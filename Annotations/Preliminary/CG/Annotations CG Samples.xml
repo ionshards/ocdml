@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OCDMLtask>
+<TEXT><![CDATA[
+Chekhov
+[The scene is laid in TIHON'S bar. On the right is the bar-counter and shelves with bottles. At the back is a door leading out of the house. Over it, on the outside, hangs a dirty red lantern. The floor and the forms, which stand against the wall, are closely occupied by pilgrims and passers-by. Many of them, for lack of space, are sleeping as they sit. It is late at night. As the curtain rises thunder is heard, and lightning is seen through the door.]
+[MURASHKIN'S study. Comfortable furniture. MURASHKIN is seated at his desk. Enter TOLKACHOV holding in his hands a glass globe for a lamp, a toy bicycle, three hat-boxes, a large parcel containing a dress, a bin-case of beer, and several little parcels. He looks round stupidly and lets himself down on the sofa in exhaustion.]
+[In a field. An old, crooked shrine, which has been long abandoned; near it a well and large stones, which apparently are old tombstones, and an old garden seat. The road is seen to GAEV'S estate. On one side rise dark poplars, behind them begins the cherry orchard. In the distance is a row of telegraph poles, and far, far away on the horizon are the indistinct signs of a large town, which can only be seen on the finest and clearest days. It is close on sunset. CHARLOTTA, YASHA, and DUNYASHA are sitting on the seat; EPIKHODOV stands by and plays on a guitar; all seem thoughtful. CHARLOTTA wears a man's old peaked cap; she has unslung a rifle from her shoulders and is putting to rights the buckle on the strap.]
+
+Milne
+[It is a June day before the war in the morning-room of ROBERT
+CRAWSHAW'S town house. Entering it with our friend the house-agent, our
+attention would first be called to the delightful club fender round the
+fireplace. On one side of this a Chesterfield sofa comes out at right
+angles. In a corner of the sofa MISS VIOLA CRAWSHAW is sitting, deep
+in "The Times." The house-agent would hesitate to catalogue her, but
+we notice for ourselves, before he points out the comfortable armchair
+opposite, that she is young and pretty. In the middle of the room and
+facing the fireplace is (observe) a solid knee-hole writing-table,
+covered with papers and books of reference, and supported by a chair at
+the middle and another at the side. The rest of the furniture, and the
+books and pictures round the walls, we must leave until another time,
+for at this moment the door behind the sofa opens and RICHARD MERITON
+comes in. He looks about thirty-five, has a clean-shaven intelligent
+face, and is dressed in a dark tweed suit. We withdraw hastily, as he
+comes behind VIOLA and puts his hands over her eyes.]
+[Enter MARGARET. MARGARET has been in love with ROBERT CRAWSHAW for
+twenty-five years, the last twenty four years from habit. She is small,
+comfortable, and rather foolish; you would certainly call her a dear,
+but you might sometimes call her a poor dear.]
+
+Strindberg
+[The Captain opens his desk and seats himself at it. Takes up account
+books.]
+[The sitting room at the Captain's. There is a door a little to the
+right at the back. In the middle of the room, a large, round table
+strewn with newspapers and magazines. To right a leather-covered sofa
+and table. In the right-hand corner a private door. At left there is a
+door leading to the inner room and a desk with a clock on it. Gamebags,
+guns and other arms hang on the walls. Army coats hang near door at
+back. On the large table stands a lighted lamp.]
+[SCENE.--A large kitchen. The ceiling and walls are partially covered
+by draperies and greens. The back wall slants upward from left side of
+scene. On back wall, left, are two shelves filled with copper kettles,
+iron casseroles and tin pans. The shelves are trimmed with fancy
+scalloped paper. To right of middle a large arched entrance with glass
+doors through which one sees a fountain with a statue of Cupid, syringa
+bushes in bloom and tall poplars. To left corner of scene a large stove
+with hood decorated with birch branches. To right, servants' dining
+table of white pine and a few chairs. On the end of table stands a
+Japanese jar filled with syringa blossoms. The floor is strewn with
+juniper branches.]
+]]></TEXT>
+<TAGS>
+<SPATIAL_ENTITY id="se0" start="64" end="75" text="bar-counter" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se1" start="80" end="87" text="shelves" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se2" start="93" end="100" text="bottles" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="disc" volume_type="cylinder" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se3" start="119" end="123" text="door" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se4" start="143" end="148" text="house" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="4-gon or other?" />
+<SPATIAL_ENTITY id="se5" start="193" end="200" text="lantern" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="disc" volume_type="cylinder" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se6" start="206" end="211" text="floor" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="4-gon" volume_type="" left_right="relative" front_back="relative" top_bottom="" comment="For entities with only 2 dimentions, should we only answer relative/intrinsic for 2 axis? How would we know which to ignore? Hard to abstract away from the English." />
+<SPATIAL_ENTITY id="se7" start="220" end="225" text="forms" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="" front_back="" top_bottom="" comment="Would it be worthwhile to add an 'undesignated' field?" />
+<SPATIAL_ENTITY id="se8" start="251" end="255" text="wall" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="4-gon" volume_type="" left_right="relative" front_back="" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se9" start="281" end="289" text="pilgrims" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se10" start="294" end="304" text="passers-by" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se11" start="314" end="318" text="them" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="**" />
+<SPATIAL_ENTITY id="se12" start="355" end="359" text="they" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="**'Them' and 'they' refer to the same mass of people. Should we ignore one?" />
+<SPATIAL_ENTITY id="se13" start="429" end="438" text="lightning" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="line" line_type="ray" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se14" start="459" end="463" text="door" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="4-gon" volume_type="" left_right="intrinsic" front_back="" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se15" start="509" end="518" text="MURASHKIN" form="NAM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se16" start="536" end="540" text="desk" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se17" start="773" end="777" text="sofa" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se18" start="720" end="722" text="He" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se19" start="800" end="805" text="field" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="other" volume_type="" left_right="relative" front_back="relative" top_bottom="" comment="" />
+<SPATIAL_ENTITY id="se20" start="823" end="829" text="shrine" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="other" left_right="" front_back="" top_bottom="" comment="undesignated area/volume type, so can't say any axis is intrinsic/relative" />
+<SPATIAL_ENTITY id="se21" start="872" end="876" text="well" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="annulus" volume_type="cylinder" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="Torus or cylinder" />
+<SPATIAL_ENTITY id="se22" start="887" end="893" text="stones" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="disc" volume_type="sphere" left_right="relative" front_back="relative" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se23" start="920" end="930" text="tombstones" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="'Stones' and 'tombstones' represent the same entity" />
+<SPATIAL_ENTITY id="se24" start="950" end="954" text="seat" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se25" start="960" end="964" text="road" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="4-gon" volume_type="" left_right="relative" front_back="" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se26" start="983" end="989" text="estate" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se27" start="1013" end="1020" text="poplars" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="disc" volume_type="cone" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se28" start="1052" end="1059" text="orchard" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" comment="2-d or 3-d?" />
+<SPATIAL_ENTITY id="se29" start="1082" end="1104" text="row of telegraph poles" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" comment="**" />
+<SPATIAL_ENTITY id="se30" start="1131" end="1138" text="horizon" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="line" line_type="line" area_type="" volume_type="" left_right="relative" front_back="" top_bottom="" comment="" />
+<SPATIAL_ENTITY id="se31" start="1158" end="1163" text="signs" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="" volume_type="" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="intrinsic/relative?" />
+<SPATIAL_ENTITY id="se32" start="1175" end="1179" text="town" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se33" start="1260" end="1269" text="CHARLOTTA" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se34" start="1271" end="1276" text="YASHA" form="NAM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se35" start="1282" end="1290" text="DUNYASHA" form="NAM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se36" start="1310" end="1314" text="seat" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se37" start="1316" end="1325" text="EPIKHODOV" form="NAM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se38" start="1380" end="1389" text="CHARLOTTA" form="NAM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se39" start="1415" end="1418" text="cap" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="disc" volume_type="cylinder" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se40" start="1438" end="1443" text="rifle" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="other" volume_type="other" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se41" start="1492" end="1498" text="buckle" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se42" start="1506" end="1511" text="strap" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="4-gon" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se43" start="1595" end="1605" text="town house" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se44" start="1569" end="1573" text="room" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se45" start="1711" end="1717" text="fender" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" comment="not sure what this is" />
+<SPATIAL_ENTITY id="se46" start="1728" end="1737" text="fireplace" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se47" start="1774" end="1778" text="sofa" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se48" start="1825" end="1829" text="sofa" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se49" start="1830" end="1849" text="MISS VIOLA CRAWSHAW" form="NAM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se50" start="1639" end="1650" text="house-agent" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se51" start="1887" end="1898" text="house-agent" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se52" start="1998" end="2006" text="armchair" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se53" start="2068" end="2072" text="room" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se54" start="2088" end="2097" text="fireplace" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se55" start="2129" end="2142" text="writing-table" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se56" start="2157" end="2163" text="papers" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="4-gon" volume_type="" left_right="relative" front_back="relative" top_bottom="" comment="" />
+<SPATIAL_ENTITY id="se57" start="2168" end="2173" text="books" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="intrinsic" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se58" start="2207" end="2212" text="chair" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se59" start="2231" end="2238" text="another" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="The author means another chair." />
+<SPATIAL_ENTITY id="se60" start="2268" end="2277" text="furniture" form="NOM" latLong="" mod="" countable="FALSE" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se61" start="2287" end="2292" text="books" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se62" start="2297" end="2305" text="pictures" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="4-gon" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se63" start="2316" end="2321" text="walls" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="4-gon" volume_type="" left_right="relative" front_back="" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se64" start="2380" end="2384" text="door" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se65" start="2396" end="2400" text="sofa" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se66" start="2411" end="2426" text="RICHARD MERITON" form="NAM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se67" start="2579" end="2584" text="VIOLA" form="NAM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se68" start="2890" end="2901" text="The Captain" form="NAM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se69" start="2912" end="2916" text="desk" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se70" start="2980" end="2984" text="room" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se71" start="2988" end="3001" text="the Captain's" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se72" start="3014" end="3018" text="door" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se73" start="3075" end="3079" text="room" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se74" start="3096" end="3101" text="table" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se75" start="3114" end="3138" text="newspapers and magazines" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="relative" comment="" />
+<SPATIAL_ENTITY id="se76" start="3167" end="3171" text="sofa" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se77" start="3176" end="3181" text="table" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se78" start="3218" end="3222" text="door" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se79" start="3243" end="3247" text="door" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se80" start="3280" end="3284" text="desk" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se81" start="3292" end="3297" text="clock" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="other" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se82" start="3269" end="3273" text="room" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="4-gon" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" comment="" />
+<SPATIAL_ENTITY id="se83" start="3347" end="3352" text="walls" form="NOM" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="4-gon" volume_type="" left_right="relative" front_back="" top_bottom="intrinsic" comment="" />
+<ORIENTATION_SIGNAL id="os0" start="233" end="238" text="stand" orientation_type="VERTICAL" comment="" />
+<ORIENTATION_SIGNAL id="os1" start="360" end="363" text="sit" orientation_type="OTHER" comment="" />
+<ORIENTATION_SIGNAL id="os2" start="175" end="180" text="hangs" orientation_type="" comment="**" />
+<ORIENTATION_SIGNAL id="os3" start="522" end="528" text="seated" orientation_type="OTHER" comment="" />
+<ORIENTATION_SIGNAL id="os4" start="1295" end="1302" text="sitting" orientation_type="OTHER" comment="" />
+<ORIENTATION_SIGNAL id="os5" start="1326" end="1332" text="stands" orientation_type="VERTICAL" comment="" />
+<ORIENTATION_SIGNAL id="os6" start="1853" end="1860" text="sitting" orientation_type="OTHER" comment="" />
+<ORIENTATION_SIGNAL id="os7" start="2077" end="2083" text="facing" orientation_type="" comment="not sure the difference between lat and long config types " />
+<ORIENTATION_SIGNAL id="os8" start="2921" end="2926" text="seats" orientation_type="OTHER" comment="" />
+<CONFIGURATION_LINK id="cl0" fromID="se55" fromText="writing-table" toID="se56" toText="papers" cluster="" coercion="" trigger="" figure="papers" ground="table" comment="" />
+<CONFIGURATION_LINK id="cl1" fromID="se55" fromText="writing-table" toID="se57" toText="books" cluster="" coercion="" trigger="" figure="books" ground="table" comment="" />
+<CONFIGURATION_LINK id="cl2" fromID="se80" fromText="desk" toID="se81" toText="clock" cluster="" coercion="" trigger="" figure="clock" ground="desk" comment="" />
+<CONFIGURATION_LINK id="cl3" fromID="se1" fromText="shelves" toID="se2" toText="bottles" cluster="" coercion="" trigger="" figure="bottles" ground="shelves" comment="" />
+<CONFIGURATION_LINK id="cl4" fromID="se7" fromText="forms" toID="se8" toText="wall" cluster="" coercion="" trigger="" figure="forms" ground="wall" comment="" />
+</TAGS>
+</OCDMLtask>

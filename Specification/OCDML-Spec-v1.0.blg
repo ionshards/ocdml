@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: OCDML-Spec-v1.0.aux
+The style file: plain.bst
+Database file #1: OCDML-spec.bib
+You've used 2 entries,
+            2118 wiz_defined-function locations,
+            508 strings with 4326 characters,
+and the built_in function-call counts, 568 in all, are:
+= -- 48
+> -- 25
+< -- 1
++ -- 11
+- -- 8
+* -- 34
+:= -- 102
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 9
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 28
+empty$ -- 53
+format.name$ -- 8
+if$ -- 118
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 3
+newline$ -- 13
+num.names$ -- 4
+pop$ -- 19
+preamble$ -- 1
+purify$ -- 8
+quote$ -- 0
+skip$ -- 11
+stack$ -- 0
+substring$ -- 11
+swap$ -- 3
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 6
+warning$ -- 0
+while$ -- 4
+width$ -- 3
+write$ -- 24

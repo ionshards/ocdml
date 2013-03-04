@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}
+\contentsline {section}{\numberline {2}Goal}{3}{section.2}
+\contentsline {section}{\numberline {3}Corpus Selection}{3}{section.3}
+\contentsline {section}{\numberline {4}Tag Types}{3}{section.4}
+\contentsline {subsection}{\numberline {4.1}Spatial Entity}{3}{subsection.4.1}
+\contentsline {paragraph}{\texttt {dimensionality}}{3}{section*.2}
+\contentsline {paragraph}{\texttt {line\_type}}{4}{section*.3}
+\contentsline {paragraph}{\texttt {area\_type}}{4}{section*.4}
+\contentsline {paragraph}{\texttt {volume\_type}}{4}{section*.5}
+\contentsline {paragraph}{\texttt {left\_right}}{4}{section*.6}
+\contentsline {paragraph}{\texttt {front\_back}}{4}{section*.7}
+\contentsline {paragraph}{\texttt {top\_bottom}}{4}{section*.8}
+\contentsline {subsection}{\numberline {4.2}Orientation Signal}{5}{subsection.4.2}
+\contentsline {paragraph}{\texttt {orientation\_type}}{5}{section*.9}
+\contentsline {section}{\numberline {5}Link Types}{5}{section.5}
+\contentsline {subsection}{\numberline {5.1}Configuration Link}{5}{subsection.5.1}

@@ -1,0 +1,34 @@
+<!ENTITY name "OCDMLtask">
+
+<!ELEMENT SPATIAL_ENTITY ( #PCDATA ) >
+<!ATTLIST SPATIAL_ENTITY start #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY id ID prefix="se" #REQUIRED >
+<!ATTLIST SPATIAL_ENTITY form ( NAM | NOM ) #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY latLong CDATA #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY mod CDATA #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY countable ( TRUE | FALSE ) #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY quant CDATA #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY scopes CDATA #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY dimensionality ( point | line | area | volume ) #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY line_type ( segment | ray | line | loop | other ) #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY area_type ( 3-gon | 4-gon | disc | annulus | other ) #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY volume_type ( tri_prism | rect_prism | pyramid | sphere | torus | cylinder | cone | biped | quadruped | other ) #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY left_right ( intrinsic | relative ) #IMPLIED "relative" >
+<!ATTLIST SPATIAL_ENTITY front_back ( intrinsic | relative ) #IMPLIED "relative" >
+<!ATTLIST SPATIAL_ENTITY top_bottom ( intrinsic | relative ) #IMPLIED "relative" >
+<!ATTLIST SPATIAL_ENTITY comment CDATA #IMPLIED >
+
+<!ELEMENT ORIENTATION_SIGNAL ( #PCDATA ) >
+<!ATTLIST ORIENTATION_SIGNAL id ID prefix="os" #REQUIRED >
+<!ATTLIST ORIENTATION_SIGNAL orientation_type ( LONGITUDINAL | LATITUDINAL | VERTICAL | OTHER ) #IMPLIED >
+<!ATTLIST ORIENTATION_SIGNAL comment CDATA #IMPLIED >
+
+<!ELEMENT CONFIGURATION_LINK EMPTY >
+<!ATTLIST CONFIGURATION_LINK id ID prefix="cl" #REQUIRED >
+<!ATTLIST CONFIGURATION_LINK figure_config ( left | right | front | back | top | bottom | any ) #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK ground_config ( left | right | front | back | top | bottom | any ) #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK trigger CDATA #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK dim_coercion ( figure | ground | none ) #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK figure CDATA #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK ground CDATA #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK comment CDATA #IMPLIED >

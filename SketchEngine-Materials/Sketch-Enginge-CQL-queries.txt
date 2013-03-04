@@ -1,0 +1,3 @@
+[tag="V.*"] [lemma_lc="on"] [tag="DT"] [lemma_lc="table"] within <s/>
+
+[tag="VB.*" | tag="N.*"] [lemma_lc="in"] [tag="DT"] [tag="N.*" & lemma_lc="road"] [tag!="N.*"] within <s/>

@@ -1,0 +1,13 @@
+Questions:
+
+Handling cross-sections
+Axial naming conventions (polar vs. top/ bottom/ … )
+Handling coercion (coercion attribute to configuration link? "FIG-GROUND" or "GROUND-FIGURE")
+Primitive disambiguation (Cube vs. Slab, Slab vs. 4-gon, etc.)
+Handling projections (are they spatial entities? should they be ignored? are they another entity type?)
+
+Decisions:
+
+Tag only heads for nominal entities
+Top/Bottom may leave Front/Back and Left/Right unspecified; lateral axes automatically assign others
+Primitives may specify necessarily intrinsic dimensions (cones have tops)

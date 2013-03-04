@@ -1,0 +1,24 @@
+**Outline of Configuration/ Orientation Relations**
+
+SPATIAL_ENTITY (inherit all attributes from ISO-space)
+mod (a descriptor)
+primitiveType ( cube | sphere | disc | torus | plane | cylinder | annulus | n-gon | ... )
+dimensionality ( 0 | 1 | 2 | 3 )
+
+***Notes:***
+For each primitive, a number of surfaces, edges, and corners should be enumerated in the guideline, e.g.
+Cube:
+6 surfaces,
+12 edges,
+8 corners
+
+Primitives can have directionality, e.g.
+Z-directed cube: the intrinsic "top" is on the z-axis
+These will probably be tied directly to primitive types.
+***Notes***
+
+CONFIGURATION_LINK
+type (closed list of nine surface/edge/point-surface/edge/point abutments, e.g. ( Ring_on_Finger | Book_on_Table | ... ))
+default (chosen based on primitive types)
+
+**Outline**
