@@ -8,6 +8,6 @@
 ##Cory
 
 ##Cynthia
-~1. Play around with github~
+~~1. Play around with github~~
 
 ##Jasper
