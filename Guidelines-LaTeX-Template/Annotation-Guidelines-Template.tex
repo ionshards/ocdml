@@ -1,0 +1,137 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx}
+\usepackage{lingmacros}
+\usepackage{verbatim}
+\usepackage{color}
+
+\usepackage[top=1in, left=1in]{geometry}
+
+\definecolor{darkblue}{rgb}{0,0,0.8}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkred}{rgb}{0.8,0,0}
+\definecolor{brown}{rgb}{0.5,0.3,0}
+
+\newcommand{\tag}[2]{[\textbf{\color{darkblue}#1}$_{t#2}$]}
+\newcommand{\othertag}[2]{[\textbf{\color{darkgreen}#1}$_{ot#2}$]}
+\newcommand{\otherothertag}[2]{[\textbf{\color{darkred}#1}$_{oot#2}$]}
+\newcommand{\yetanothertag}[2]{[\textbf{\color{brown}#1}$_{yat#2}$]}
+
+\begin{document}
+
+\title{Title\\
+Subtitle}
+
+\author{Author}
+
+\date{\today}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction} % (fold)
+\label{sec:introduction}
+Introducing \ldots
+% section introduction (end)
+
+\section{Extent Tags} % (fold)
+\label{sec:extent_tag}
+
+\subsection{Tag} % (fold)
+\label{sub:tag}
+How do you annotate a \textsc{tag}? Let me tell you \ldots
+% subsection tag (end)
+
+\subsubsection{Tag Extents} % (fold)
+\label{ssub:tag_extents}
+
+Example (\ref{ex:tag_examples}) demonstrates examples of \textsc{tag} extents:
+
+\eenumsentence{
+    \item This is an enumerated \tag{tag}{1} example.
+    \label{ex:tag_command}
+    \item You can give a tag an arbitrary \tag{id number}{9001}
+    \label{ex:tag_id}
+}\label{ex:tag_examples}
+
+You can modify or expand the id wrapper commands to your liking and define your own colors as well. \texttt{lingstyle.sty} provides the \texttt{\textbackslash\-eenumsentence\{\ldots\}} environment for enumerated, multi-sentence examples and \texttt{\textbackslash\-enumsentence\{\ldots\}} for single examples.
+
+If you \texttt{\textbackslash\-label\{ex:a\_label\}} your examples, you can refer to them (e.g., Example (\ref{ex:tag_command}) \& Example (\ref{ex:tag_id})). You can use the cleveref package if you want to have more control over references.
+% subsubsection tag_extents (end)
+
+\subsubsection{Tag Attributes} % (fold)
+\label{ssub:tag_attributes}
+Attributes for the \textsc{tag} tag are listed in Table \ref{tab:tag}.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|l|l|}
+    \hline \textbf{Attribute}   & \textbf{Value}\\
+    \hline \texttt{id}          & \texttt{t1}, \texttt{t2}, \texttt{t3}, \ldots\\
+    \hline \texttt{attribute1}  & Takes a value\\
+    \hline
+\end{tabular}
+\caption{\textsc{tag} Attributes}
+\label{tab:tag}
+\end{center}
+\end{table}
+% subsubsection tag_attributes (end)
+
+\subsection{Other Tag} % (fold)
+\label{sub:other_tag}
+And, \textsc{othertag}? Well \ldots
+% subsection other_tag (end)
+
+\subsubsection{Other Tag Extents} % (fold)
+\label{ssub:other_tag_extents}
+
+% subsubsection other_tag_extents (end)
+
+\subsubsection{Other Tag Attributes} % (fold)
+
+\label{ssub:other_tag_attributes}
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|l|l|}
+    \hline \textbf{Attribute}   & \textbf{Value}\\
+    \hline \texttt{id}          & \texttt{ot1}, \texttt{ot2}, \texttt{ot3}, \ldots\\
+    \hline \texttt{attribute1}  & Takes a value\\
+    \hline
+\end{tabular}
+\caption{\textsc{othertag} Attributes}
+\label{tab:othertag}
+\end{center}
+\end{table}
+% subsubsection other_tag_attributes (end)
+
+% section extent_tags (end)
+
+\section{Link Tags} % (fold)
+\label{sec:link_tags}
+
+\subsection{Other Other Tag} % (fold)
+\label{sub:other_other_tag}
+Let me tell you about \otherothertag{otherothertags}{1} \ldots
+
+\subsubsection{Other Other Tag Attributes} % (fold)
+\label{ssub:other_other_tag_attributes}
+
+% subsubsection other_other_tag_attributes (end)
+
+% subsection other_other_tag (end)
+
+\subsection{Yet Another Tag} % (fold)
+\label{sub:yet_another_tag}
+Finally, let's discuss \yetanothertag{yetanothertag}{1} \ldots
+% subsection yet_another_tag (end)
+
+\subsubsection{Yet Another Tag Attributes} % (fold)
+\label{ssub:yet_another_tag_attributes}
+
+% subsubsection yet_another_tag_attributes (end)
+
+% section link_tags (end)
+
+\end{document}
