@@ -1,0 +1,294 @@
+\documentclass[11pt]{article}
+
+\usepackage{hyperref}
+    \hypersetup{colorlinks,breaklinks,
+                urlcolor=[rgb]{0,0,0.8},
+                linkcolor=[rgb]{0,0,0},
+                citecolor=[rgb]{0,0,0}}
+
+\usepackage{cleveref}
+    \creflabelformat{enums}{(#2#1#3)}
+        \crefname{enums}{example}{examples}
+        \Crefname{enums}{Example}{Examples}
+    \creflabelformat{enumsi}{(#2#1#3)}
+        \crefname{enumsi}{example}{examples}
+        \Crefname{enumsi}{Example}{Examples}
+    \newcommand{\crefrangeconjunction}{~through~}
+
+\usepackage{lingstyle}
+
+\usepackage{graphicx}
+
+\usepackage[top=1in, left=1in]{geometry}
+
+\usepackage{color}
+	\definecolor{darkblue}{rgb}{0,0,0.8}
+	\definecolor{darkgreen}{rgb}{0,0.5,0}
+	\definecolor{darkred}{rgb}{0.8,0,0}
+
+\newcommand{\entity}[2]{[\textbf{\color{darkblue}#1}$_{se#2}$]}
+\newcommand{\signal}[2]{[\textbf{\color{darkred}#1}$_{os#2}$]}
+
+\newcommand{\nameML}{Orientation Configuration and Dimensionality Markup Language}
+\newcommand{\ML}{OCDML}
+\newcommand{\version}{Version 1.0}
+
+\newenvironment{attributes}
+{
+\begin{tabular}{|l|l|}
+    \hline \textbf{Attribute} & \textbf{Value}\\
+}
+{   \hline
+\end{tabular}
+}
+
+\newenvironment{note}
+{\list{}
+ {\setlength
+  {\itemindent}
+  {\listparindent}}
+   \item[\textbf{Note:}]\relax}
+{\endlist}
+
+\title{\nameML\\
+{\Large Annotation Guidelines \version}}
+\author{
+    Cynthia Goodman\\
+    \and
+    Jasper Phillips\\
+    \and
+    Cory Massaro\\
+    \and
+    Zachary Yocum\\
+}
+\date{\today}
+
+\begin{document}
+    
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction} % (fold)
+\label{sec:introduction}
+
+% Briefly explain the goal.
+% Explain the purpose of each section in the document.
+
+% section introduction (end)
+
+\section{Extent Tags} % (fold)
+\label{sec:extent_tag}
+
+\subsection{Spatial Entity} % (fold)
+\label{sub:spatial_entity}
+
+The \texttt{spatial\_entity} tag in \ML is intended to identify participants of spatial relations. In order to be considered a participant in a spatial relation, the entity must be located in real-space. For this annotation task, annotators should ignore any entities that exist within metaphorical spaces. For instance, a metaphrical-space is introduced in \Cref{ex:hit_song}, so, although \emph{song} and \emph{charts} could be considered spatial entities, they should be ignored for this task. Note, however, that metaphorical-spaces are distinct from fictional-spaces, such as in \Cref{ex:enter}. For the purposes of this task, annotators should the fictional-space that is associated with the diagesis of a play, film or other literary work, to be a real-space. For instance, in \Cref{ex:enter}, annotators should consider \emph{PAMELA}, \emph{door}, and \emph{staircase} to be spatial entities.
+
+\eenumsentence{
+    \item The hit song is on top of the charts.
+    \label{ex:hit_song} % We should look for a metaphorical example from our corpus.
+    \item Enter \entity{PAMELA}{1} from the \entity{door}{1} in front of the \entity{staircase}{1}, \ldots
+    \label{ex:enter}
+}\label{ex:metaphorical_fictional_spaces}
+
+\subsubsection{Spatial Entity Extents} % (fold)
+\label{ssub:spatial_entity_extents}
+
+For this task, the textual extents that should be tagged with the \textsc{spatial\_entity} tag will be nouns. In terms of grammatical dependencies, only the heads of noun phrases should be captured with the \textsc{spatial\_entity} tag. Spatial entities may occur in nominal or named forms, and both are valid extents for this tag type. In the case of multi-word proper names, the entire extent of the name should be included in the tag. In terms of a dependency phrase-structure, sister words and phrases of head nouns should not be included in \textsc{spatial\_entity} tag extents. Refer to \Cref{ex:spatial_entity} in \cref{ssub:spatial_entity_examples} for illustrations of various \textsc{spatial\_entity} extent tags.
+% subsubsection spatial_entity_extents (end)
+
+\subsubsection{Spatial Entity Attributes} % (fold)
+\label{ssub:spatial_entity_attributes}
+
+The \ML \textsc{spatial\_entity} tag inherits some attributes from other annotation schemes, but only a subset of these attributes are relevant for this task. The attributes which annotators should annotate for this task are \texttt{dimensionality}, \texttt{line\_type}, \texttt{area\_type}, \texttt{volume\_type}, \texttt{left\_right}, \texttt{front\_back}, \texttt{top\_bottom}, and \texttt{c-sec\_axis}. Annotators do not need to tag the other attributes that are defined in the Document Task Definition, including \texttt{form}, \texttt{latLong}, \texttt{mod}, \texttt{countable}, \texttt{amount}, \texttt{quant}, \texttt{scopes}.
+
+\begin{table}[h]
+\centering
+\begin{attributes}
+    \hline \texttt{id}                  & \texttt{se1}, \texttt{se2}, 
+                                          \texttt{se3}, \ldots\\
+    \hline \texttt{dimensionality}      & \textsc{point}, \textsc{line}, 
+                                          \textsc{area}, \textsc{volume}\\
+    \hline \texttt{mod}                 & A spatially relevant modifier\\
+    \hline \texttt{line\_type}          & \textsc{segment}, \textsc{ray}, 
+                                          \textsc{line}, \textsc{loop}, 
+                                          \textsc{other}\\
+    \hline \texttt{area\_type}          & \textsc{3-gon}, \textsc{4-gon}, 
+                                          \textsc{disc}, \textsc{annulus}, 
+                                          \textsc{other}\\
+    \hline \texttt{volume\_type}        & \textsc{tri\_prism}, 
+                                          \textsc{rect\_prism}, 
+                                          \textsc{pyramid}, \textsc{sphere}, 
+                                          \textsc{torus},\\
+                                        & \textsc{cylinder}, \textsc{cone}, 
+                                          \textsc{biped}, \textsc{quadruped}, 
+                                          \textsc{other}\\
+    \hline \texttt{left\_right}         & \textsc{intrinsic} or 
+                                          \textsc{relative}\\
+    \hline \texttt{front\_back}         & \textsc{intrinsic} or 
+                                          \textsc{relative}\\
+    \hline \texttt{top\_bottom}         & \textsc{intrinsic} or 
+                                          \textsc{relative}\\
+    \hline \texttt{c-sec\_axis}         & \textsc{left\_right} or 
+                                          \textsc{front\_back} or 
+                                          \textsc{top\_bottom} or 
+                                          \textsc{other}\\
+\end{attributes}
+\caption{\textsc{spatial\_entity} Attributes}
+\label{tab:spatial_entity}
+\end{table}
+
+\paragraph{\texttt{dimensionality}} % (fold)
+\label{par:dimensionality}
+This attribute is used to designate the number of spatial dimensions occupied by the entity. For the purposes of \ML annotation, take spatial entities to be point-sets. As such, a value of \textsc{point} indicates a 0-dimensional entity consisting of a single point with no edges or surfaces. A value of \textsc{line} indicates a 1-dimensional entity with up to two bounding points, or vertices, with a single edge and no surfaces. A value of \textsc{area} indicates a 2-dimensional entity with some number of bounding edges, points and two surfaces. A value of \textsc{volume} indicates a 3-dimensional entity with at least one surface and possibly a number of bounding edges and points.
+
+If a value of \textsc{point} is specified for a \textsc{spatial\_entity} tag, then it is not necessary to specify the other attributes, since they are not relevant to 0-dimensional entities. If a value of \textsc{line} is specified, then the \texttt{line\_type} attribute must be filled. If a value of \textsc{area} is specified then at least the \texttt{area\_type} attribute must be filled, and the \texttt{line\_type} could be filled with whatever would be appropriate if the entity were coerced to a line for the purposes of participating in a relation. Finally, if the the \textsc{volume} type is specified, then at least the \texttt{volume\_type} attribute must also be filled, and the \texttt{area\_type} and \texttt{line\_type} attributes might also be filled.
+
+\begin{note}
+Although annotators must choose a single value for the \texttt{dimensionality} attribute, spatial entities may be coerced to different dimensionalities depending on the spatial relations they are participating in. E.g., a \emph{door} might be considered volumetric, however it may be coerced to 2-dimensions when participating in some relationships. In that case, it would be appropriate to fill both the \texttt{volume\_type} and \texttt{area\_type} attributes. Refer to \Cref{sub:configuration_link} for more discussion of this type of coercion.
+\end{note}
+
+% paragraph dimensionality (end)
+
+\paragraph{\texttt{line\_type}} % (fold)
+\label{par:line_type}
+This attribute is used to classify the entity based on a set of 1-dimensional primitive types. Some lexical items that are good candidates for the \texttt{line\_type} value of \textsc{segment} would be a \emph{clothesline}, a piece of \emph{wire}, or a singular strand of \emph{hair}. These are examples of linear entities which have distinguishable endpoints. We include the \textsc{ray} type to capture entities such as a \emph{ray} of light that would have only one distinguishable endpoint. The \textsc{line} type would be appropariate for a \emph{row} or \emph{queue} that has no particularly distinguishable endpoints, but also is not a loop. The \textsc{loop} type would be appropriate for an \emph{equator} or for the \emph{border} of a region, which has no endpoints, but also loops back on itself. A value of \textsc{other} may be specified when none of the previously mentioned values are appropriate.
+% paragraph line_type (end)
+
+\paragraph{\texttt{area\_type}} % (fold)
+\label{par:area_type}
+This attribute is used to classify the entity based on a set of 2-dimensional primitive types. The \textsc{3-gon} type is used to indicate that the entity is triangular, possessing three distinguishable bounding edges and points such as a triangular \emph{slice} of pizza. Similarly, the \textsc{4-gon} type is used to indicate a 2-dimensional primitive with four bounding edges and points, such as a rectangular \emph{piece} of paper. The \textsc{disc} type is used for 2-dimensional entities with a single bounding edge, and no distinguishable points, such as a round \emph{coaster}. The \textsc{annulus} type is appropriate for a 2-dimensional entity, such as a compact \emph{disc}, that has two distinguishable bounding edges and no distinguishable bounding points. A value of \textsc{other} may be specified when none of the previously mentioned values are appropriate.
+% paragraph area_type (end)
+
+\paragraph{\texttt{volume\_type}} % (fold)
+\label{par:volume_type}
+This attribute is used to classify the entity based on a set of 3-dimensional primitive types.
+
+The \textsc{tri\_prism} type should be used for 3-dimensional entities which can be thought of as 2-dimensional 3-gons that are extruded into a 3-dimensional prism with five distinguishable bounding surfaces and six distinguisable bounding points. A \emph{box} of Toblerone chocolates would be an appropriate entity to be tagged with the \textsc{tri\_prism} type.
+
+The \textsc{rect\_prism} type is used for 3-dimensional entities that are 3-dimensionally extruded 4-gons with six distinguishable bounding surfaces and eight boinding points. This type includes entities such as a standard six-sided \emph{die}, a closed \emph{book} or \emph{tome}, or a prototypical \emph{box}. 
+
+A value of \textsc{pyramid} is used for 3-dimensional entities with five distinguishable bounding surfaces, including a 4-gon and four 3-gons, in addition to five bounding points, including a single apex point.
+
+A value of \textsc{sphere} is given to 3-dimensional spheroidal entities with no distinguishable bounding edges or vertices, such as a \emph{globe}, \emph{orange}, or \emph{ball}.
+
+A value of \textsc{torus} is used for 3-dimensional entities with no distinguishable bounding edges or vertices, but is topologically distinct from a \textsc{sphere} type by virtue of having a hole. The distinction is analogous to the difference between the 2-dimensional \textsc{disc} and \textsc{annulus} primitive types, with \textsc{sphere} corresponding to the former and \textsc{torus} corresponding to the latter. A \emph{doughnut}, a hoola \emph{hoop}, or a wedding \emph{band} would all be examples of entities that would take a value of \textsc{torus} for their \texttt{volume\_type}.
+
+A value of \textsc{cylinder} indicates a 3-dimensional entity with three distinguishable surfaces, two distinguishable bounding edges, and zero vertices. A soda \emph{can}, a dumbbell \emph{bar}, and a AA \emph{battery} are all examples that fall under this volume type.
+
+A value of \textsc{cone} should be given for 3-dimensional entities with two distinguishable surfaces, one bounding edge, and a single apex point. An ice-cream \emph{cone}, a \emph{funnel}, or a coniferous \emph{tree} would all be appropriate entities to annotate with the \textsc{cone} type.
+
+The \texttt{volume\_type} attribute is not intended to capture every entity perfectly. Rather, it is intended to identify distinguishable topological features which are accessed when the entity participates within a spatial configuration relation. If none of the previously described values are appropriate, a value of \textsc{other} may be specified.
+% paragraph volume_type (end)
+
+\paragraph{\texttt{left\_right}} % (fold)
+\label{par:left_right}
+This attribute is a bit that indicates whether the entity possesses an intrinsic axis of orientation whose polar extremes are `left' and `right'. An entity should be considered to possess an intrinsic left-right axis if it has left-hand and right-hand sides that are distinguishable independent of any frame of reference. One heuristic which may help to determine whether a spatial entity possesses an intrinsic \texttt{left\_right} axis is the linear-array-test. The linear-array-test can be employed by asking ``Could duplicates of this entity be arranged in a 1-dimensional array from `left-to-right', i.e., such that the `left' boundary belonging to each entity in the array abuts the `right' boundary of another?'' If the answer is ``no'', then the \texttt{left\_right} attribute should probably be annotated as \textsc{relative}; if ``yes'', the value would be likely be \textsc{intrinsic}.
+% paragraph left_right (end)
+
+\paragraph{\texttt{front\_back}} % (fold)
+\label{par:front_back}
+This attribute is similar to the \texttt{left\_right} attribute. A value of \textsc{intrinsic} indicates the entity possesses an intrinsic axis of orientation whose polar extremes are `front' and `back'. A value of \textsc{relative} indicates the opposite. The linear-array-test heuristic can be modified for this case such that arrangement of the array would be considered `front-to-back'.
+% paragraph front_back (end)
+
+\paragraph{\texttt{top\_bottom}} % (fold)
+\label{par:top_bottom}
+This attribute is similar, again, to both \texttt{left\_right} and \texttt{front\_back}. A value of \textsc{intrinsic} indicates the entity possesses an intrinsic axis of orientation whose polar extremes are `top' and `bottom'. The linear-array-test can be applied for this attribute as well to test if the entities can possibly be stacked `top-to-bottom'.
+% paragraph top_bottom (end)
+
+\paragraph{\texttt{c-sec\_axis}} % (fold)
+\label{par:c_sec_axis}
+This attribute is intended to identify the salient cross-sectional axis for 3-dimensional entities. The point of specifying the cross-sectional axis is to distinguish between spatial entities such as a typical twelve-ounce \emph{can} of soda, and a military-style \emph{submarine} that are both cylindrical, and both possess intrinsic left, right, front, back, top, and bottom boundaries, yet whose salient cross-sectional axes do not correspond to one another. For the soda \emph{can}, the salient cross-sectional axis---the axis along which the 2-dimensional circular base would be extruded---is the \textsc{top\_bottom} axis. For the \emph{submarine}, contrastively, it is the \textsc{front\_back} axis which corresponds to the cross-sectional axis along which the cylindrical primitive form would be extruded. Another way to conceptualize the salient cross-sectional axis would be to imagine slicing the entity into pieces as if to skewer the pieces like a kebab. Under this conceptualization, the axis that is aligned with the imaginary kebab is the axis which should be filled for the \texttt{c-sec\_axis} attribute.
+% paragraph c_sec_axis (end)
+
+% subsubsection spatial_entity_attributes (end)
+
+\subsubsection{Spatial Entity Examples} % (fold)
+\label{ssub:spatial_entity_examples}
+
+\eenumsentence{
+    \item % Need to fill in examples
+}\label{ex:spatial_entity}
+
+% subsubsection spatial_entity_tag_examples (end)
+
+% subsection spatial_entity (end)
+
+\subsection{Spatial Signal Tag} % (fold)
+\label{sub:spatial_signal_tag}
+% Introduce the spatial signal tag here.
+% subsection spatial_signal_tag (end)
+
+\subsubsection{Spatial Signal Extents} % (fold)
+\label{ssub:spatial_signal_extents}
+% Explain what kinds of lexical items should be captured with the spatial signal tag here.
+% subsubsection spatial_signal_extents (end)
+
+\subsubsection{Spatial Signal Attributes} % (fold)
+\label{ssub:spatial_signal_attributes}
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|l|l|}
+    \hline \textbf{Attribute}   & \textbf{Value}\\
+    \hline \texttt{id}          & \texttt{ss1}, \texttt{ss2}, \texttt{ss3}, \ldots\\
+    \hline \texttt{attribute1}  & Takes a value\\
+    \hline
+\end{tabular}
+\caption{\textsc{spatial\_signal} Attributes}
+\label{tab:spatial_signal}
+\end{center}
+\end{table}
+
+% Go through each attribute, in depth, here.
+
+% subsubsection other_tag_attributes (end)
+
+\subsubsection{Spatial Signal Examples} % (fold)
+\label{ssub:spatial_signal_examples}
+
+% subsubsection spatial_signal_examples (end)
+
+% section extent_tags (end)
+
+\section{Link Tags} % (fold)
+\label{sec:link_tags}
+
+\subsection{Configuration Link Tag} % (fold)
+\label{sub:configuration_link}
+
+\subsubsection{Configuration Link Attributes} % (fold)
+\label{ssub:configuration_link_attributes}
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|l|l|}
+    \hline \textbf{Attribute}   & \textbf{Value}\\
+    \hline \texttt{id}          & \texttt{ss1}, \texttt{ss2}, \texttt{ss3}, \ldots\\
+    \hline \texttt{attribute1}  & Takes a value\\
+    \hline
+\end{tabular}
+\caption{\textsc{configuration\_link} Attributes}
+\label{tab:configuration_link}
+\end{center}
+\end{table}
+
+% subsubsection configuration_link_attributes (end)
+
+\subsubsection{Configuration Link Examples} % (fold)
+\label{ssub:configuration_link_examples}
+
+% subsubsection configuration_link_examples (end)
+% subsection configuration_link_tag (end)
+
+% section link_tags (end)
+
+\section{Fully Annotated Examples} % (fold)
+\label{sec:fully_annotated_examples}
+
+% List some full annotation sample sentences and pseudo-XML annotations along with discussion of the motivations for any decisions which were made.
+
+% section fully_annotated_examples (end)
+\end{document}
