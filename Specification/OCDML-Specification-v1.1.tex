@@ -1,0 +1,262 @@
+\documentclass[11pt]{article}
+
+\usepackage{hyperref}
+    \hypersetup{colorlinks,breaklinks,
+                urlcolor=[rgb]{0,0,0.8},
+                linkcolor=[rgb]{0,0,0},
+                citecolor=[rgb]{0,0,0}}
+
+\usepackage{cleveref}
+    \creflabelformat{enums}{(#2#1#3)}
+        \crefname{enums}{example}{examples}
+        \Crefname{enums}{Example}{Examples}
+    \creflabelformat{enumsi}{(#2#1#3)}
+        \crefname{enumsi}{example}{examples}
+        \Crefname{enumsi}{Example}{Examples}
+    \newcommand{\crefrangeconjunction}{~through~}
+
+\usepackage{lingstyle}
+
+\usepackage{graphicx}
+
+\usepackage[top=1in, left=1in]{geometry}
+
+\usepackage{color}
+	\definecolor{darkblue}{rgb}{0,0,0.8}
+	\definecolor{darkgreen}{rgb}{0,0.5,0}
+	\definecolor{darkred}{rgb}{0.8,0,0}
+
+\newcommand{\entity}[2]{[\textbf{\color{darkblue}#1}$_{se#2}$]}
+\newcommand{\signal}[2]{[\textbf{\color{darkred}#1}$_{os#2}$]}
+
+\newcommand{\nameML}{Orientation Configuration and Dimensionality Markup Language}
+\newcommand{\ML}{OCDML}
+\newcommand{\version}{Version 1.0}
+
+\newenvironment{attributes}
+{
+\begin{tabular}{|l|l|}
+    \hline \textbf{Attribute} & \textbf{Value}\\
+}
+{   \hline
+\end{tabular}
+}
+
+\newenvironment{note}
+{\list{Note:}
+ {\setlength
+  {\itemindent}
+  {\listparindent}}
+   \item[]
+   \relax}
+{\endlist}
+
+\title{\nameML\\
+{\Large \version}}
+\author{
+    Cynthia Goodman\\
+    \and
+    Jasper Phillips\\
+    \and
+    Cory Massaro\\
+    \and
+    Zachary Yocum\\
+}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents 
+
+\newpage
+
+\section{Introduction} % (fold)
+\label{sec:introduction}
+
+This document is a specification of \nameML~(\ML), a natural language annotation schema aimed at capturing the intrinsic orientation and dimensionality of spatial entities in addition to configuration relations between entities. This specification builds, in part, on ISO-Space\cite{pustejovsky_moszkowicz:2011}, an annotation standard being developed at Brandeis University for markup of spatial and spatio-temporal information.
+
+\ML~anticipates an annotation task with the goal of identifying spatially relevant entities and categorizing those entities according to certain intrinsic spatial properties. Our model presumes that there exist constraints on the intrinsic properties of spatial entities that humans rely on.\footnote{We do not suggest that these constraints are the same as those formalized in modern universal laws of physics or mathematics. Rather, we presume that these constraints belong to the set of common knowledge of human beings in line with the notion of na\"ive physics from Western philosophical and cognitive psychological traditions.} In \emph{The Design of Everyday Things}\cite{norman:2002}, cognitive scientist Donald A. Norman discusses physical objects that people interact with regularly in their daily lives in terms of ``affordances'' which are, in essence, the converse of such constraints. Adopting such terminology, \ML~is intended to provide a formal means of capturing orientational spatial affordances of spatial entities that are exploited by natural language.
+
+Examples of the kinds of spatial language that \ML~is intended to capture are listed in \cref{ex:intro_examples}.
+
+\eenumsentence{
+    \item I found a baby bird in the road at my work today.
+    \label{ex:bird}
+    \item \ldots an empty flask stood on the table beside him.
+    \label{ex:flask}
+    \item If I held the iPhone flat on its back, the way it would lay on a table \ldots
+    \label{ex:iPhone}
+}\label{ex:intro_examples}
+
+For instance, in \cref{ex:bird}, the spatial entity \emph{road} can be categorized as a 2-dimensional surface area whose intrinsic `top' affords supporting, but also as a 3-dimensional `tunnel' or 1-dimensional `path', which both afford traversal. In addition, the entity denoted by \emph{bird} can be categorized as a biped with an intrinsic `bottom' that affords being supported. Though the spatial properties of these entities are not encoded explicitly in the lexical items themselves, they are exploited when interpreting the relation introduced by the spatial preposition \emph{in}. In the case of \cref{ex:bird} it is the intrinsic `bottom' of the bipedal \emph{bird} and the intrinsic `top' surface of the \emph{road} which are selected for in the configuration. 
+
+Similarly, for \cref{ex:flask}, it is the intrinsic `bottom' surface of the \emph{flask}, taken as a 3-dimensional rectangular prism or cylinder, that is selected for by \emph{standing}, and the \emph{table}, much like the \emph{road} from the previous example, can be categorized as a 2-dimensional supporting surface whose `top' affords being stood on. Also, assuming \emph{him} can be categorized as a biped with an intrinsic `left' and `right', \emph{beside} accesses the `left' or `right' for the location of \emph{table} in a figure-ground relation between the \emph{table} and \emph{him}.
+
+In \cref{ex:iPhone}, the \emph{iPhone} can be categorized as a 3-dimensional rectangular-prism with intrinsic `left', `right', `front', `back', `top' and `bottom' surfaces. These surfaces, excluding the `top' and `bottom', afford laying. In this case, the \emph{back} surface of the \emph{iPhone} happens to be referenced explicitly, which can be classified as a 2-dimensional surface which has its own intrinsic `left', `right', `front', `back', `top', and `bottom' edges.
+% section introduction (end)
+
+\section{Goal} % (fold)
+\label{sec:goal}
+The goal of our schema is to adequately capture the intrinsic spatial  orientation and dimensionalities of spatial entities from natural language text for the purpose of making inferences about their participation in spatial relations. Our ultimate aim is, given a list of spatial entities, to be able to classify them according to the ways in which they participate within orientationally dependent spatial relations and be able to supply their `default' configuration. E.g., we would want to be able to classify hominids as entities, which possess intrinsic lefts, rights, fronts, backs, tops and bottoms, whose default configuration, when acting as a figure in a figure-ground configuration, is a vertical `bottom-to-top' relation with some supporting surface. The primary applications in spatial reasoning that \ML would be suited to are text-to-scene generation applications.
+% section goal (end)
+
+\section{Corpus Selection} % (fold)
+\label{sec:corpus_selection}
+Some corpora consisting of spatial language already exist in the form of scene descriptions for projects such as \href{http://imageclef.org/photodata}{ImageCLEF} and \href{http://lucky.cs.columbia.edu:2001/}{WordsEye}. These projects contain descriptive texts that necessarily comprise spatial information, though they are not necessarily completely natural. We may test against such data, for our annotation, we have opted to select more linguistically natural prose from highly descriptive portions of literary texts. Preliminarily, we have programatically identified and isolated stage directions and scene descriptions from dramatic works in the public domain. Such documents can easily (and legally) be accessed via \href{http://www.gutenberg.org}{Project Gutenberg}; the Library of Congress's website (\href{loc.gov}{loc.gov}) and the Internet Archive (\href{archive.org}{archive.org}) also provide large literary corpora of public domain and Creative Commons-licensed works. We are also evaluating other domains to broaden the variety our corpus.
+% section corpus_selection (end)
+
+\section{Tag Types} % (fold)
+\label{sec:tag_types}
+
+This section enumerates the inventory of \ML~tag types.
+
+\subsection{Spatial Entity} % (fold)
+\label{sub:spatial_entity}
+
+The \textsc{spatial\_entity} tag is used to capture participants in spatial relations. \ML~inherits the ISO-Space \textsc{spatial\_entity} tag which possesses \texttt{dimensionality}, \texttt{form}, \texttt{latLong}, \texttt{mod}, \texttt{countable}, \texttt{amount}, \texttt{quant}, and \texttt{scopes} attributes. \ML~extends the \textsc{spatial\_entity} tag with the following attributes: \texttt{top\_bottom}, \texttt{front\_back}, and \texttt{left\_right}. \Cref{tab:spatial_entity} enumerates the relevant ISO-Space attributes and \ML-specific attributes for the \textsc{spatial\_entity} tag.
+
+\begin{table}[h]
+\centering
+\begin{attributes}
+    \hline \texttt{id}                  & \texttt{se1}, \texttt{se2}, 
+                                          \texttt{se3}, \ldots\\
+    \hline \texttt{dimensionality}      & \textsc{point}, \textsc{line}, \textsc{area}, \textsc{volume}\\
+    \hline \texttt{mod}                 & A spatially relevant modifier\\
+    \hline \texttt{line\_type}          & \textsc{segment}, \textsc{ray}, \textsc{line}, \textsc{loop}, \textsc{other}\\
+    \hline \texttt{area\_type}          & \textsc{3-gon}, \textsc{4-gon}, \textsc{disc}, \textsc{annulus}, \textsc{other}\\
+    \hline \texttt{volume\_type}        & \textsc{tri\_prism}, \textsc{rect\_prism}, \textsc{pyramid}, \textsc{sphere}, \textsc{torus},\\
+                                        & \textsc{cylinder}, \textsc{cone}, \textsc{biped}, \textsc{quadruped}, \textsc{other}\\
+    \hline \texttt{left\_right}         & \textsc{intrinsic} or \textsc{relative}\\
+    \hline \texttt{front\_back}         & \textsc{intrinsic} or \textsc{relative}\\
+    \hline \texttt{top\_bottom}         & \textsc{intrinsic} or \textsc{relative}\\
+    \hline \texttt{c-sec\_axis}        & \textsc{left\_right} or \textsc{front\_back} or \textsc{top\_bottom}\\
+\end{attributes}
+\caption{Attributes for \textsc{spatial\_entity}}
+\label{tab:spatial_entity}
+\end{table}
+
+\paragraph{\texttt{dimensionality}} % (fold)
+\label{par:dimensionality}
+This attribute designates the number of spatial dimensions occupied by the entity. Under our model, we are taking spatial entities to be point-sets, so a value of \textsc{point} indicates a 0-dimensional entity consisting of a single point with no edges or surfaces. A value of \textsc{line} indicates a 1-dimensional entity with up to two bounding points with a single edge and no surfaces. A value of \textsc{area} indicates a 2-dimensional entity with some number of bounding edges, points and two surfaces. A value of \textsc{volume} indicates a 3-dimensional entity with at least one surface and possibly a number of bounding edges and points.
+% paragraph dimensionality (end)
+
+\paragraph{\texttt{line\_type}} % (fold)
+\label{par:line_type}
+This attribute is used to classify the entity based on a set of 1-dimensional primitive types.
+% paragraph line_type (end)
+
+\paragraph{\texttt{area\_type}} % (fold)
+\label{par:area_type}
+This attribute is used to classify the entity based on a set of 2-dimensional primitive types.
+% paragraph area_type (end)
+
+\paragraph{\texttt{volume\_type}} % (fold)
+\label{par:volume_type}
+This attribute is used to classify the entity based on a set of 3-dimensional primitive types.
+% paragraph volume_type (end)
+
+\paragraph{\texttt{left\_right}} % (fold)
+\label{par:left_right}
+This attribute is a bit that indicates whether the entity possesses an intrinsic axis of orientation whose polar extremes are `left' and `right'. One heuristic which may help to determine whether a spatial entity possesses an intrinsic \texttt{left\_right} axis is the \emph{linear array test}. The \emph{linear array test} can be used by asking ``Could several of these entities be arranged in a 1-dimensional array such that the `left' boundary of each entity in the arry abuts the `right' boundary of another?'' If the answer is ``no'', then the \texttt{left\_right} attribute would be \textsc{relative}; if ``yes'', the value would be \textsc{intrinsic}.
+% paragraph left_right (end)
+
+\paragraph{\texttt{front\_back}} % (fold)
+\label{par:front_back}
+This attribute is similar to the \texttt{left\_right} attribute. A value of \textsc{intrinsic} indicates the entity possesses an intrinsic axis of orientation whose polar extremes are `front' and `back'. A value of \textsc{relative} indicates the opposite. The \emph{linear array test} heuristic can be modified for this case such that arrangement is `front-to-back'.
+% paragraph front_back (end)
+
+\paragraph{\texttt{top\_bottom}} % (fold)
+\label{par:top_bottom}
+This attribute is similar, again, to both \texttt{left\_right} and \texttt{front\_back}. A value of \textsc{intrinsic} indicates the entity possesses an intrinsic axis of orientation whose polar extremes are `top' and `bottom'. The linear-array-test can be applied for this attribute as well to test if the entities can be stacked `top-to-bottom'.
+% paragraph top_bottom (end)
+
+\vspace{\parsep}
+
+\Cref{ex:spatial_entities} lists examples of extents which would be appropriate candidates for the \textsc{spatial\_entity} tag:
+
+\eenumsentence{
+    \item \ldots a baby \entity{bird}{1} in the \entity{road}{2} at my work today.
+    \label{ex:bird_road}
+    \item \ldots an empty \entity{flask}{3} stood on the \entity{table}{4} beside \entity{him}{5}.
+    \label{ex:flast_table}
+    \item If \entity{I}{6} held the \entity{iPhone}{7} flat on its \entity{back}{8}, the way it would lay on a \entity{table}{9} \ldots
+    \label{ex:iPhone_back}
+}\label{ex:spatial_entities}
+% subsection spatial_entity (end)
+
+\subsection{Orientation Signal} % (fold)
+\label{sub:orientation_signal}
+The \textsc{orientation\_signal} tag is used to capture additional information about the orientation of a \textsc{spatial\_entity} that is not contributed by the lexical item associated with the \textsc{spatial\_entity} extent itself.  \textsc{orientation\_signal} tags trigger \textsc{configuration\_link} tags, which are discussed in \cref{sub:configuration_link}. \Cref{tab:orientation_signal} enumerates the attributes for this tag type and \cref{ex:orientation_signals} lists examples of appropriate extents that it is intended to capture. We are currently investigating whether it is preferable to extend the ISO-Space \textsc{spatial\_signal} tag rather than establish this tag type.
+
+\begin{table}[h]
+\centering
+\begin{attributes}
+    \hline \texttt{id}                  & \texttt{os1}, \texttt{os2}, 
+                                          \texttt{os3}, \ldots\\
+    \hline \texttt{orientation\_type}   & \textsc{latitudinal}, \textsc{longitudinal}, \textsc{vertical}, \textsc{other}\\
+\end{attributes}
+\caption{Attributes for \textsc{spatial\_entity}}
+\label{tab:orientation_signal}
+\end{table}
+
+\paragraph{\texttt{orientation\_type}} % (fold)
+\label{par:orientation_type}
+The \texttt{orientation\_type} attribute is used to identify the way in which the signal informs the relation between spatial entities. This attribute is used to specify which axis of orientation of the figure entity is exploited for orienting the figure relative to the ground. \textsc{latidunial} refers to the left-right axis, \textsc{longitudinal} refers to the front-back axis, and \textsc{vertical} refers to the top-bottom axis. The additional value of \textsc{other} is supplied for signals which establish an orientation not based on the three previously defined axes of orientation.
+% paragraph orientation_type (end)
+
+Examples of extents captured by the the \textsc{orientation\_signal} tag are given in \cref{ex:orientation_signals}:
+
+\eenumsentence{
+    \item \ldots an empty flask \signal{stood}{1} on the table beside him.
+    \label{ex:stood}
+    \item If I held the iPhone \signal{flat}{2} on its back, the way it would \signal{lay}{3} on a table \ldots
+    \label{ex:flat}
+}\label{ex:orientation_signals}
+
+% subsection orientation_signal (end)
+% section tag_types (end)
+
+\section{Link Types} % (fold)
+\label{sec:link_types}
+
+\subsection{Configuration Link} % (fold)
+\label{sub:configuration_link}
+The \textsc{configuration\_link} relates two \textsc{spatial\_entity} tags. The attributes are enumerated in \cref{tab:configuration_link}, though our model for configuration relations is still developing, and we would like to ensure the highest degree of interoperability with the existing treatment of orientation relations within ISO-Space. The combination of the \texttt{figure\_config} and \texttt{ground\_config} attributes are used to specify the configuration between the participating figure and ground entitities. The \texttt{figure\_config} attribute is compulsory whereas the \texttt{ground\_config} attribute is optional;  \cref{ex:blah} shows an optional \texttt{ground\_config} whereas in \cref{ex:blag} the \texttt{ground\_config} is requisite. The \texttt{coercion} attribute can be used to indicate that the dimensionality of the figure entity is coerced to that of the ground or vice versa. The \texttt{direction} attribute is used to indicate the asymmetrical directionality of the relation in terms of figure-to-ground or ground-to-figure. 
+
+\iffalse
+\eenumsentence{
+    \item The man saw the dog through the window.
+    \label{ex:blah}
+    \item The man saw the dog staring at him through the window.
+    \label{ex:blag}
+}\label{ex:configuration_links}
+\fi
+%figure orientation must be explicit. Ground orientation is optional.
+
+\begin{table}[h]
+\centering
+\begin{attributes}
+    \hline \texttt{id}                  & \texttt{cl1}, \texttt{cl2}, 
+                                          \texttt{cl3}, \ldots\\
+    \hline \texttt{figure\_config}      & \textsc{left}, \textsc{right}, \textsc{front}, \textsc{back}, \textsc{top}, \textsc{bottom}, \textsc{any}\\
+    \hline \texttt{ground\_config}      & \textsc{left}, \textsc{any}, \textsc{front}, \textsc{back}, \textsc{top}, \textsc{bottom}, \textsc{other}\\
+    \hline \texttt{dim\_coercion}            & \textsc{figure}, \textsc{ground}, or \textsc{none}\\
+    \hline \texttt{trigger}             & An ID of a \texttt{orientation\_signal} tag that triggers the link\\
+    \hline \texttt{direction}           & \textsc{figure\_ground}, \textsc{ground\_figure}\\
+\end{attributes}
+\caption{Attributes for \textsc{configuration\_link}}
+\label{tab:configuration_link}
+\end{table}
+
+% subsection configuration_link (end)
+% section link_types (end)
+
+\break
+
+\bibliographystyle{plain}
+\bibliography{OCDML-spec}
+
+\end{document}
