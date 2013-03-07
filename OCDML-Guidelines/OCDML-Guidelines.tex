@@ -216,40 +216,89 @@ This attribute is intended to identify the salient cross-sectional axis for 3-di
 
 % subsection spatial_entity (end)
 
-\subsection{Spatial Signal Tag} % (fold)
-\label{sub:spatial_signal_tag}
-% Introduce the spatial signal tag here.
-% subsection spatial_signal_tag (end)
+\subsection{Orientation Signal Tag} % (fold)
+\label{sub:orientation_signal_tag}
 
-\subsubsection{Spatial Signal Extents} % (fold)
-\label{ssub:spatial_signal_extents}
-% Explain what kinds of lexical items should be captured with the spatial signal tag here.
-% subsubsection spatial_signal_extents (end)
+An orientation signal is taken to be some word or phrase that restricts the potential configurational interpretations of a spatial entity or group of spatial entities. Orientation signals always trigger configuration links, so if an annotator tags a orientation signal, then they are committing to also creating a configuration link. 
 
-\subsubsection{Spatial Signal Attributes} % (fold)
-\label{ssub:spatial_signal_attributes}
+% @Cory - We would want every orientation signal to trigger a config link, no?
+
+Examples of the former type are enumerated in \cref{ex:non_trigger_examples}.
+
+\eenumsentence{
+    \item On the large table \emph{stands} a lighted lamp.
+    \label{ex:lamp_stands}
+    \item \ldots \emph{lies} down on sofa.
+    \label{ex:lies_sofa}
+}\label{ex:non_trigger_examples}
+
+Here, in \cref{ex:lamp_stands}, the signal \emph{stands} serves to adumbrate in what configuration the lamp is arranged individually. Because the lamp \emph{stands} rather than, e.g., \emph{lies down}, one immediately recognizes that the lamp is situated in such a way that its cross-sectional, top-bottom axis is aligned vertically.
+
+Likewise, in \cref{ex:lies_sofa}, the signal \emph{lies} indicates that the entity---in this case an implicit spatial entity, which would need to be created via a non-consuming extent tag---is configured in such a way that its salient cross-sectional axis is horizontally aligned. 
+
+Examples of the latter type are enumerated in \cref{ex:trigger_examples}.
+
+\eenumsentence{
+	\item MAURICE and HENRIETTE are in evening dress and sit facing each other \ldots
+	\label{ex:sit_facing}
+	\item In the foreground a table is spread, with flowers in the centre, bowls full of fruit, wine in decanters, oysters on platters \ldots
+	\label{ex:foreground_table}
+}\label{ex:trigger_examples}
+
+%In the foreground a table is spread, with flowers [in] the [centre], bowls [full] of fruit, wine [in] decanters, oysters [on] platters ...; I am not sure about the annotation of "in the centre" above, "full of," or "on" above. I am going to leave this explanation blank for the moment.
+
+\subsubsection{Orientation Signal Extents} % (fold)
+\label{ssub:orientation_signal_extents}
+% Explain what kinds of lexical items should be captured with the orientation signal tag here.
+In general, whereas orientation entities will be nominals, orientation signals will belong to other parts of speech, e.g., verbs, prepositions, adjectives, and adverbs. For phrasal verbs, take only the head verb as the extent for the orientation signal.
+
+% subsubsection orientation_signal_extents (end)
+
+\subsubsection{Orientation Signal Attributes} % (fold)
+\label{ssub:orientation_signal_attributes}
+
+The orientation signal tag has one attribute that annotators need to consider, as given in \cref{tab:orientation_signal}:
 
 \begin{table}[h]
-\begin{center}
-\begin{tabular}{|l|l|}
-    \hline \textbf{Attribute}   & \textbf{Value}\\
-    \hline \texttt{id}          & \texttt{ss1}, \texttt{ss2}, \texttt{ss3}, \ldots\\
-    \hline \texttt{attribute1}  & Takes a value\\
-    \hline
-\end{tabular}
-\caption{\textsc{spatial\_signal} Attributes}
-\label{tab:spatial_signal}
-\end{center}
+\centering
+\begin{attributes}
+    \hline \texttt{id}                  & \texttt{os1}, \texttt{os2}, 
+                                          \texttt{os3}, \ldots\\
+    \hline \texttt{orientation\_type}   & \textsc{latitudinal}, \textsc{longitudinal}, \textsc{lateral}, \textsc{vertical}, \textsc{other}\\
+\end{attributes}
+\caption{Attributes for \textsc{orientation\_signal}}
+\label{tab:orientation_signal}
 \end{table}
+
+\paragraph{\texttt{orientation\_type}} % (fold)
+\label{par:orientation_type}
+The \texttt{orientation\_type} attribute specifies an axis of orientation that is accessed by the orientation signal. It is employed to indicate how an entity is configured in an absolute sense (i.e., independently of any specific ground). The \textsc{latitudinal} value refers to the left-right axis, the \textsc{longitudinal} to the front-back axis, and the \textsc{vertical} to the top-bottom axis. We supply also the \textsc{lateral} value for cases in which a horizontal axis is accessed, but there is no distinction between the left-right and the front-back. The value of \textsc{other} should be selected for such cases as specify a configuration not covered by the remaining values.
 
 % Go through each attribute, in depth, here.
 
 % subsubsection other_tag_attributes (end)
 
-\subsubsection{Spatial Signal Examples} % (fold)
-\label{ssub:spatial_signal_examples}
+\subsubsection{Orientation Signal Examples} % (fold)
+\label{ssub:orientation_signal_examples}
 
-% subsubsection spatial_signal_examples (end)
+Provided below, in \cref{ex:orientation_signals}, are sample annotations for extents to be tagged as \textsc{orientation\_signal}:
+
+\eenumsentence{
+    \item On the large table \signal{stands}{1} a lighted lamp.
+    \label{ex:annot_stands}
+    \item \ldots \signal{lies}{2} down on sofa.
+    \label{ex:annot_lies}
+    \item MAURICE and HENRIETTE are in evening dress and \signal{sit}{3} \signal{facing}{4} each other \ldots
+	\label{ex:annot_sit_facing}
+	\item In the foreground a table is spread, with flowers \signal{in}{5} the centre, bowls \signal{full}{6} of fruit, wine \signal{in}{7} decanters, oysters \signal{on}{8} platters \ldots
+	\label{ex:annot_table}
+}\label{ex:orientation_signals}
+
+% We need to talk about how we are not actually capturing containment relations. E.g, for \emph{fruit in the bowl} and \emph{wine in decanters}, the $contains{container,containee}$ is a topological relation, distinct from the orientation relations we are capturing with configuration links, though there may be some conflation of the two. ISO-Space classifies \textsc{spatial\_signal} tags as topological, orientational, or both, but since OCDML is focused strictly on orientation, the cases where conflation does occur are going to be difficult.
+
+% subsubsection orientation_signal_examples (end)
+
+% subsection orientation_signal_tag (end)
 
 % section extent_tags (end)
 
