@@ -1,0 +1,71 @@
+\section{Link Types} % (fold)
+\label{sec:link_types}
+
+\subsection{Configuration Link Tag} % (fold)
+\label{sub:configuration_link}
+The \textsc{configuration\_link} relates two \textsc{spatial\_entity} tags. For each \textsc{configuration\_link}, one \textsc{spatial\_entity} will be referred to as the figure in the relation, and the other will be referred to as the ground. The figure is the spacial entity that moves or is located in relation to the ground. Similarly, the ground is the spacial entity against which the figure moves, or in relation to which the figure is located. In \cref{ex:cat}, 'cat' is the figure and 'table' is the ground, since the cat is located in relation to the table. In \cref{ex:man}, 'man' is the figure and 'street' is the ground, since the man is moving in relation to the street. The figure is typically the smaller, more movable object, but this is not always the case, as can be seen in \cref{ex:house}. In English, the figure tends to come before the ground in the sentence. While this is a helpful fact, it should not be the sole basis of your annotation decisions. 
+ 
+% Cynthia: When creating the link, always link from the figure to the ground? This is related to my question about the direction attribute.
+
+\eenumsentence{
+    \item The cat is sitting on the table.
+    \label{cat}
+    \item The man walked down the street.
+    \label{man}
+    \item The house landed on the witch.
+    \label{house}
+    \item \ldots sitting at the desk was a beautiful woman.
+    \label{lady}
+}\label{ex:fig_ground_examples}
+
+
+% subsection configuration_link (end)
+
+
+\subsubsection{Configuration Link Attributes} % (fold)
+\label{ssub:configuration_link_attributes}
+
+The attributes are enumerated in \cref{tab:configuration_link}. 
+
+\begin{table}[h]
+\centering
+\begin{attributes}
+    \hline \texttt{id}                  & \texttt{cl1}, \texttt{cl2}, 
+                                          \texttt{cl3}, \ldots\\
+    \hline \texttt{figure\_config}      & \textsc{left}, \textsc{right}, \textsc{front}, \textsc{back}, \textsc{top}, \textsc{bottom}, \textsc{other}\\
+    \hline \texttt{ground\_config}      & \textsc{left}, \textsc{right}, \textsc{front}, \textsc{back}, \textsc{top}, \textsc{bottom}, \textsc{other}\\
+    \hline \texttt{coercion}            & \textsc{figure}, \textsc{ground}, or \textsc{none}\\
+    \hline \texttt{trigger}             & An ID of a \texttt{orientation\_signal} tag that triggers the link\\
+    \hline \texttt{direction}           & \textsc{figure\_ground}, \textsc{ground\_figure}\\
+\end{attributes}
+\caption{Attributes for \textsc{configuration\_link}}
+\label{tab:configuration_link}
+\end{table}
+
+The combination of the \texttt{figure\_config} and \texttt{ground\_config} attributes are used to specify the configuration between the participating figure and ground entities. Looking back at \cref{ex:cat}, the configuration of the entities involved is such that the bottom of the cat is on the top of the table. The \texttt{figure\_config} attribute is compulsory whereas the ground config attribute is optional; \cref{ex:ground} shows an optional \texttt{ground\_config} whereas in \cref{ex:no_ground} the \texttt{ground\_config} is requisite.
+
+\eenumsentence{
+    \item An example with a required ground.
+    \label{ground}
+    \item An example with no ground required.
+    \label{no_ground}
+}\label{ex:ground_requirement}
+
+\texttt{dim_coercion}   This attribute can be used to indicate that the dimensionality of the figure entity is coerced to that of the ground or vice versa. Consider \cref{ex:sun}. While we know that the sun is a 3-dimensional sphere, in this example the sun is being coerced into 2-dimensions by the ground, namely the sky. This type of coercion does not take place in \cref{ex:earth}, since both the earth and the sun are 3-dimensional objects moving in 3-dimensional space.
+
+\eenumsentence{
+    \item The sun travels across the sky.
+    \label{sun}
+    \item The earth rotates around the sun.
+    \label{earth}
+}\label{ex:coercion}
+
+\texttt{trigger}   This attribute takes the ID value of the \texttt{orientation\_signal} that triggered the \texttt{configuration\_link}.  Since creating an \texttt{orientation\_signal} automatically commits you to creating a \texttt{configuration\_link}, each link is required to have a value for the \texttt{trigger} attribute.  
+
+\texttt{direction}   This attribute is used to indicate the asymmetrical directionality of the relation in terms of figure-to-ground or ground-to-figure. 
+%Cynthia: remind me again why we decided to use this instead of specifying that the annotator always tag the figure first and the ground second, regardless of word order? I thought we had decided to do the latter, but now I'm unsure. How would we annotate the sentence "… and sitting in the chair was a beautiful lady"?
+
+
+
+% subsubsection configuration_link_attributes (end)
+% section link_types (end)
