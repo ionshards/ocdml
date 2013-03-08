@@ -23,7 +23,7 @@
 
 \usepackage{graphicx}
 
-\usepackage[top=1in, left=1in]{geometry}
+\usepackage[top=1in, left=1in, right=1in]{geometry}
 
 \usepackage{color}
 	\definecolor{darkblue}{rgb}{0,0,0.8}
@@ -204,12 +204,12 @@ This attribute is similar, again, to both \texttt{left\_right} and \texttt{front
 
 \paragraph{\texttt{c-sec\_axis}} % (fold)
 \label{par:c_sec_axis}
-This attribute is intended to identify the salient cross-sectional axis of the spatial entity. Only entities with dimensionality value of \textsc{volume} should have a \texttt{c-sec\_axis} value specified. For \textsc{point}, \textsc{line}, and \textsc{area} type entities, the \texttt{c-sec\_axis} attribute should be left blank. The point of specifying the cross-sectional axis is to distinguish between spatial entities such as a typical twelve-ounce \emph{can} of soda, and a military-style \emph{submarine} that are classified as cylindrical primitive types, and both possess intrinsic left, right, front, back, top, and bottom boundaries, yet they possess salient cross-sectional axes do not correspond to one another. For the soda \emph{can}, the salient cross-sectional axis---the axis along which the 2-dimensional circular base would be extruded---is the \textsc{top\_bottom} axis. For the \emph{submarine}, contrastively, it is the \textsc{front\_back} axis which corresponds to the cross-sectional axis along which the cylindrical primitive form would be extruded. Another way to conceptualize the salient cross-sectional axis would be to imagine slicing the entity into pieces as if to skewer the pieces like a kebab. Under this conceptualization, the axis that is aligned with the imaginary kebab is the axis which should be filled for the \texttt{c-sec\_axis} attribute.
+This attribute is intended to identify the salient cross-sectional axis of the spatial entity. Only entities with a \texttt{dimensionality} value of \textsc{volume}, and at least one intrinsic axis of orientation, should have a \texttt{c-sec\_axis} value specified. For \textsc{point}, \textsc{line}, and \textsc{area} type entities, the \texttt{c-sec\_axis} attribute should be left blank. The point of specifying the cross-sectional axis is to distinguish between spatial entities such as a typical twelve-ounce \emph{can} of soda, and a military-style \emph{submarine}. Each of these entities would be classified as volumetric, cylindrical primitive types, and both possess intrinsic left, right, front, back, top, and bottom boundaries, yet they possess salient cross-sectional axes that do not correspond to one another. For the soda \emph{can}, the salient cross-sectional axis---the axis along which the 2-dimensional circular base would be extruded---is the \textsc{top\_bottom} axis. For the \emph{submarine}, contrastively, it is the \textsc{front\_back} axis which corresponds to the cross-sectional axis along which the cylindrical primitive form would be extruded. \Cref{fig:c-sec_axes} illustrates this distinction. Another way to conceptualize the salient cross-sectional axis would be to imagine slicing the entity into pieces as if to skewer the pieces with a kebab. Under this conceptualization, the axis that is aligned with the imaginary kebab is the axis which should be filled for the \texttt{c-sec\_axis} attribute.
 
 \begin{figure}[h]
-    \centering
     \scalebox{.20}{
         \includegraphics{sodacan.png}
+        \hfill
         \includegraphics{submarine.png}
     }\caption{Salient Cross-sectional Axes}
     \label{fig:c-sec_axes}
@@ -230,7 +230,7 @@ This attribute is intended to identify the salient cross-sectional axis of the s
             (\texttt{id}=\texttt{se1},
             \texttt{dimensionality}=\textsc{volume},
             \texttt{mod}=``large'',
-            \texttt{line\_type}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
             \texttt{area\_type}=\textsc{4-gon},
             \texttt{volume\_type}=\textsc{rect\_prism},
             \texttt{left\_right}=\textsc{relative},\\
@@ -285,7 +285,7 @@ This attribute is intended to identify the salient cross-sectional axis of the s
             \texttt{area\_type}=$\varnothing$,
             \texttt{volume\_type}=\textsc{biped},
             \texttt{left\_right}=\textsc{intrinsic},
-            \texttt{front\_back}=\textsc{intrinsic},
+            \texttt{front\_back}=\textsc{intrinsic},\\
             \texttt{top\_bottom}=\textsc{intrinsic},
             \texttt{c-sec\_axis}=\textsc{top\_bottom})\vspace{0.5em}\\
         \textsc{spatial\_entity}
@@ -296,7 +296,7 @@ This attribute is intended to identify the salient cross-sectional axis of the s
             \texttt{area\_type}=$\varnothing$,
             \texttt{volume\_type}=\textsc{biped},
             \texttt{left\_right}=\textsc{intrinsic},
-            \texttt{front\_back}=\textsc{intrinsic},
+            \texttt{front\_back}=\textsc{intrinsic},\\
             \texttt{top\_bottom}=\textsc{intrinsic},
             \texttt{c-sec\_axis}=\textsc{top\_bottom})        
         \label{ex:maurice_henriette}
