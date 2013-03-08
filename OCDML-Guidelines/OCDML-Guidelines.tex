@@ -1,6 +1,8 @@
 \documentclass[11pt]{article}
 
-\usepackage{amssymb} % provides proper ∅ symbol
+\usepackage{graphicx} % provides for adding external images/PDFs for figures
+
+\usepackage{amssymb} % provides proper null symbol
 
 \usepackage{hyperref}
     \hypersetup{colorlinks,breaklinks,
@@ -203,6 +205,16 @@ This attribute is similar, again, to both \texttt{left\_right} and \texttt{front
 \paragraph{\texttt{c-sec\_axis}} % (fold)
 \label{par:c_sec_axis}
 This attribute is intended to identify the salient cross-sectional axis of the spatial entity. Only entities with dimensionality value of \textsc{volume} should have a \texttt{c-sec\_axis} value specified. For \textsc{point}, \textsc{line}, and \textsc{area} type entities, the \texttt{c-sec\_axis} attribute should be left blank. The point of specifying the cross-sectional axis is to distinguish between spatial entities such as a typical twelve-ounce \emph{can} of soda, and a military-style \emph{submarine} that are classified as cylindrical primitive types, and both possess intrinsic left, right, front, back, top, and bottom boundaries, yet they possess salient cross-sectional axes do not correspond to one another. For the soda \emph{can}, the salient cross-sectional axis---the axis along which the 2-dimensional circular base would be extruded---is the \textsc{top\_bottom} axis. For the \emph{submarine}, contrastively, it is the \textsc{front\_back} axis which corresponds to the cross-sectional axis along which the cylindrical primitive form would be extruded. Another way to conceptualize the salient cross-sectional axis would be to imagine slicing the entity into pieces as if to skewer the pieces like a kebab. Under this conceptualization, the axis that is aligned with the imaginary kebab is the axis which should be filled for the \texttt{c-sec\_axis} attribute.
+
+\begin{figure}[h]
+    \centering
+    \scalebox{.20}{
+        \includegraphics{sodacan.png}
+        \includegraphics{submarine.png}
+    }\caption{RCC8 Relations}
+    \label{fig:Salient Cross-sectional Axes}
+\end{figure}
+
 % paragraph c_sec_axis (end)
 
 % subsubsection spatial_entity_attributes (end)
