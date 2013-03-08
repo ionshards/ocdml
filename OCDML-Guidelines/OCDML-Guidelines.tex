@@ -1,5 +1,7 @@
 \documentclass[11pt]{article}
 
+\usepackage{amssymb} % provides proper ∅ symbol
+
 \usepackage{hyperref}
     \hypersetup{colorlinks,breaklinks,
                 urlcolor=[rgb]{0,0,0.8},
@@ -147,7 +149,7 @@ This attribute is used to designate the number of spatial dimensions occupied by
 If a value of \textsc{point} is specified for a \textsc{spatial\_entity} tag, then it is not necessary to specify the other attributes, since they are not relevant to 0-dimensional entities. If a value of \textsc{line} is specified, then the \texttt{line\_type} attribute must be filled. If a value of \textsc{area} is specified then at least the \texttt{area\_type} attribute must be filled, and the \texttt{line\_type} could be filled with whatever would be appropriate if the entity were coerced to a line for the purposes of participating in a relation. Finally, if the the \textsc{volume} type is specified, then at least the \texttt{volume\_type} attribute must also be filled, and the \texttt{area\_type} and \texttt{line\_type} attributes might also be filled.
 
 \begin{note}
-Although annotators must choose a single value for the \texttt{dimensionality} attribute, spatial entities may be coerced to different dimensionalities depending on the spatial relations they are participating in. E.g., a \emph{door} might be considered volumetric, however it may be coerced to 2-dimensions when participating in some relationships. In that case, it would be appropriate to fill both the \texttt{volume\_type} and \texttt{area\_type} attributes. Refer to \Cref{sub:configuration_link} for more discussion of this type of coercion.
+Although annotators must choose a single value for the \texttt{dimensionality} attribute, spatial entities may be coerced to different dimensionalities depending on the spatial relations they are participating in. E.g., a \emph{door} might be considered volumetric, however it may be coerced to 2-dimensions when participating in some relationships. In that case, it would be appropriate to fill both the \texttt{volume\_type} and \texttt{area\_type} attributes. Refer to \cref{sub:configuration_link} for more discussion of this type of coercion.
 \end{note}
 
 % paragraph dimensionality (end)
@@ -200,7 +202,7 @@ This attribute is similar, again, to both \texttt{left\_right} and \texttt{front
 
 \paragraph{\texttt{c-sec\_axis}} % (fold)
 \label{par:c_sec_axis}
-This attribute is intended to identify the salient cross-sectional axis for 3-dimensional entities. The point of specifying the cross-sectional axis is to distinguish between spatial entities such as a typical twelve-ounce \emph{can} of soda, and a military-style \emph{submarine} that are both cylindrical, and both possess intrinsic left, right, front, back, top, and bottom boundaries, yet whose salient cross-sectional axes do not correspond to one another. For the soda \emph{can}, the salient cross-sectional axis---the axis along which the 2-dimensional circular base would be extruded---is the \textsc{top\_bottom} axis. For the \emph{submarine}, contrastively, it is the \textsc{front\_back} axis which corresponds to the cross-sectional axis along which the cylindrical primitive form would be extruded. Another way to conceptualize the salient cross-sectional axis would be to imagine slicing the entity into pieces as if to skewer the pieces like a kebab. Under this conceptualization, the axis that is aligned with the imaginary kebab is the axis which should be filled for the \texttt{c-sec\_axis} attribute.
+This attribute is intended to identify the salient cross-sectional axis of the spatial entity. Only entities with dimensionality value of \textsc{volume} should have a \texttt{c-sec\_axis} value specified. For \textsc{point}, \textsc{line}, and \textsc{area} type entities, the \texttt{c-sec\_axis} attribute should be left blank. The point of specifying the cross-sectional axis is to distinguish between spatial entities such as a typical twelve-ounce \emph{can} of soda, and a military-style \emph{submarine} that are classified as cylindrical primitive types, and both possess intrinsic left, right, front, back, top, and bottom boundaries, yet they possess salient cross-sectional axes do not correspond to one another. For the soda \emph{can}, the salient cross-sectional axis---the axis along which the 2-dimensional circular base would be extruded---is the \textsc{top\_bottom} axis. For the \emph{submarine}, contrastively, it is the \textsc{front\_back} axis which corresponds to the cross-sectional axis along which the cylindrical primitive form would be extruded. Another way to conceptualize the salient cross-sectional axis would be to imagine slicing the entity into pieces as if to skewer the pieces like a kebab. Under this conceptualization, the axis that is aligned with the imaginary kebab is the axis which should be filled for the \texttt{c-sec\_axis} attribute.
 % paragraph c_sec_axis (end)
 
 % subsubsection spatial_entity_attributes (end)
@@ -208,9 +210,176 @@ This attribute is intended to identify the salient cross-sectional axis for 3-di
 \subsubsection{Spatial Entity Examples} % (fold)
 \label{ssub:spatial_entity_examples}
 
+\textsc{spatial\_entity} tag extents have been identified in \Cref{ex:spatial_entity} followed by pseudo-XML annotations for each tag's attributes have been provided.\footnote{The symbol $\varnothing$ is used in these examples to explicitly indicate an empty, or unspecified value.}
+
 \eenumsentence{
-    \item % Need to fill in examples
+    \item On the large \entity{table}{1} stands a lighted \entity{lamp}{2}.     \vspace{0.5em}\\   
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se1},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=``large'',
+            \texttt{line\_type}=$\varnothing$,
+            \texttt{area\_type}=\textsc{4-gon},
+            \texttt{volume\_type}=\textsc{rect\_prism},
+            \texttt{left\_right}=\textsc{relative},\\
+            \texttt{front\_back}=\textsc{relative},
+            \texttt{top\_bottom}=\textsc{intrinsic},
+            \texttt{c-sec\_axis}=\textsc{top\_bottom})\vspace{0.5em}\\
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se2},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
+            \texttt{area\_type}=\textsc{disc},
+            \texttt{volume\_type}=\textsc{cylinder},
+            \texttt{left\_right}=\textsc{relative},\\
+            \texttt{front\_back}=\textsc{relative},
+            \texttt{top\_bottom}=\textsc{intrinsic},
+            \texttt{c-sec\_axis}=\textsc{top\_bottom})
+        \label{ex:table_lamp}
+    \item \entity{}{0} Lies down on \entity{sofa}{3}.
+        \begin{note}
+            In this example, \texttt{se0} is a non-consuming \textsc{spatial\_entity} tag that is configured relative to the \emph{sofa}.
+        \end{note}
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se0},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
+            \texttt{area\_type}=$\varnothing$,
+            \texttt{volume\_type}=$\varnothing$,
+            \texttt{left\_right}=$\varnothing$,
+            \texttt{front\_back}=$\varnothing$,\\
+            \texttt{top\_bottom}=\textsc{intrinsic},
+            \texttt{c-sec\_axis}=\textsc{top\_bottom})\vspace{0.5em}\\
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se3},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
+            \texttt{area\_type}=\textsc{4-gon},
+            \texttt{volume\_type}=\textsc{rect\_prism},
+            \texttt{left\_right}=\textsc{intrinsic},\\
+            \texttt{front\_back}=\textsc{intrinsic},
+            \texttt{top\_bottom}=\textsc{intrinsic},
+            \texttt{c-sec\_axis}=\textsc{left\_right})
+        \label{ex:sofa}
+	\item \entity{MAURICE}{4} and \entity{HENRIETTE}{5} are in evening dress and sit facing each other \ldots\vspace{0.5em}\\
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se4},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
+            \texttt{area\_type}=$\varnothing$,
+            \texttt{volume\_type}=\textsc{biped},
+            \texttt{left\_right}=\textsc{intrinsic},
+            \texttt{front\_back}=\textsc{intrinsic},
+            \texttt{top\_bottom}=\textsc{intrinsic},
+            \texttt{c-sec\_axis}=\textsc{top\_bottom})\vspace{0.5em}\\
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se5},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
+            \texttt{area\_type}=$\varnothing$,
+            \texttt{volume\_type}=\textsc{biped},
+            \texttt{left\_right}=\textsc{intrinsic},
+            \texttt{front\_back}=\textsc{intrinsic},
+            \texttt{top\_bottom}=\textsc{intrinsic},
+            \texttt{c-sec\_axis}=\textsc{top\_bottom})        
+        \label{ex:maurice_henriette}
+    \item In the foreground a \entity{table}{6} is spread, with \entity{flowers}{7} in the centre, \entity{bowls}{8} full of \entity{fruit}{9}, \entity{wine}{10} in \entity{decanters}{11}, \entity{oysters}{12} on \entity{platters}{13} \ldots\vspace{0.5em}\\
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se6},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
+            \texttt{area\_type}=\textsc{4-gon},
+            \texttt{volume\_type}=\textsc{rect\_prism},
+            \texttt{left\_right}=\textsc{relative},\\
+            \texttt{front\_back}=\textsc{relative},
+            \texttt{top\_bottom}=\textsc{intrinsic},
+            \texttt{c-sec\_axis}=\textsc{top\_bottom})\vspace{0.5em}\\
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se7},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
+            \texttt{area\_type}=$\varnothing$,
+            \texttt{volume\_type}=\textsc{other},
+            \texttt{left\_right}=\textsc{relative},\\
+            \texttt{front\_back}=\textsc{relative},
+            \texttt{top\_bottom}=\textsc{intrinsic},
+            \texttt{c-sec\_axis}=\textsc{top\_bottom})\vspace{0.5em}\\
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se8},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
+            \texttt{area\_type}=\textsc{disc},
+            \texttt{volume\_type}=\textsc{other},
+            \texttt{left\_right}=\textsc{relative},\\
+            \texttt{front\_back}=\textsc{relative},
+            \texttt{top\_bottom}=\textsc{intrinsic},
+            \texttt{c-sec\_axis}=\textsc{top\_bottom})\vspace{0.5em}\\
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se9},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
+            \texttt{area\_type}=$\varnothing$,
+            \texttt{volume\_type}=\textsc{other},
+            \texttt{left\_right}=\textsc{relative},\\
+            \texttt{front\_back}=\textsc{relative},
+            \texttt{top\_bottom}=\textsc{relative},
+            \texttt{c-sec\_axis}=$\varnothing$)\vspace{0.5em}\\
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se10},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
+            \texttt{area\_type}=$\varnothing$,
+            \texttt{volume\_type}=\textsc{other},
+            \texttt{left\_right}=\textsc{relative},\\
+            \texttt{front\_back}=\textsc{relative},
+            \texttt{top\_bottom}=\textsc{relative},
+            \texttt{c-sec\_axis}=$\varnothing$)\vspace{0.5em}\\
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se11},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
+            \texttt{area\_type}=\textsc{disc},
+            \texttt{volume\_type}=\textsc{other},
+            \texttt{left\_right}=\textsc{relative},\\
+            \texttt{front\_back}=\textsc{relative},
+            \texttt{top\_bottom}=\textsc{intrinsic},
+            \texttt{c-sec\_axis}=\textsc{top\_bottom})\vspace{0.5em}\\
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se12},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
+            \texttt{area\_type}=$\varnothing$,
+            \texttt{volume\_type}=\textsc{other},
+            \texttt{left\_right}=\textsc{intrinsic},\\
+            \texttt{front\_back}=\textsc{intrinsic},
+            \texttt{top\_bottom}=\textsc{intrinsic},
+            \texttt{c-sec\_axis}=\textsc{top\_bottom})\vspace{0.5em}\\
+        \textsc{spatial\_entity}
+            (\texttt{id}=\texttt{se13},
+            \texttt{dimensionality}=\textsc{volume},
+            \texttt{mod}=$\varnothing$,
+            \texttt{line\_type}=$\varnothing$,\\
+            \texttt{area\_type}=\textsc{disc},
+            \texttt{volume\_type}=\textsc{cylinder},
+            \texttt{left\_right}=\textsc{relative},\\
+            \texttt{front\_back}=\textsc{relative},
+            \texttt{top\_bottom}=\textsc{intrinsic},
+            \texttt{c-sec\_axis}=\textsc{top\_bottom})\vspace{0.5em}\\
+    \label{ex:table_flowers_etc}
 }\label{ex:spatial_entity}
+
 
 % subsubsection spatial_entity_tag_examples (end)
 
@@ -219,24 +388,27 @@ This attribute is intended to identify the salient cross-sectional axis for 3-di
 \subsection{Orientation Signal Tag} % (fold)
 \label{sub:orientation_signal_tag}
 
-An orientation signal is taken to be some word or phrase that restricts the potential configurational interpretations of a spatial entity or group of spatial entities. Orientation signals always trigger configuration links, so if an annotator tags a orientation signal, then they are committing to also creating a configuration link. 
+An orientation signal is taken to be some word or phrase that restricts the potential configurational interpretations of a spatial entity. Orientation signals always trigger configuration links, so, if an annotator tags a orientation signal, then they are committing to also creating a configuration link.
 
-% @Cory - We would want every orientation signal to trigger a config link, no?
-
-Examples of the former type are enumerated in \cref{ex:non_trigger_examples}.
+Sentences in \Cref{ex:non_trigger_examples} have had \textsc{orientation\_signal} extents identified.
 
 \eenumsentence{
-    \item On the large table \emph{stands} a lighted lamp.
+    \item On the large table \signal{stands}{1} a lighted lamp.
     \label{ex:lamp_stands}
-    \item \ldots \emph{lies} down on sofa.
+    \item \signal{Lies}{2} down on sofa.
     \label{ex:lies_sofa}
+	\item MAURICE and HENRIETTE are in evening dress and \signal{sit}{3} \signal{facing}{4} each other \ldots
+	\label{ex:sit_facing}
+	\item In the foreground a table is spread, with flowers in the centre, bowls full of fruit, wine in decanters, oysters on platters \ldots
+	\label{ex:foreground_table}
 }\label{ex:non_trigger_examples}
 
-Here, in \cref{ex:lamp_stands}, the signal \emph{stands} serves to adumbrate in what configuration the lamp is arranged individually. Because the lamp \emph{stands} rather than, e.g., \emph{lies down}, one immediately recognizes that the lamp is situated in such a way that its cross-sectional, top-bottom axis is aligned vertically.
+Here, in \Cref{ex:lamp_stands}, the signal \emph{stands} serves to adumbrate in what configuration the lamp is arranged individually. Because the lamp \emph{stands} rather than, e.g., \emph{lies} or \emph{leans}, one immediately recognizes that the lamp is situated in such a way that its top-bottom axis is aligned vertically.
 
-Likewise, in \cref{ex:lies_sofa}, the signal \emph{lies} indicates that the entity---in this case an implicit spatial entity, which would need to be created via a non-consuming extent tag---is configured in such a way that its salient cross-sectional axis is horizontally aligned. 
+Likewise, in \Cref{ex:lies_sofa}, the signal \emph{lies} indicates that some entity---in this case an implicit spatial entity, which would need to be created via a non-consuming \textsc{spatial\_entity} tag---is configured in such a way that its top-bottom orientational axis is horizontally aligned. 
 
-Examples of the latter type are enumerated in \cref{ex:trigger_examples}.
+\iffalse
+Examples of the latter type are enumerated in \Cref{ex:trigger_examples}.
 
 \eenumsentence{
 	\item MAURICE and HENRIETTE are in evening dress and sit facing each other \ldots
@@ -246,25 +418,29 @@ Examples of the latter type are enumerated in \cref{ex:trigger_examples}.
 }\label{ex:trigger_examples}
 
 %In the foreground a table is spread, with flowers [in] the [centre], bowls [full] of fruit, wine [in] decanters, oysters [on] platters ...; I am not sure about the annotation of "in the centre" above, "full of," or "on" above. I am going to leave this explanation blank for the moment.
+\fi
 
 \subsubsection{Orientation Signal Extents} % (fold)
 \label{ssub:orientation_signal_extents}
 % Explain what kinds of lexical items should be captured with the orientation signal tag here.
-In general, whereas orientation entities will be nominals, orientation signals will belong to other parts of speech, e.g., verbs, prepositions, adjectives, and adverbs. For phrasal verbs, take only the head verb as the extent for the orientation signal.
+In general, whereas \textsc{spatial\_entity} terms will be nominals, \textsc{orientation\_signal} terms will belong to other parts of speech, e.g., verbs, prepositions, adjectives, and adverbs. The extent for orientation signals should consist of the head of the phrase, so for phrasal verbs, take only the head verb as the extent for the orientation signal, ignoring any particles. For prepositional phrases, only the head preposition would be tagged.
 
 % subsubsection orientation_signal_extents (end)
 
 \subsubsection{Orientation Signal Attributes} % (fold)
 \label{ssub:orientation_signal_attributes}
 
-The orientation signal tag has one attribute that annotators need to consider, as given in \cref{tab:orientation_signal}:
+The orientation signal tag has one attribute that annotators need to consider, as shown in \cref{tab:orientation_signal}:
 
 \begin{table}[h]
 \centering
 \begin{attributes}
     \hline \texttt{id}                  & \texttt{os1}, \texttt{os2}, 
                                           \texttt{os3}, \ldots\\
-    \hline \texttt{orientation\_type}   & \textsc{latitudinal}, \textsc{longitudinal}, \textsc{lateral}, \textsc{vertical}, \textsc{other}\\
+    \hline \texttt{orientation\_type}   & \textsc{latitudinal}, 
+                                          \textsc{longitudinal}, 
+                                          \textsc{lateral}, \textsc{vertical}, 
+                                          \textsc{other}\\
 \end{attributes}
 \caption{Attributes for \textsc{orientation\_signal}}
 \label{tab:orientation_signal}
@@ -272,7 +448,7 @@ The orientation signal tag has one attribute that annotators need to consider, a
 
 \paragraph{\texttt{orientation\_type}} % (fold)
 \label{par:orientation_type}
-The \texttt{orientation\_type} attribute specifies an axis of orientation that is accessed by the orientation signal. It is employed to indicate how an entity is configured in an absolute sense (i.e., independently of any specific ground). The \textsc{latitudinal} value refers to the left-right axis, the \textsc{longitudinal} to the front-back axis, and the \textsc{vertical} to the top-bottom axis. We supply also the \textsc{lateral} value for cases in which a horizontal axis is accessed, but there is no distinction between the left-right and the front-back. The value of \textsc{other} should be selected for such cases as specify a configuration not covered by the remaining values.
+The \texttt{orientation\_type} attribute specifies an axis of orientation that is accessed by the orientation signal. The \textsc{latitudinal} value refers to the left-right axis, the \textsc{longitudinal} to the front-back axis, and the \textsc{vertical} to the top-bottom axis. The \textsc{lateral} value is supplied to capture cases in which a horizontal axis is accessed, yet there is no distinction between the left-right and the front-back axes. The value of \textsc{other} should be selected for such cases as specify a configuration not covered by the remaining values.
 
 % Go through each attribute, in depth, here.
 
@@ -281,7 +457,7 @@ The \texttt{orientation\_type} attribute specifies an axis of orientation that i
 \subsubsection{Orientation Signal Examples} % (fold)
 \label{ssub:orientation_signal_examples}
 
-Provided below, in \cref{ex:orientation_signals}, are sample annotations for extents to be tagged as \textsc{orientation\_signal}:
+Provided below, in \Cref{ex:orientation_signals}, are sample annotations for extents to be tagged as \textsc{orientation\_signal}:
 
 \eenumsentence{
     \item On the large table \signal{stands}{1} a lighted lamp.
@@ -293,6 +469,8 @@ Provided below, in \cref{ex:orientation_signals}, are sample annotations for ext
 	\item In the foreground a table is spread, with flowers \signal{in}{5} the centre, bowls \signal{full}{6} of fruit, wine \signal{in}{7} decanters, oysters \signal{on}{8} platters \ldots
 	\label{ex:annot_table}
 }\label{ex:orientation_signals}
+
+% What about [spread]? Would we want to capture it differently if the sentence said [stacked] instead of [spread]?
 
 % We need to talk about how we are not actually capturing containment relations. E.g, for \emph{fruit in the bowl} and \emph{wine in decanters}, the $contains{container,containee}$ is a topological relation, distinct from the orientation relations we are capturing with configuration links, though there may be some conflation of the two. ISO-Space classifies \textsc{spatial\_signal} tags as topological, orientational, or both, but since OCDML is focused strictly on orientation, the cases where conflation does occur are going to be difficult.
 
@@ -307,37 +485,38 @@ Provided below, in \cref{ex:orientation_signals}, are sample annotations for ext
 
 \subsection{Configuration Link Tag} % (fold)
 \label{sub:configuration_link}
-
-The \textsc{configuration\_link} relates two \textsc{spatial\_entity} tags. For each \textsc{configuration\_link}, one \textsc{spatial\_entity} will be referred to as the figure in the relation, and the other will be referred to as the ground. The figure is the spacial entity that moves or is located in relation to the ground. Similarly, the ground is the spacial entity against which the figure moves, or in relation to which the figure is located. In \cref{ex:cat}, 'cat' is the figure and 'table' is the ground, since the cat is located in relation to the table. In \cref{ex:man}, 'man' is the figure and 'street' is the ground, since the man is moving in relation to the street. The figure is typically the smaller, more movable object, but this is not always the case, as can be seen in \cref{ex:house}. In English, the figure tends to come before the ground in the sentence. While this is a helpful fact, it should not be the sole basis of your annotation decisions. 
-
+The \textsc{configuration\_link} relates two \textsc{spatial\_entity} tags. For each \textsc{configuration\_link}, one \textsc{spatial\_entity} will be referred to as the figure in the relation, and the other will be referred to as the ground. The figure is the spacial entity that moves or is located in relation to the ground. Similarly, the ground is the spacial entity against which the figure moves, or in relation to which the figure is located. In \Cref{ex:cat}, \emph{cat} is the figure and \emph{table} is the ground, since the \emph{cat} is located in relation to the \emph{table}. In \Cref{ex:man}, \emph{man} is the figure and \emph{street} is the ground, since the \emph{man} is moving in relation to the \emph{street}. The figure is typically the smaller, more movable object, but this is not always the case, as can be seen in \Cref{ex:house}. In English, the figure tends to come before the ground in the sentence. While this is a helpful heuristic, it should not be the sole basis of your annotation decisions, as is evident from \Cref{ex:lady}.
+ 
 % Cynthia: When creating the link, always link from the figure to the ground? This is related to my question about the direction attribute.
 
 \eenumsentence{
-    \item The cat is sitting on the table.
+    \item The [cat$_{figure}$] is sitting on the [table$_{ground}$].
     \label{ex:cat}
-    \item The man walked down the street.
+    \item The [man$_{figure}$] walked down the [street$_{ground}$].
     \label{ex:man}
-    \item The house landed on the witch.
+    \item The [house$_{figure}$] landed on the [witch$_{ground}$].
     \label{ex:house}
-    \item \ldots sitting at the desk was a beautiful woman.
+    \item \ldots sitting at the [desk$_{ground}$] was a beautiful [woman$_{figure}$].
     \label{ex:lady}
 }\label{ex:fig_ground_examples}
 
+
 % subsection configuration_link (end)
+
 
 \subsubsection{Configuration Link Attributes} % (fold)
 \label{ssub:configuration_link_attributes}
 
-The attributes are enumerated in \cref{tab:configuration_link}. 
+The attributes for the \textsc{configuration\_link} tag are enumerated in \cref{tab:configuration_link}. 
 
 \begin{table}[h]
 \centering
 \begin{attributes}
     \hline \texttt{id}                  & \texttt{cl1}, \texttt{cl2}, 
                                           \texttt{cl3}, \ldots\\
-    \hline \texttt{figure\_config}      & \textsc{left}, \textsc{right}, \textsc{front}, \textsc{back}, \textsc{top}, \textsc{bottom}, \textsc{other}\\
-    \hline \texttt{ground\_config}      & \textsc{left}, \textsc{right}, \textsc{front}, \textsc{back}, \textsc{top}, \textsc{bottom}, \textsc{other}\\
-    \hline \texttt{dim\_coercion}            & \textsc{figure}, \textsc{ground}, or \textsc{none}\\
+    \hline \texttt{figure\_config}      & \textsc{left}, \textsc{right}, \textsc{front}, \textsc{back}, \textsc{top}, \textsc{bottom}, \textsc{side}, \textsc{top\_or\_bottom}, \textsc{any}, \textsc{other}\\
+    \hline \texttt{ground\_config}      & \textsc{left}, \textsc{right}, \textsc{front}, \textsc{back}, \textsc{top}, \textsc{bottom}, \textsc{side}, \textsc{top\_or\_bottom}, \textsc{any}, \textsc{other}\\
+    \hline \texttt{coercion}            & \textsc{figure}, \textsc{ground}, or \textsc{none}\\
     \hline \texttt{trigger}             & An ID of a \texttt{orientation\_signal} tag that triggers the link\\
     \hline \texttt{direction}           & \textsc{figure\_ground}, \textsc{ground\_figure}\\
 \end{attributes}
@@ -345,54 +524,67 @@ The attributes are enumerated in \cref{tab:configuration_link}.
 \label{tab:configuration_link}
 \end{table}
 
-The combination of the \texttt{figure\_config} and \texttt{ground\_config} attributes are used to specify the configuration between the participating figure and ground entities. Looking back at \cref{ex:cat}, the configuration of the entities involved is such that the bottom of the cat is on the top of the table. The \texttt{figure\_config} attribute is compulsory whereas the ground config attribute is optional; In \cref{ex:no_ground} the \texttt{ground\_config} is not explicit, whereas in \cref{ex:ground} the \texttt{ground\_config} is requisite.
+% Zach: I added \textsc{side}, \textsc{top\_or\_bottom} and \textsc{any} configuration values to handle cases where the configuration is only partly specified, e.g., ``Lies on the couch.'', where is the the implicit figure's \textsc{side} that is related to the \textsc{top} of the couch. We also need the \textsc{any} value for ``fruit in the bowl'', where we take the fruit to be the figure, and it is fruit's \textsc{any} being related to the bowl's \textsc{bottom}.
+
+\paragraph{\texttt{figure\_config} \& \texttt{ground\_config}} % (fold)
+\label{par:figure_ground_config}
+The combination of the \texttt{figure\_config} and \texttt{ground\_config} attributes are used to specify the configuration between the participating figure and ground entities. 
+
+\iffalse
+Looking back at \Cref{ex:cat}, the configuration of the entities involved is such that the bottom of the cat is on the top of the table. The \texttt{figure\_config} attribute is compulsory whereas the ground config attribute is optional; \Cref{ex:ground} shows an optional \texttt{ground\_config} whereas in \Cref{ex:no_ground} the \texttt{ground\_config} is requisite.
+
+% Zach: I don't agree with this. We need to be able to handle cases where there is a lot of underspecification.
+\fi
 
 \eenumsentence{
-    \item The dog sat opposite the man.
-    \label{ex:no_ground}
-    \item The dog sat on the man's lap.
+    \item The [cat$_{figure}$] is sitting on the [table$_{ground}$].
     \label{ex:ground}
+    \item The [cat$_{figure}$] is sitting alone [$_{ground}$].
+    \label{ex:no_ground}
 }\label{ex:ground_requirement}
 
-\paragraph{\texttt{dim\_coercion}} % fold
-\label{par:din\_coercion}
-This attribute is used to indicate that the dimensionality of the figure entity is coerced to that of the ground or vice versa. Consider \cref{ex:sun}. While we know that the sun is a 3-dimensional sphere, in this example the sun is being coerced into 2-dimensions by the ground, namely the sky. This type of coercion does not take place in \cref{ex:earth}, since both the earth and the sun are 3-dimensional objects moving in 3-dimensional space.
+% paragraph figure_ground_config (end)
 
-% paragraph dim_coercion (end)
+\paragraph{\texttt{dim\_coercion}} % (fold)
+\label{par:dim_coercion}
+
+This attribute can be used to indicate that the dimensionality of the figure entity is coerced to that of the ground or vice versa. Consider \Cref{ex:sun}. While we know that the sun is a 3-dimensional sphere, in this example the \emph{sun} is being coerced into 2-dimensions by the ground, namely the \emph{sky}. This type of coercion does not take place in \Cref{ex:earth}, since both the \emph{earth} and the \emph{sun} would be considered 3-dimensional objects moving in 3-dimensional space.
 
 \eenumsentence{
-    \item The sun travels across the sky.
+    \item The [sun$_{figure}$] travels across the [sky$_{ground}$].
     \label{ex:sun}
-    \item The earth rotates around the sun.
+    \item The [earth$_{figure}$] rotates around the [sun$_{ground}$].
     \label{ex:earth}
 }\label{ex:coercion}
 
-\paragraph{\texttt{trigger}} % fo;d
+% Zach: @Cynthia, nice examples!
+
+% paragraph dim_coercion (end)
+
+\paragraph{\texttt{trigger}} % (fold)
 \label{par:trigger}
-This attribute takes the ID value of the \texttt{orientation\_signal} that triggered the \texttt{configuration\_link}.  Since creating an \texttt{orientation\_signal} automatically commits you to creating a \texttt{configuration\_link}, each link is required to have a value for the \texttt{trigger} attribute.  Take \cref{ex:annot_stands}, the \textsc{orientation\_signal} \signal{stands}{1} is the \texttt{trigger} for the \textsc{configuration\_link} between \emph{table} and \emph{lamp}.
+This attribute takes the ID value of the \texttt{orientation\_signal} that triggered the \texttt{configuration\_link}. Recall that creating an \texttt{orientation\_signal} means committing to creating a \textsc{configuration\_link}, however, there may be situations where a \textsc{configuration\_link} is created without any triggering signal.
 
-% paragraph trigger (eng)
+% Zach: We should add some xamples for the latter case, if not here, then in our fully annotated examples section. 
 
-\paragraph{\texttt{direction}}
+    % In the foreground a \entity{table}{6} is spread, with \entity{flowers}{7} in the centre, \entity{bowls}{8} full of \entity{fruit}{9}, \entity{wine}{10} in \entity{decanters}{11}, \entity{oysters}{12} on \entity{platters}{13}
+
+    % This is one example where we would want to have links between [bowls] and [table], [decanters] and [table], and [platters] and [table], even though there are no explicit signals for these relations, right?
+
+% paragraph trigger (end)
+
+\paragraph{\texttt{direction}} % (fold)
 \label{par:direction}
-This attribute is used to indicate the asymmetrical directionality of the relation in terms of figure-to-ground or ground-to-figure. 
+This attribute is used to indicate the asymmetrical directionality of the configuration relation in terms of figure-to-ground or ground-to-figure. When creating a \textsc{configuration\_link}, if the ID of the \textsc{spatial\_entity} tag that represents the figure is selected first, then the \texttt{direction} attribute should take a value of \textsc{figure\_ground}. If the link were created in the reverse order, such that the ID of the \textsc{spatial\_entity} tag that represents the ground is selected first, then the \texttt{direction} attribute should take a value of \textsc{ground\_figure}.
 %Cynthia: remind me again why we decided to use this instead of specifying that the annotator always tag the figure first and the ground second, regardless of word order? I thought we had decided to do the latter, but now I'm unsure. How would we annotate the sentence "… and sitting in the chair was a beautiful lady"?
+
+% Zach: @Cynthia, the problem with relying on the order of the link creation is that it's relying on the annotators to remember the correct order, whereas allowing the order to be switched, but having explicit figure and ground attributes is more flexible for the annotators and less prone to mistakes being made, since annotators must be explicit about which entity ID is the figure and which is the ground.
 
 % paragraph direction (end)
 
+
+
 % subsubsection configuration_link_attributes (end)
-
-\subsubsection{Configuration Link Examples} % (fold)
-\label{ssub:configuration_link_examples}
-
-Provided below, in \cref{ex:config_links}, are examples of \textsc{configuration\_links}.
-
-\enumsentence{
-}\label{ex:config_links}
-
-% subsubsection configuration_link_examples (end)
-% subsection configuration_link_tag (end)
-
 % section link_tags (end)
 
 \section{Fully Annotated Examples} % (fold)
@@ -400,5 +592,27 @@ Provided below, in \cref{ex:config_links}, are examples of \textsc{configuration
 
 % List some full annotation sample sentences and pseudo-XML annotations along with discussion of the motivations for any decisions which were made.
 
+% Zach: We need examples that explain the choices that need to be made:
+    % How do we tag pronouns like [other] and [another], [each other] etc.?
+    % 
+
+
 % section fully_annotated_examples (end)
+
+\section{Phased Annotation Approach} % (fold)
+\label{sec:phased_annotation_approach}
+
+For this task we will be dividing the annotation into three sections as enumerated in the outline below. This phased approach is intended to establish a consistent set of entity and signal extent tags early in the process. For the first annotation phase, annotators will simply be identifying \textsc{spatial\_entity} and \textsc{spatial\_signal} tag extents. After the first annotation phase, a cursory round of adjudication will be performed in order to lock in a consistent set of extent tags. Once this consistent set of extents has been frozen, annotators will fill the attributes for those extent tags. Finally, during the third phase of annotation, annotators will create the links between the locked set of extent tags. After the third annotation phase the final adjudication will occur.
+
+\begin{description}
+    \item[Annotation Phase 1] Extents for \textsc{spatial\_entity} and \textsc{orientation\_signal} tags.
+    \item[Extents Adjudication] Extent tags will be adjudicated and locked.
+    \item[Annotation Phase 2] Attributes for locked \textsc{spatial\_entity} and \textsc{orientation\_signal} tags.
+    \item[Annotation Phase 3] Creation of \textsc{configuration\_links} annotation of link attributes.
+    \item[Final Adjudication] Link tags and all tag attributes will be adjudicated.
+\end{description}
+\label{desc:phases}
+
+
+% section phased_annotation_approach (end)
 \end{document}
