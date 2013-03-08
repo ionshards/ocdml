@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 
-\usepackage{amssymb} % provides proper ∅ symbol
+\usepackage{amssymb} % provides proper null symbol
 
 \usepackage{hyperref}
     \hypersetup{colorlinks,breaklinks,
@@ -576,7 +576,7 @@ This attribute takes the ID value of the \texttt{orientation\_signal} that trigg
 \paragraph{\texttt{direction}} % (fold)
 \label{par:direction}
 This attribute is used to indicate the asymmetrical directionality of the configuration relation in terms of figure-to-ground or ground-to-figure. When creating a \textsc{configuration\_link}, if the ID of the \textsc{spatial\_entity} tag that represents the figure is selected first, then the \texttt{direction} attribute should take a value of \textsc{figure\_ground}. If the link were created in the reverse order, such that the ID of the \textsc{spatial\_entity} tag that represents the ground is selected first, then the \texttt{direction} attribute should take a value of \textsc{ground\_figure}.
-%Cynthia: remind me again why we decided to use this instead of specifying that the annotator always tag the figure first and the ground second, regardless of word order? I thought we had decided to do the latter, but now I'm unsure. How would we annotate the sentence "… and sitting in the chair was a beautiful lady"?
+%Cynthia: remind me again why we decided to use this instead of specifying that the annotator always tag the figure first and the ground second, regardless of word order? I thought we had decided to do the latter, but now I'm unsure. How would we annotate the sentence "and sitting in the chair was a beautiful lady"?
 
 % Zach: @Cynthia, the problem with relying on the order of the link creation is that it's relying on the annotators to remember the correct order, whereas allowing the order to be switched, but having explicit figure and ground attributes is more flexible for the annotators and less prone to mistakes being made, since annotators must be explicit about which entity ID is the figure and which is the ground.
 
