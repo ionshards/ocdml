@@ -16,17 +16,18 @@
 <!ATTLIST SPATIAL_ENTITY left_right ( intrinsic | relative ) #IMPLIED "relative" >
 <!ATTLIST SPATIAL_ENTITY front_back ( intrinsic | relative ) #IMPLIED "relative" >
 <!ATTLIST SPATIAL_ENTITY top_bottom ( intrinsic | relative ) #IMPLIED "relative" >
+<!ATTLIST SPATIAL_ENTITY c-sec_axis ( left_right | front_back | top_bottom | other ) #IMPLIED "relative" >
 <!ATTLIST SPATIAL_ENTITY comment CDATA #IMPLIED >
 
 <!ELEMENT ORIENTATION_SIGNAL ( #PCDATA ) >
 <!ATTLIST ORIENTATION_SIGNAL id ID prefix="os" #REQUIRED >
-<!ATTLIST ORIENTATION_SIGNAL orientation_type ( LONGITUDINAL | LATITUDINAL | VERTICAL | OTHER ) #IMPLIED >
+<!ATTLIST ORIENTATION_SIGNAL orientation_type ( longitudinal | latitudinal | lateral | vertical | other ) #IMPLIED >
 <!ATTLIST ORIENTATION_SIGNAL comment CDATA #IMPLIED >
 
 <!ELEMENT CONFIGURATION_LINK EMPTY >
 <!ATTLIST CONFIGURATION_LINK id ID prefix="cl" #REQUIRED >
-<!ATTLIST CONFIGURATION_LINK figure_config ( left | right | front | back | top | bottom | any ) #IMPLIED >
-<!ATTLIST CONFIGURATION_LINK ground_config ( left | right | front | back | top | bottom | any ) #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK figure_config ( left | right | front | back | top | bottom | side | top_or_bottom | any ) #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK ground_config ( left | right | front | back | top | bottom | side | top_or_bottom | any ) #IMPLIED >
 <!ATTLIST CONFIGURATION_LINK trigger CDATA #IMPLIED >
 <!ATTLIST CONFIGURATION_LINK dim_coercion ( figure | ground | none ) #IMPLIED >
 <!ATTLIST CONFIGURATION_LINK figure CDATA #IMPLIED >
