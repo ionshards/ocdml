@@ -210,7 +210,7 @@ This attribute is similar, again, to both \texttt{left\_right} and \texttt{front
 
 \paragraph{\texttt{c-sec\_axis}} % (fold)
 \label{par:c_sec_axis}
-This attribute is intended to identify the salient cross-sectional axis of the spatial entity. Only entities with a \texttt{dimensionality} value of \textsc{volume}, and at least one intrinsic axis of orientation, should have a \texttt{c-sec\_axis} value specified. For \textsc{point}, \textsc{line}, and \textsc{area} type entities, the \texttt{c-sec\_axis} attribute should be left blank. The point of specifying the cross-sectional axis is to distinguish between spatial entities such as a typical twelve-ounce \emph{can} of soda, and a military-style \emph{submarine}. Each of these entities would be classified as volumetric, cylindrical primitive types, and both possess intrinsic left, right, front, back, top, and bottom boundaries, yet they possess salient cross-sectional axes that do not correspond to one another. For the soda \emph{can}, the salient cross-sectional axis---the axis along which the 2-dimensional circular base would be extruded---is the \textsc{top\_bottom} axis. For the \emph{submarine}, contrastively, it is the \textsc{front\_back} axis which corresponds to the cross-sectional axis along which the cylindrical primitive form would be extruded. \Cref{fig:c-sec_axes} illustrates this distinction. Another way to conceptualize the salient cross-sectional axis would be to imagine slicing the entity into pieces as if to skewer the pieces with a kebab. Under this conceptualization, the axis that is aligned with the imaginary kebab is the axis which should be filled for the \texttt{c-sec\_axis} attribute.
+This attribute is intended to identify the salient cross-sectional axis of the spatial entity. Only entities with at least one intrinsic axis of orientation, should have a \texttt{c-sec\_axis} value specified. The point of specifying the cross-sectional axis is to distinguish between spatial entities such as a typical twelve-ounce \emph{can} of soda and a military-style \emph{submarine}. Each of these entities would be classified as volumetric, cylindrical primitive types, and both possess intrinsic left, right, front, back, top, and bottom boundaries, yet they possess salient cross-sectional axes that do not correspond to one another. For the soda \emph{can}, the salient cross-sectional axis---the axis along which the 2-dimensional circular base would be extruded---is the \textsc{top\_bottom} axis. For the \emph{submarine}, contrastively, it is the \textsc{front\_back} axis which corresponds to the cross-sectional axis along which the cylindrical primitive form would be extruded. \Cref{fig:c-sec_axes} illustrates this distinction. Another way to conceptualize the salient cross-sectional axis would be to imagine slicing the entity into pieces as if to skewer the pieces with a kebab. Under this conceptualization, the axis that is aligned with the imaginary kebab is the axis which should be filled for the \texttt{c-sec\_axis} attribute.
 
 \begin{figure}[h]
     \scalebox{.20}{
@@ -255,6 +255,7 @@ This attribute is intended to identify the salient cross-sectional axis of the s
             \texttt{top\_bottom}=\textsc{intrinsic},
             \texttt{c-sec\_axis}=\textsc{top\_bottom})
         \label{ex:table_lamp}
+        
     \item \entity{}{0} Lies down on \entity{sofa}{3}.
         \begin{note}
             In this example, \texttt{se0} is a non-consuming \textsc{spatial\_entity} tag that is configured relative to the \emph{sofa}.
@@ -282,9 +283,10 @@ This attribute is intended to identify the salient cross-sectional axis of the s
             \texttt{top\_bottom}=\textsc{intrinsic},
             \texttt{c-sec\_axis}=\textsc{left\_right})
         \label{ex:sofa}
+        
 	\item \entity{MAURICE}{4} and \entity{HENRIETTE}{5} are in evening dress and sit facing each other \ldots
     \begin{note}
-        Normally the pronoun \emph{other} would be tagged as a \textsc{spatial\_entity}, but in this example only the antecedents \emph{MAURICE} and \emph{HENRIETTE} have been tagged. In cases where a spatial entity is referenced anaphorically via a pronominal form it is appropriate to tag the extent of the pronoun with the \textsc{spatial\_entity} tag. However, if a split antecedent occurs where each part of the antecedent is introduced and participates in a spatial configuration acting as a figure relative to others, then it is safe to only tag the antecedents which can then be linked directly to one another.
+        Normally the pronoun \emph{other} would be tagged as a \textsc{spatial\_entity}, but in this example only the extents for \emph{MAURICE} and \emph{HENRIETTE} have been tagged. In cases where a spatial entity is referenced anaphorically via a pronominal form it is normally appropriate to tag the extent of the pronoun with the \textsc{spatial\_entity} tag. However, if a split antecedent occurs where each part of the antecedent participates in a spatial configuration, acting as both a figure and ground relative to others, then it is safe to only tag the antecedents. If \emph{MAURICE} and \emph{HENRIETTE} were both facing something else then that 3rd entity would be tagged as a \textsc{spatial\_entity}.
     \end{note}
         \textsc{spatial\_entity}
             (\texttt{id}=\texttt{se4},
@@ -309,6 +311,7 @@ This attribute is intended to identify the salient cross-sectional axis of the s
             \texttt{top\_bottom}=\textsc{intrinsic},
             \texttt{c-sec\_axis}=\textsc{top\_bottom})        
         \label{ex:maurice_henriette}
+        
     \item In the foreground a \entity{table}{6} is spread, with \entity{flowers}{7} in the centre, \entity{bowls}{8} full of \entity{fruit}{9}, \entity{wine}{10} in \entity{decanters}{11}, \entity{oysters}{12} on \entity{platters}{13} \ldots\vspace{0.5em}\\
         \textsc{spatial\_entity}
             (\texttt{id}=\texttt{se6},
