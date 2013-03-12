@@ -76,14 +76,17 @@
 
 \section{Introduction} % (fold)
 \label{sec:introduction}
+In this annotation task annotators must identify spatially relevant entities with scene descriptions and categorize them according to their intrinsic spatial properties, as well as specify how they are configured relative to other entities. In this section we briefly outline the task goal. \Cref{sec:extent_tags} enumerates the extent tags and their attributes. \Cref{sec:link_tags} explains the link tag relations and their attributes. \Cref{sec:fully_annotated_examples} provides discussion of fully annotated example sentences. Finally, \Cref{sec:phased_annotation_approach} explains the phased approach for this annotation task.
 
-% Briefly explain the goal.
-% Explain the purpose of each section in the document.
+\subsection{Goal} % (fold)
+\label{sub:goal}
+The annotation task is intended to capture the intrinsic spatial orientation and dimensionality of spatial entities for the purpose of making inferences about their participation in spatial relations. The ultimate aim is to be able to classify spatial entities according to the ways in which they are able to participate within spatial relations and be able to supply an inventory of spatial configurations based on these classes. E.g., we would want to be able to classify a hominid as a bipedal entity, which possess an intrinsic left, right, front, back, top and bottom that can stand vertically `bottom-to-top', or lay horizontally `side-to-top', in relation to some supporting surface. The primary applications in spatial reasoning that \ML would be suited to are text-to-scene generation applications, and it may also be able to augment other qualitative spatial schemes.
+% subsection goal (end)
 
 % section introduction (end)
 
 \section{Extent Tags} % (fold)
-\label{sec:extent_tag}
+\label{sec:extent_tags}
 
 \subsection{Spatial Entity} % (fold)
 \label{sub:spatial_entity}
@@ -100,7 +103,12 @@ The \texttt{spatial\_entity} tag in \ML~is intended to identify participants of 
 \subsubsection{Spatial Entity Extents} % (fold)
 \label{ssub:spatial_entity_extents}
 
-For this task, the textual extents that should be tagged with the \textsc{spatial\_entity} tag will be nouns. In terms of grammatical dependencies, only the heads of noun phrases should be captured with the \textsc{spatial\_entity} tag. Spatial entities may occur in nominal or named forms, and both are valid extents for this tag type. In the case of multi-word proper names, the entire extent of the name should be included in the tag. In terms of a dependency phrase-structure, sister words and phrases of head nouns should not be included in \textsc{spatial\_entity} tag extents. Refer to \Cref{ex:spatial_entity} in \cref{ssub:spatial_entity_examples} for illustrations of various \textsc{spatial\_entity} extent tags.
+For this task, the textual extents that should be tagged with the \textsc{spatial\_entity} tag will be nouns. In terms of grammatical dependencies, only the heads of noun phrases should be captured with the \textsc{spatial\_entity} tag. Spatial entities may occur in nominal or named forms, and both are valid extents for this tag type. In the case of multi-word proper names, the entire extent of the name should be included in the tag. In terms of a dependency phrase-structure, sister words and phrases of head nouns should not be included in \textsc{spatial\_entity} tag extents. The \textsc{spatial\_entity} tag is allowed to be non-consuming; in the case of implicit spatial entities that are not directly referred to in the text annotators should create non-consuming tags. Refer to \Cref{ex:spatial_entity} in \cref{ssub:spatial_entity_examples} for illustrations of various \textsc{spatial\_entity} extent tags.
+
+\begin{note}
+    
+\end{note}
+
 % subsubsection spatial_entity_extents (end)
 
 \subsubsection{Spatial Entity Attributes} % (fold)
@@ -168,21 +176,19 @@ This attribute is used to classify the entity based on a set of 2-dimensional pr
 
 \paragraph{\texttt{volume\_type}} % (fold)
 \label{par:volume_type}
-This attribute is used to classify the entity based on a set of 3-dimensional primitive types.
+This attribute is used to classify the entity based on a set of 3-dimensional primitive types:
 
-The \textsc{tri\_prism} type should be used for 3-dimensional entities which can be thought of as 2-dimensional 3-gons that are extruded into a 3-dimensional prism with five distinguishable bounding surfaces and six distinguisable bounding points. A \emph{box} of Toblerone chocolates would be an appropriate entity to be tagged with the \textsc{tri\_prism} type.
-
-The \textsc{rect\_prism} type is used for 3-dimensional entities that are 3-dimensionally extruded 4-gons with six distinguishable bounding surfaces and eight boinding points. This type includes entities such as a standard six-sided \emph{die}, a closed \emph{book} or \emph{tome}, or a prototypical \emph{box}. 
-
-A value of \textsc{pyramid} is used for 3-dimensional entities with five distinguishable bounding surfaces, including a 4-gon and four 3-gons, in addition to five bounding points, including a single apex point.
-
-A value of \textsc{sphere} is given to 3-dimensional spheroidal entities with no distinguishable bounding edges or vertices, such as a \emph{globe}, \emph{orange}, or \emph{ball}.
-
-A value of \textsc{torus} is used for 3-dimensional entities with no distinguishable bounding edges or vertices, but is topologically distinct from a \textsc{sphere} type by virtue of having a hole. The distinction is analogous to the difference between the 2-dimensional \textsc{disc} and \textsc{annulus} primitive types, with \textsc{sphere} corresponding to the former and \textsc{torus} corresponding to the latter. A \emph{doughnut}, a hoola \emph{hoop}, or a wedding \emph{band} would all be examples of entities that would take a value of \textsc{torus} for their \texttt{volume\_type}.
-
-A value of \textsc{cylinder} indicates a 3-dimensional entity with three distinguishable surfaces, two distinguishable bounding edges, and zero vertices. A soda \emph{can}, a dumbbell \emph{bar}, and a AA \emph{battery} are all examples that fall under this volume type.
-
-A value of \textsc{cone} should be given for 3-dimensional entities with two distinguishable surfaces, one bounding edge, and a single apex point. An ice-cream \emph{cone}, a \emph{funnel}, or a coniferous \emph{tree} would all be appropriate entities to annotate with the \textsc{cone} type.
+\begin{description}
+    \item[{\sc tri\_prism}] should be used for 3-dimensional entities that can be thought of as 3-gons that are extruded into a 3-dimensional prism and have five distinguishable bounding surfaces and six distinguishable bounding points. A \emph{wedge} of cheese or a \emph{box} of Toblerone chocolates would both be appropriate entities to be tagged with the \textsc{tri\_prism} type.
+    \item[{\sc rect\_prism}] is used for 3-dimensional entities that are 3-dimensionally extruded 4-gons with six distinguishable bounding surfaces and eight boinding points. This type includes entities such as a standard six-sided \emph{die}, a closed \emph{book} or \emph{tome}, or a prototypical \emph{box}.
+    \item[{\sc pyramid}] is used for 3-dimensional entities with five distinguishable bounding surfaces, including a 4-gon and four 3-gons, in addition to five bounding points, including a single apex point.
+    \item[{\sc sphere}] is given to 3-dimensional spheroidal entities with no distinguishable bounding edges or vertices, such as a \emph{globe}, \emph{orange}, or \emph{ball}.
+    \item[{\sc torus}] is used for 3-dimensional entities with no distinguishable bounding edges or vertices, but is topologically distinct from a \textsc{sphere} type by virtue of having a hole. The distinction is analogous to the difference between the 2-dimensional \textsc{disc} and \textsc{annulus} primitive types, with \textsc{sphere} corresponding to the former and \textsc{torus} corresponding to the latter. A \emph{doughnut}, a hoola \emph{hoop}, or a wedding \emph{band} would all be examples of entities that would take a value of \textsc{torus} for their \texttt{volume\_type}.
+    \item[{\sc cylinder}] indicates a 3-dimensional entity with three distinguishable surfaces, two distinguishable bounding edges, and zero vertices. A soda \emph{can}, a dumbbell \emph{bar}, and a AA \emph{battery} are all examples that fall under this volume type.
+    \item[{\sc cone}] should be given for 3-dimensional entities with two distinguishable surfaces, one bounding edge, and a single apex point. An ice-cream \emph{cone}, a \emph{funnel}, or a coniferous \emph{tree} would all be appropriate entities to annotate with the \textsc{cone} type.
+    \item[{\sc biped}] is used for 3-dimensional entities with two distinguishable feet. An \emph{ostrich}, a \emph{kangaroo}, or a \emph{person} are all excellent candidates for this \texttt{volume\_type}.
+    \item[{\sc quadruped}] is used for 3-dimensional entities with four distinguishable feet. Animals such as \emph{horses}, \emph{cats} or \emph{dogs} are good examples of quadrupedal spatial entities.
+\end{description}
 
 The \texttt{volume\_type} attribute is not intended to capture every entity perfectly. Rather, it is intended to identify distinguishable topological features which are accessed when the entity participates within a spatial configuration relation. If none of the previously described values are appropriate, a value of \textsc{other} may be specified.
 % paragraph volume_type (end)
@@ -276,7 +282,10 @@ This attribute is intended to identify the salient cross-sectional axis of the s
             \texttt{top\_bottom}=\textsc{intrinsic},
             \texttt{c-sec\_axis}=\textsc{left\_right})
         \label{ex:sofa}
-	\item \entity{MAURICE}{4} and \entity{HENRIETTE}{5} are in evening dress and sit facing each other \ldots\vspace{0.5em}\\
+	\item \entity{MAURICE}{4} and \entity{HENRIETTE}{5} are in evening dress and sit facing each other \ldots
+    \begin{note}
+        Normally the pronoun \emph{other} would be tagged as a \textsc{spatial\_entity}, but in this example only the antecedents \emph{MAURICE} and \emph{HENRIETTE} have been tagged. In cases where a spatial entity is referenced anaphorically via a pronominal form it is appropriate to tag the extent of the pronoun with the \textsc{spatial\_entity} tag. However, if a split antecedent occurs where each part of the antecedent participates in a spatial configuration acting as a figure relative to another.
+    \end{note}
         \textsc{spatial\_entity}
             (\texttt{id}=\texttt{se4},
             \texttt{dimensionality}=\textsc{volume},
@@ -392,7 +401,6 @@ This attribute is intended to identify the salient cross-sectional axis of the s
     \label{ex:table_flowers_etc}
 }\label{ex:spatial_entity}
 
-
 % subsubsection spatial_entity_tag_examples (end)
 
 % subsection spatial_entity (end)
@@ -400,7 +408,7 @@ This attribute is intended to identify the salient cross-sectional axis of the s
 \subsection{Orientation Signal Tag} % (fold)
 \label{sub:orientation_signal_tag}
 
-An orientation signal is taken to be some word or phrase that restricts the potential configurational interpretations of a spatial entity. Orientation signals always trigger configuration links, so, if an annotator tags a orientation signal, then they are committing to also creating a configuration link.
+An orientation signal is taken to be some word or phrase that restricts the potential configurational interpretations of a spatial entity. Orientation signals always trigger configuration links, so, if an annotator tags an orientation signal, then they are committing to also creating a configuration link.
 
 Sentences in \Cref{ex:non_trigger_examples} have had \textsc{orientation\_signal} extents identified.
 
