@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OCDMLtask>
+<TEXT><![CDATA[
+It is eight o'clock in the evening. The curtains are drawn and the lamps
+lighted in the drawing room of Her flat in Cromwell Road. Her lover, a
+beautiful youth of eighteen, in evening dress and cape, with a bunch of
+flowers and an opera hat in his hands, comes in alone. The door is near
+the corner; and as he appears in the doorway, he has the fireplace on
+the nearest wall to his right, and the grand piano along the opposite
+wall to his left. Near the fireplace a small ornamental table has on it
+a hand mirror, a fan, a pair of long white gloves, and a little white
+woollen cloud to wrap a woman's head in. On the other side of the room,
+near the piano, is a broad, square, softly up-holstered stool. The room
+is furnished in the most approved South Kensington fashion: that is, it
+is as like a show room as possible, and is intended to demonstrate the
+racial position and spending powers of its owners, and not in the least
+to make them comfortable.
+
+He is, be it repeated, a very beautiful youth, moving as in a dream,
+walking as on air. He puts his flowers down carefully on the table
+beside the fan; takes off his cape, and, as there is no room on the
+table for it, takes it to the piano; puts his hat on the cape; crosses
+to the hearth; looks at his watch; puts it up again; notices the things
+on the table; lights up as if he saw heaven opening before him; goes to
+the table and takes the cloud in both hands, nestling his nose into its
+softness and kissing it; kisses the gloves one after another; kisses the
+fan: gasps a long shuddering sigh of ecstasy; sits down on the stool and
+presses his hands to his eyes to shut out reality and dream a little;
+takes his hands down and shakes his head with a little smile of rebuke
+for his folly; catches sight of a speck of dust on his shoes and hastily
+and carefully brushes it off with his handkerchief; rises and takes
+the hand mirror from the table to make sure of his tie with the gravest
+anxiety; and is looking at his watch again when She comes in, much
+flustered. As she is dressed for the theatre; has spoilt, petted ways;
+and wears many diamonds, she has an air of being a young and beautiful
+woman; but as a matter of hard fact, she is, dress and pretensions
+apart, a very ordinary South Kensington female of about 37, hopelessly
+inferior in physical and spiritual distinction to the beautiful youth,
+who hastily puts down the mirror as she enters.
+
+The Mayor's parlor in the Town Hall of Little Pifflington. Lord Augustus
+Highcastle, a distinguished member of the governing class, in the
+uniform of a colonel, and very well preserved at forty-five, is
+comfortably seated at a writing-table with his heels on it, reading The
+Morning Post. The door faces him, a little to his left, at the other
+side of the room. The window is behind him. In the fireplace, a gas
+stove. On the table a bell button and a telephone. Portraits of past
+Mayors, in robes and gold chains, adorn the walls. An elderly clerk with
+a short white beard and whiskers, and a very red nose, shuffles in.
+
+A hotel sitting room. A table in the centre. On it a telephone. Two
+chairs at it, opposite one another. Behind it, the door. The fireplace
+has a mirror in the mantelpiece.
+
+A spinster Princess, hatted and gloved, is ushered in by the hotel
+manager, spruce and artifically bland by professional habit, but
+treating his customer with a condescending affability which sails very
+close to the east wind of insolence.
+
+A lady and gentleman are sitting together on a chesterfield in a
+retired corner of the lounge of a seaside hotel. It is a summer night:
+the French window behind them stands open. The terrace without
+overlooks a moonlit harbor. The lounge is dark. The chesterfield,
+upholstered in silver grey, and the two figures on it in evening dress,
+catch the light from an arc lamp somewhere; but the walls, covered with
+a dark green paper, are in gloom. There are two stray chairs, one on
+each side. On the gentleman's right, behind him up near the window, is
+an unused fireplace. Opposite it on the lady's left is a door. The
+gentleman is on the lady's right.
+
+The lady is very attractive, with a musical voice and soft appealing
+manners. She is young: that is, one feels sure that she is under
+thirty-five and over twenty-four. The gentleman does not look much
+older. He is rather handsome, and has ventured as far in the direction
+of poetic dandyism in the arrangement of his hair as any man who is not
+a professional artist can afford to in England. He is obviously very
+much in love with the lady, and is, in fact, yielding to an
+irresistible impulse to throw his arms around her.
+
+General Mitchener is at his writing table in the War Office, opening
+letters. On his left is the fireplace, with a fire burning. On his
+right, against the opposite wall is a standing desk with an office
+stool. The door is in the wall behind him, half way between the table
+and the desk. The table is not quite in the middle of the room: it is
+nearer to the hearthrug than to the desk. There is a chair at each end
+of it for persons having business with the general. There is a telephone
+on the table. Long silence.
+]]></TEXT>
+<TAGS>
+<SPATIAL_ENTITY id="se0" start="41" end="49" text="curtains" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se1" start="68" end="73" text="lamps" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se2" start="89" end="101" text="drawing room" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se3" start="109" end="113" text="flat" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se4" start="136" end="141" text="lover" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se5" start="155" end="160" text="youth" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se6" start="217" end="224" text="flowers" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se7" start="232" end="241" text="opera hat" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se8" start="276" end="280" text="door" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se9" start="293" end="299" text="corner" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se10" start="326" end="333" text="doorway" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se11" start="308" end="310" text="he" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se12" start="335" end="337" text="he" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se13" start="346" end="355" text="fireplace" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se14" start="371" end="375" text="wall" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se15" start="398" end="409" text="grand piano" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se16" start="456" end="465" text="fireplace" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se18" start="503" end="514" text="hand mirror" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se19" start="518" end="521" text="fan" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se21" start="544" end="550" text="gloves" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se22" start="485" end="490" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se23" start="579" end="584" text="cloud" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se24" start="595" end="600" text="woman" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se25" start="603" end="607" text="head" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se26" start="177" end="190" text="evening dress" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se27" start="195" end="199" text="cape" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se28" start="652" end="657" text="piano" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se29" start="637" end="641" text="room" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se30" start="699" end="704" text="stool" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se31" start="710" end="714" text="room" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se32" start="800" end="809" text="show room" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se33" start="957" end="959" text="He" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se34" start="997" end="1002" text="youth" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se35" start="1045" end="1047" text="He" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se36" start="1057" end="1064" text="flowers" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se37" start="1087" end="1092" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se38" start="1104" end="1107" text="fan" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se39" start="1123" end="1127" text="cape" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se40" start="1161" end="1166" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se41" start="1191" end="1196" text="piano" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se42" start="1207" end="1210" text="hat" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se43" start="1218" end="1222" text="cape" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se44" start="1239" end="1245" text="hearth" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se45" start="1260" end="1265" text="watch" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se46" start="1272" end="1274" text="it" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se47" start="1297" end="1303" text="things" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se48" start="1311" end="1316" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se49" start="1380" end="1385" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se50" start="1400" end="1405" text="cloud" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se51" start="1414" end="1419" text="hands" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se52" start="1434" end="1438" text="nose" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se53" start="1469" end="1471" text="it" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se54" start="1484" end="1490" text="gloves" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se55" start="1521" end="1524" text="fan" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se56" start="1584" end="1589" text="stool" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se57" start="1606" end="1611" text="hands" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se58" start="1619" end="1623" text="eyes" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se59" start="1674" end="1679" text="hands" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se60" start="1700" end="1704" text="head" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se61" start="1790" end="1795" text="shoes" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se62" start="1769" end="1782" text="speck of dust" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se63" start="1846" end="1858" text="handkerchief" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se64" start="1880" end="1891" text="hand mirror" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se65" start="1901" end="1906" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se66" start="1927" end="1930" text="tie" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se67" start="1979" end="1984" text="watch" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se68" start="2052" end="2059" text="theatre" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se69" start="2101" end="2109" text="diamonds" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se70" start="2090" end="2095" text="wears" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se71" start="2111" end="2114" text="she" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se72" start="2157" end="2162" text="woman" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se73" start="2202" end="2207" text="dress" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se74" start="2247" end="2263" text="South Kensington" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se75" start="2392" end="2398" text="mirror" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se76" start="2402" end="2405" text="she" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se77" start="2419" end="2424" text="Mayor" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se78" start="2427" end="2433" text="parlor" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se79" start="2441" end="2450" text="Town Hall" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se80" start="2454" end="2472" text="Little Pifflington" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se82" start="2474" end="2498" text="Lord Augustus Highcastle" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se83" start="2554" end="2561" text="uniform" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se84" start="2567" end="2574" text="colonel" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se85" start="2642" end="2655" text="writing-table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se87" start="2665" end="2670" text="heels" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se88" start="2686" end="2702" text="The Morning Post" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se89" start="2708" end="2712" text="door" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se90" start="2719" end="2722" text="him" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se91" start="2759" end="2763" text="side" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se92" start="2771" end="2775" text="room" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se93" start="2781" end="2787" text="window" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se94" start="2798" end="2801" text="him" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se95" start="2810" end="2819" text="fireplace" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se96" start="2823" end="2832" text="gas stove" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se97" start="2841" end="2846" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se98" start="2849" end="2860" text="bell button" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se99" start="2867" end="2876" text="telephone" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se100" start="2878" end="2887" text="Portraits" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se101" start="2896" end="2902" text="Mayors" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se102" start="2907" end="2912" text="robes" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se103" start="2917" end="2928" text="gold chains" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se104" start="2940" end="2945" text="walls" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se105" start="2958" end="2963" text="clerk" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se107" start="2993" end="3001" text="whiskers" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se108" start="3018" end="3022" text="nose" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se109" start="2983" end="2988" text="beard" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se110" start="3040" end="3058" text="hotel sitting room" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se111" start="3062" end="3067" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se112" start="3091" end="3100" text="telephone" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se113" start="3106" end="3112" text="chairs" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se114" start="3157" end="3161" text="door" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se115" start="3167" end="3176" text="fireplace" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se116" start="3183" end="3189" text="mirror" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se117" start="3197" end="3208" text="mantelpiece" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se118" start="3222" end="3230" text="Princess" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se119" start="3278" end="3285" text="manager" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se120" start="3356" end="3364" text="customer" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se121" start="3454" end="3458" text="lady" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se122" start="3463" end="3472" text="gentleman" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se123" start="3499" end="3511" text="chesterfield" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se124" start="3525" end="3531" text="corner" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se125" start="3539" end="3545" text="lounge" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se126" start="3559" end="3564" text="hotel" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se127" start="3599" end="3605" text="window" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se128" start="3635" end="3642" text="terrace" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se129" start="3671" end="3677" text="harbor" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se130" start="3683" end="3689" text="lounge" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se131" start="3703" end="3715" text="chesterfield" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se132" start="3757" end="3764" text="figures" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se133" start="3774" end="3787" text="evening dress" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se134" start="3813" end="3821" text="arc lamp" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se135" start="3841" end="3846" text="walls" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se136" start="3874" end="3879" text="paper" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se137" start="3909" end="3921" text="stray chairs" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se138" start="3974" end="3977" text="him" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se139" start="3935" end="3939" text="side" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se140" start="3990" end="3996" text="window" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se141" start="4011" end="4020" text="fireplace" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se142" start="4058" end="4062" text="door" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se143" start="4041" end="4045" text="lady" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se144" start="4068" end="4077" text="gentleman" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se145" start="4088" end="4092" text="lady" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se146" start="3948" end="3957" text="gentleman" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se147" start="4107" end="4111" text="lady" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se148" start="4181" end="4184" text="She" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se149" start="4224" end="4227" text="she" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se150" start="4275" end="4284" text="gentleman" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se151" start="4311" end="4313" text="He" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se152" start="4420" end="4424" text="hair" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se153" start="4462" end="4468" text="artist" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se154" start="4432" end="4435" text="man" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se155" start="4486" end="4493" text="England" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se156" start="4495" end="4497" text="He" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se157" start="4538" end="4542" text="lady" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se158" start="4622" end="4625" text="her" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se159" start="4610" end="4614" text="arms" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se160" start="4628" end="4645" text="General Mitchener" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se161" start="4664" end="4669" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se162" start="4677" end="4687" text="War Office" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se163" start="4697" end="4704" text="letters" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se164" start="4725" end="4734" text="fireplace" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se165" start="4743" end="4747" text="fire" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se166" start="4792" end="4796" text="wall" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se167" start="4811" end="4815" text="desk" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se168" start="4824" end="4830" text="office" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se169" start="4831" end="4836" text="stool" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se170" start="4842" end="4846" text="door" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se171" start="4857" end="4861" text="wall" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se172" start="4895" end="4900" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se173" start="4909" end="4913" text="desk" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se174" start="4919" end="4924" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se175" start="4959" end="4963" text="room" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se176" start="4985" end="4994" text="hearthrug" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se177" start="5007" end="5011" text="desk" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se178" start="5024" end="5029" text="chair" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se179" start="5085" end="5092" text="general" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se180" start="5122" end="5127" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se181" start="5105" end="5114" text="telephone" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<ORIENTATION_SIGNAL id="os0" start="54" end="59" text="drawn" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os1" start="201" end="205" text="with" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os2" start="363" end="370" text="nearest" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os3" start="410" end="415" text="along" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os4" start="429" end="433" text="wall" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os5" start="174" end="176" text="in" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os6" start="1224" end="1231" text="crosses" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os7" start="1198" end="1202" text="puts" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os8" start="1109" end="1118" text="takes off" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os9" start="1048" end="1052" text="puts" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os10" start="1267" end="1271" text="puts" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os12" start="1285" end="1292" text="notices" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os13" start="1390" end="1395" text="takes" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os14" start="1594" end="1601" text="presses" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os15" start="1664" end="1669" text="takes" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os16" start="1870" end="1875" text="takes" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os17" start="2378" end="2387" text="puts down" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os18" start="2630" end="2636" text="seated" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os19" start="2713" end="2718" text="faces" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os20" start="2791" end="2797" text="behind" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os21" start="2834" end="2836" text="On" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os22" start="3024" end="3032" text="shuffles" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os23" start="3120" end="3140" text="opposite one another" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os24" start="3477" end="3493" text="sitting together" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os25" start="3618" end="3629" text="stands open" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os26" start="3981" end="3985" text="near" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os27" start="4600" end="4605" text="throw" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os28" start="4802" end="4810" text="standing" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os29" start="5115" end="5117" text="on" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os30" start="4401" end="4412" text="arrangement" orientation_type="" comment="" />
+</TAGS>
+</OCDMLtask>
