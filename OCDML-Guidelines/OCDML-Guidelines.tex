@@ -103,7 +103,7 @@ The \texttt{spatial\_entity} tag in \ML~is intended to identify participants of 
 \subsubsection{Spatial Entity Extents} % (fold)
 \label{ssub:spatial_entity_extents}
 
-For this task, the textual extents that should be tagged with the \textsc{spatial\_entity} tag will be nouns. In terms of grammatical parts of speech, only nouns should be captured with the \textsc{spatial\_entity}.. Spatial entities may be referred to by nominal or named forms, and both are valid extents for this tag type. In the case of multi-word proper names, the entire extent of the name should be included in the tag. In terms of a constituency phrase-structure, only the heads of noun phrases should be tagged; sister words and phrases of a head noun should not be included in \textsc{spatial\_entity} tag extents. The \textsc{spatial\_entity} tag is allowed to be non-consuming. In cases of implicit spatial entities that are not directly referred to in the text, annotators should create non-consuming tags. Refer to \Cref{ex:spatial_entity} in \cref{ssub:spatial_entity_examples} for illustrations of various \textsc{spatial\_entity} extent tags.
+For this task, the textual extents that should be tagged with the \textsc{spatial\_entity} tag will be nouns. In terms of grammatical parts of speech, only nouns should be captured with the \textsc{spatial\_entity}.. Spatial entities may be referred to by nominal or named forms, and both are valid extents for this tag type. In the case of multi-word proper names, the entire extent of the name should be included in the tag. In terms of grammatical structure, only the heads of noun phrases should be tagged; sister words and phrases of a head noun should not be included in \textsc{spatial\_entity} tag extents. The \textsc{spatial\_entity} tag is allowed to be non-consuming. In cases of implicit spatial entities that are not directly referred to in the text, annotators should create non-consuming tags. Refer to \Cref{ex:spatial_entity} in \cref{ssub:spatial_entity_examples} for illustrations of various \textsc{spatial\_entity} extent tags.
 
 \begin{note}
     
@@ -258,7 +258,7 @@ This attribute is intended to identify the salient cross-sectional axis of the s
         
     \item \entity{}{0} Lies down on \entity{sofa}{3}.
         \begin{note}
-            In this example, \texttt{se0} is a non-consuming \textsc{spatial\_entity} tag that is configured relative to the \emph{sofa}.
+            In this example, \texttt{se0} is a non-consuming \textsc{spatial\_entity} tag that is configured relative to the \emph{sofa}. When annotators create a non-consuming tag such as this, they must fill the comment field to indicate their motivation for creating the tag.
         \end{note}
         \textsc{spatial\_entity}
             (\texttt{id}=\texttt{se0},
@@ -286,7 +286,7 @@ This attribute is intended to identify the salient cross-sectional axis of the s
         
 	\item \entity{MAURICE}{4} and \entity{HENRIETTE}{5} are in evening dress and sit facing each other \ldots
     \begin{note}
-        Normally the pronoun \emph{other} would be tagged as a \textsc{spatial\_entity}, but in this example only the extents for \emph{MAURICE} and \emph{HENRIETTE} have been tagged. In cases where a spatial entity is referenced anaphorically via a pronominal form it is normally appropriate to tag the extent of the pronoun with the \textsc{spatial\_entity} tag. However, if a split antecedent occurs where each part of the antecedent participates in a spatial configuration, acting as both a figure and ground relative to others, then it is safe to only tag the antecedents. If \emph{MAURICE} and \emph{HENRIETTE} were both facing something else then that 3rd entity would be tagged as a \textsc{spatial\_entity}.
+        Normally the pronoun \emph{other} would be tagged as a \textsc{spatial\_entity}, but in this example only the extents for \emph{MAURICE} and \emph{HENRIETTE} have been tagged. In cases where a spatial entity is referenced anaphorically, via a pronominal form, it is normally appropriate to tag the extent of the pronoun with the \textsc{spatial\_entity} tag. However, if a split antecedent occurs where each part of the antecedent participates in a spatial configuration, acting as both a figure and ground relative to others, then it is safe to only tag the antecedents. If \emph{MAURICE} and \emph{HENRIETTE} were both facing something else then that 3rd entity would be tagged as a \textsc{spatial\_entity}.
     \end{note}
         \textsc{spatial\_entity}
             (\texttt{id}=\texttt{se4},
@@ -540,8 +540,9 @@ The attributes for the \textsc{configuration\_link} tag are enumerated in \cref{
     \hline \texttt{figure\_config}      & \textsc{left}, \textsc{right}, \textsc{front}, \textsc{back}, \textsc{top}, \textsc{bottom}, \textsc{side}, \textsc{top\_or\_bottom}, \textsc{any}, \textsc{other}\\
     \hline \texttt{ground\_config}      & \textsc{left}, \textsc{right}, \textsc{front}, \textsc{back}, \textsc{top}, \textsc{bottom}, \textsc{side}, \textsc{top\_or\_bottom}, \textsc{any}, \textsc{other}\\
     \hline \texttt{coercion}            & \textsc{figure}, \textsc{ground}, or \textsc{none}\\
-    \hline \texttt{trigger}             & An ID of a \texttt{orientation\_signal} tag that triggers the link\\
-    \hline \texttt{direction}           & \textsc{figure\_ground}, \textsc{ground\_figure}\\
+    \hline \texttt{trigger}             & An ID of an \textsc{orientation\_signal} tag that triggers the link\\
+    \hline \texttt{figure}              & The ID of the \textsc{spatial\_entity} acting as the figure within the relation\\
+    \hline \texttt{ground}              & The ID of the \textsc{spatial\_entity} acting as the ground within the relation\\
 \end{attributes}
 \caption{Attributes for \textsc{configuration\_link}}
 \label{tab:configuration_link}
@@ -551,10 +552,14 @@ The attributes for the \textsc{configuration\_link} tag are enumerated in \cref{
 
 \paragraph{\texttt{figure\_config} \& \texttt{ground\_config}} % (fold)
 \label{par:figure_ground_config}
-The combination of the \texttt{figure\_config} and \texttt{ground\_config} attributes are used to specify the configuration between the participating figure and ground entities. 
+The combination of the \texttt{figure\_config} and \texttt{ground\_config} attributes are used to specify the configuration between the participating figure and ground entities. Looking at \Cref{ex:cat}, the configuration of the entities involved is such that the bottom of the cat is on the top of the table. So, a \textsc{configuration\_link} between the entity tags for \emph{cat} and \emph{table} would have the \texttt{figure\_config} attribute filled as \textsc{bottom} and the \texttt{ground\_config} attribute filled as \textsc{top}.
+
+\begin{note}
+For every \textsc{congiruation\_link} relation, it is important that one of either the \texttt{figure\_config} or the \texttt{ground\_config} attributes does not take a value of \textsc{any}. That is to say, for these two attributes they should never both be marked as \textsc{any} within the same link.
+\end{note}
 
 \iffalse
-Looking back at \Cref{ex:cat}, the configuration of the entities involved is such that the bottom of the cat is on the top of the table. The \texttt{figure\_config} attribute is compulsory whereas the ground config attribute is optional; \Cref{ex:ground} shows an optional \texttt{ground\_config} whereas in \Cref{ex:no_ground} the \texttt{ground\_config} is requisite.
+The \texttt{figure\_config} attribute is compulsory whereas the ground config attribute is optional; \Cref{ex:ground} shows an optional \texttt{ground\_config} whereas in \Cref{ex:no_ground} the \texttt{ground\_config} is requisite.
 
 % Zach: I don't agree with this. We need to be able to handle cases where there is a lot of underspecification.
 \fi
@@ -571,7 +576,7 @@ Looking back at \Cref{ex:cat}, the configuration of the entities involved is suc
 \paragraph{\texttt{dim\_coercion}} % (fold)
 \label{par:dim_coercion}
 
-This attribute can be used to indicate that the dimensionality of the figure entity is coerced to that of the ground or vice versa. Consider \Cref{ex:sun}. While we know that the sun is a 3-dimensional sphere, in this example the \emph{sun} is being coerced into 2-dimensions by the ground, namely the \emph{sky}. This type of coercion does not take place in \Cref{ex:earth}, since both the \emph{earth} and the \emph{sun} would be considered 3-dimensional objects moving in 3-dimensional space.
+This attribute can be used to indicate that the dimensionality of the figure entity is coerced to that of the ground or vice versa. Consider \Cref{ex:sun}. While we know that the sun is a 3-dimensional sphere, in this example the \emph{sun} is being coerced into 2-dimensions for the purposes of participating in a relation relative to the ground, namely the \emph{sky}, which is acting as a 2-dimensional space. This type of coercion does not take place in \Cref{ex:earth}, since both the \emph{earth} and the \emph{sun} would be considered 3-dimensional objects moving in 3-dimensional space. So in the case where the \emph{sun}---the figure---is coerced to the dimensionality of the \emph{sky}---the ground---the \texttt{coercion} attribute would be filled as \textsc{ground}. When the ground entity is coerced to the dimensionality of the figure, then this attribute would be set to \textsc{figure}. If there is no coercion, then both the figure and ground participant entity tags should have the same dimensionality, and the value should be set to \textsc{none}. 
 
 \eenumsentence{
     \item The [sun$_{figure}$] travels across the [sky$_{ground}$].
@@ -596,14 +601,14 @@ This attribute takes the ID value of the \texttt{orientation\_signal} that trigg
 
 % paragraph trigger (end)
 
-\paragraph{\texttt{direction}} % (fold)
-\label{par:direction}
-This attribute is used to indicate the asymmetrical directionality of the configuration relation in terms of figure-to-ground or ground-to-figure. When creating a \textsc{configuration\_link}, if the ID of the \textsc{spatial\_entity} tag that represents the figure is selected first, then the \texttt{direction} attribute should take a value of \textsc{figure\_ground}. If the link were created in the reverse order, such that the ID of the \textsc{spatial\_entity} tag that represents the ground is selected first, then the \texttt{direction} attribute should take a value of \textsc{ground\_figure}.
+\paragraph{\texttt{figure} \& \texttt{ground}} % (fold)
+\label{par:figure_ground}
+These two attribute are used to indicate the asymmetrical directionality of the configuration relation in terms of which argument in the link acts as the ground and which acts as the figure. The \texttt{figure} attribute should be filled with the ID of the \textsc{spatial\_entity} tag that is participating as the figure in the relation. The \texttt{ground} attribute would then be filled with the ID of the \textsc{spatial\_entity} tag that is participating as the ground.
 %Cynthia: remind me again why we decided to use this instead of specifying that the annotator always tag the figure first and the ground second, regardless of word order? I thought we had decided to do the latter, but now I'm unsure. How would we annotate the sentence "… and sitting in the chair was a beautiful lady"?
 
 % Zach: @Cynthia, the problem with relying on the order of the link creation is that it's relying on the annotators to remember the correct order, whereas allowing the order to be switched, but having explicit figure and ground attributes is more flexible for the annotators and less prone to mistakes being made, since annotators must be explicit about which entity ID is the figure and which is the ground.
 
-% paragraph direction (end)
+% paragraph figure_ground (end)
 
 
 
