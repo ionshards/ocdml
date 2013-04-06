@@ -446,7 +446,24 @@ Examples of the latter type are enumerated in \Cref{ex:trigger_examples}.
 \subsubsection{Orientation Signal Extents} % (fold)
 \label{ssub:orientation_signal_extents}
 % Explain what kinds of lexical items should be captured with the orientation signal tag here.
-In general, whereas \textsc{spatial\_entity} terms will be nominals, \textsc{orientation\_signal} terms will belong to other parts of speech, e.g., verbs, prepositions, adjectives, and adverbs. The extent for orientation signals should consist of the head of the phrase, so for phrasal verbs, take only the head verb as the extent for the orientation signal, ignoring any particles. For prepositional phrases, only the head preposition would be tagged.
+In general, whereas \textsc{spatial\_entity} terms will be nominals, \textsc{orientation\_signal} terms will usually belong to other parts of speech, e.g., verbs, prepositions, adjectives, and adverbs. In these cases, the extent for the orientation signal should consist of the head of the phrase, so for phrasal verbs, take only the head verb as the extent for the orientation signal, ignoring any particles. For prepositional phrases, only the head preposition would be tagged.
+
+There are some special cases where it will prove necessary to tag more than a phrase head. Consider the following sentences:
+
+\eenumsentence{
+    \item I found him \signal{in a state of repose}{1}.
+    \label{ex:state_repose}
+    \item The cup is \signal{on top}{2} of the table.
+    \label{ex:top_non_reified}
+	\item The cup is \signal{on}{3} the top of the table.
+	\label{ex:top_reified}
+}\label{ex:full_phrase_trigger}
+
+In \Cref{ex:state_repose}, there is no single word in the tagged phrase which individually encodes the spatial information. However, the full phrase intimates that "[he]" was lying down, hence with his side oriented toward the top of some supporting surface. Simply tagging the syntactic head, "in," would be inadequate; simply tagging the semantic head, arguably "repose," would capture more accurately the orientation information, but does not directly access the side of "him" or the top of the supporting surface. It is the entire phrase which does so. Likewise, in \Cref{ex:top_non_reified}, the entirety of the indicated phrase is what affords the interpretation that the cup is in contact with the table's top.
+
+Note that only "on" has been tagged in \Cref{ex:top_reified}. Because "top" is preceded by the definite article, we treat it as spatial entity of its own. Thus, "on" accesses the top of the entity "top," with which "cup" is in contact.
+
+In order to decide how much of such a phrase to tag, one may employ the following heuristic. The minimal constituent containing the semantic head ("repose" and "top" in the above examples) and the syntactic head of the prepositional (or adjectival, or adverbial) adjunct or complement phrase ("in" or "on" above) should be included within the extent tag.
 
 % subsubsection orientation_signal_extents (end)
 
