@@ -6,7 +6,7 @@ Some of us had a hard time grasping the specific definitions of some of the term
  
 ## Critique of the guidelines
 ### Quantity and clarity of examples
-In general, the guidelines could have been improved by including more annotation examples.  We were given fully annotated sentences in the form of an .xml file, but adding those examples to the guidelines would have been helpful.  These examples were generally more simple in comparison to the sentences we were expected to annotate, so having some more complicated example sentences that better reflected the data would have been helpful as well.
+In general, the guidelines could have been improved by including more annotation examples.  We were given fully annotated sentences in the form of an XML file, but adding those examples to the guidelines might have been helpful.  These examples were generally more simple in comparison to the sentences we were expected to annotate, so having some more complicated example sentences that better reflected the data would have been helpful as well.
 
 ### Definition of "Clause"
 One of the least clear areas of the annotation task was exactly what the markable extent for a `CLAUSE` tag should consist of. The guidelines begin by stating that:
@@ -32,9 +32,9 @@ Since the sentences in a. and b. were intended to be contrastive, it might have 
 a. The man **sits** (in the middle of the lake)
 b. The town **sits** (in the middle of the lake)
 
-In general, the guidelines could have been greatly improved by giving more minimally contrastive examples.
+In general, the guidelines could have been greatly improved by giving additional minimally contrastive examples.
 
-Furthermore, the guidelines explicitly mention that bare manner-of-motion verbs (e.g., *runs* or *swims*) do not select for specific spatial configurations. This confused us, since the guidelines explicitly contrast the non-motion verbs *sits* and *stands*. As for *swims*, we don't believe it selects for any particular spatial configuration, since there are myriad configurations in which to swim. For *runs* or say *walks*, however, we feel as though there should be some distinction between these verbs and say *scoots*. In fact, to draw an analogous contrast to the distinction that the guidelines bring up, it seems as if the distinctions between the static verbs *sits* and *lies* and *stands* is exactly analogous to the distinctions between the dynamic, bare manner-of-motion verbs *scoots* and *crawls* and *walks*.
+Furthermore, the guidelines explicitly mention that bare manner-of-motion verbs (e.g., *runs* or *swims*) do not select for specific spatial configurations. This confused us, since the guidelines explicitly contrast the non-motion verbs *sits* and *stands*. As for *swims*, we agree that it doesn't select for any particular spatial configuration, since there are myriad configurations in which to swim. For *runs* or say *walks*, however, we feel as though there should be some distinction between these verbs and say *scoots*. In fact, to draw an analogous contrast to the distinction that the guidelines bring up, it seems as if the distinctions between the static verbs *sits* and *lies* and *stands* is exactly analogous to the distinctions between the dynamic, bare manner-of-motion verbs *scoots* and *crawls* and *walks*.
 
 1.
     a. The man **sits** (on the grass)
@@ -46,7 +46,7 @@ Furthermore, the guidelines explicitly mention that bare manner-of-motion verbs 
     b. The man **crawls** (on the grass)
     c. The man **walks** (on the grass)
 
-The guidelines make it explicit that the verb *walks* does not select for spatial aspect; that it is the prepositional phrase alone, that applies the spatial aspect.
+The guidelines make it explicit that the verb *walks* does not select for spatial aspect; that it is the prepositional phrase alone, that applies the spatial aspect.  It seems unintuitive that there is no distinction between the spatial aspect of any pair of sentences in within 2.  Equally unintuitive is that, according to our interpretation of the guidelines, there is no distinction between the spatial aspects in the pairs 1.a. and 2.a., 1.b. and 2.b., and 1.c. and 2.c.
 
 ##Is the guideline reflected in the specification?
 
