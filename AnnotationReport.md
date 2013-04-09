@@ -13,7 +13,7 @@ One of the least clear areas of the annotation task was exactly what the markabl
 
 >"Every clause centered around a content (non-function) verb should be marked as such, and will appear under the CLAUSE tab."
 
-The term "clause" is not explicitly defined.  If, relying on our own knowledge, we interpret "clause" to refer to a grammatical unit that expresses a "proposition" or "complete thought", then the next issue arises as to when adjunctive modifiers should be included within the extent of a `CLAUSE` tag.  The annotation examples that were provided are also unclear; some `CLAUSE` tags include adjuncts and others did not.
+The term "clause" is not explicitly defined.  If, relying on our own knowledge, we interpret "clause" to refer to a grammatical unit that expresses a "proposition" or "complete thought", then the next issue arises as to when adjunctive modifiers should be included within the extent of a `CLAUSE` tag.  The annotation examples that were provided are also unclear; some `CLAUSE` tags include adjuncts and others do not.
 
 ### Definition of "Spatial Aspect"
 Another issue that some of us encountered when interpreting the guidelines was attempting to remain consistent with the `spatial` and `dynamism` attributes of the `CLAUSE` tag type.  In the section of the guidelines titled 'Definition of spatial Aspect', a contrast is established between the following sentences:
@@ -29,12 +29,12 @@ This is confusing because the verb *sits* in b. is, arguably, still contributing
 
 Since the sentences in a. and b. were intended to be contrastive, it might have been helpful to use a perfectly minimally contrastive pair such as:
 
-a. The man sits (in the middle of the lake)
-b. The town sits (in the middle of the lake)
+a. The man **sits** (in the middle of the lake)
+b. The town **sits** (in the middle of the lake)
 
 In general, the guidelines could have been greatly improved by giving more minimally contrastive examples.
 
-Furthermore, the guidelines explicitly mention that bare manner-of-motion verbs (e.g., *runs* or *swims*) do not select for specific spatial configurations. This confused me, since the guidelines explicitly contrast the non-motion verbs *sits* and *stands*. As for *swims*, I don't believe it selects for any particular spatial configuration, since there are myriad configurations in which to swim. For *runs* or say *walks*, however, I feel as though there should be some distinction between these verbs and say *scoots*. In fact, to draw an analogous contrast to the distinction that the guidelines bring up, it seems as if the distinctions between between the static verbs *sits* and *lies* and *stands* is exactly analogous to the distinctions between the dynamic, bare manner-of-motion verbs *scoots* and *crawls* and *walks*.
+Furthermore, the guidelines explicitly mention that bare manner-of-motion verbs (e.g., *runs* or *swims*) do not select for specific spatial configurations. This confused us, since the guidelines explicitly contrast the non-motion verbs *sits* and *stands*. As for *swims*, we don't believe it selects for any particular spatial configuration, since there are myriad configurations in which to swim. For *runs* or say *walks*, however, we feel as though there should be some distinction between these verbs and say *scoots*. In fact, to draw an analogous contrast to the distinction that the guidelines bring up, it seems as if the distinctions between the static verbs *sits* and *lies* and *stands* is exactly analogous to the distinctions between the dynamic, bare manner-of-motion verbs *scoots* and *crawls* and *walks*.
 
 1.
     a. The man **sits** (on the grass)
@@ -46,7 +46,7 @@ Furthermore, the guidelines explicitly mention that bare manner-of-motion verbs 
     b. The man **crawls** (on the grass)
     c. The man **walks** (on the grass)
 
-The guidelines make it explicit that the verb *walks* does not select for spatial aspect.
+The guidelines make it explicit that the verb *walks* does not select for spatial aspect; that it is the prepositional phrase alone, that applies the spatial aspect.
 
 ##Is the guideline reflected in the specification?
 
