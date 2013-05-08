@@ -1,0 +1,100 @@
+% ACL packages (Do not change)
+\documentclass[11pt]{article}
+\usepackage{acl2012}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{url}
+\DeclareMathOperator*{\argmax}{argmax}
+\setlength\titlebox{6.5cm}    % Expanding the titlebox
+
+% Other packages
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{lingstyle}
+\usepackage{color}
+\definecolor{darkblue}{rgb}{0,0,0.8}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkred}{rgb}{0.8,0,0}
+\definecolor{brown}{rgb}{0.5,0.3,0}
+
+% Colorized ISO-Space tags
+\newcommand{\placeTag}[2]{[{\bf \color{darkblue}#1}$_{pl#2}$]}
+\newcommand{\pathTag}[2]{[{\bf \color{darkblue}#1}$_{p#2}$]}
+\newcommand{\entityTag}[2]{[{\bf \color{darkgreen}#1}$_{se#2}$]}
+\newcommand{\eventTag}[2]{[{\bf \color{darkred}#1}$_{e#2}$]}
+\newcommand{\motionTag}[2]{[{\bf \color{darkred}#1}$_{m#2}$]}
+\newcommand{\signalTag}[2]{[{\bf \color{brown}#1}$_{s#2}$]}
+\newcommand{\adjunctTag}[2]{[{\bf \color{brown}#1}$_{a#2}$]}
+\newcommand{\measureTag}[2]{[{\bf \color{brown}#1}$_{me#2}$]}
+
+\title{OCDML}
+
+%
+\author{
+    Zachary Yocum \\
+    Brandeis University \\
+    \texttt{zyocum@brandeis.edu} \\\And
+    Cory Massaro \\
+    Brandeis University \\
+    \texttt{cmassaro@brandeis.edu} \\\And
+    Malcolm J. Phillips \\
+    Brandeis University \\
+    \textt{icos@brandeis.edu} \\\And
+    Cynthia Goodman\\
+    Brandeis University \\
+    \textt{cpg@brandeis.edu}
+    }
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+%An understanding of spatial information in natural language is necessary for many computational linguistics and artificial intelligence applications.  In this paper, we discuss what problems face researchers with respect to this topic, focusing on the need for a well-developed annotation scheme.  The desiderata for such a specification language are defined along with what representational mechanisms are required for the specification to be successful.  We then review several spatial information annotation schemes, focusing on the latest version of the ISO-Space specification.  Finally, we discuss where ISO-Space still falls short and propose some ways that the specification could be enriched.
+%
+
+
+\begin{abstract}
+This paper presents the first description of Orientation Configuration \& Dimensionality Markup Language (OCDML), a markup language for coding certain spatial configurations expressed in natural language.
+\end{abstract}
+
+\section{Introduction} % (fold)
+\label{sec:introduction}
+The goal of OCDML is to \ldots
+% section introduction (end)
+
+Citations:
+\cite{cohn1997qualitative}
+\cite{isli2000new}
+\cite{cristani2002spaceml}
+\cite{slobin2001sign}
+\cite{mani2010spatialml}
+\cite{talmy1978figure}
+\cite{herskovits1980spatial}
+
+\section{SceneBank Data} % (fold)
+\label{scenebank_data}
+% section scenebank_data (end)
+
+\section{Discussion} % (fold)
+\label{sec:discussion}
+% section discussion (end)
+
+\section{Conclusion} % (fold)
+\label{sec:conclusion}
+In this paper we have presented an initial description of OCDML \ldots
+% section conclusion (end)
+
+\section*{Acknowledgements} % (fold)
+\label{sec:acknowledgements}
+% section acknowledgements (end)
+
+\bibliographystyle{acl}
+
+\bibliography{acl2012-ocdml}
+
+
+\end{document}
