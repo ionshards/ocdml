@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OCDMLtask>
+<TEXT><![CDATA[
+The curtained door away out in the dim part of the room behind him is opened so softly that he does not wake.
+
+She stands in breathless terror.
+
+In the middle of the room and facing the fireplace is (observe) a solid knee-hole writing-table, covered with papers and books of reference, and supported by a chair at the middle and another at the side.
+
+A Girl, sits crouched over her knees on a stile close to a river.
+
+YANK can be seen within, crouched on the edge of his cot in the attitude of Rodin's "The Thinker."
+
+A second-class compartment of a corridor carriage, in motion. In it are seated the ENGLISHMAN and his WIFE, opposite each other at the corridor end, she with her face to the engine, he with his back.
+
+In the foreground a table is spread, with flowers in the centre, bowls full of fruit, wine in decanters, oysters on platters, many different kinds of wine glasses, and two lighted candelabra. On the right there is a round table full of newspapers and telegrams.
+]]></TEXT>
+<TAGS>
+<SPATIAL_ENTITY id="se0" start="15" end="19" text="door" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se1" start="52" end="56" text="room" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se2" start="40" end="44" text="part" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se3" start="93" end="95" text="he" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se4" start="64" end="67" text="him" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se5" start="112" end="115" text="She" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se6" start="153" end="159" text="middle" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se7" start="167" end="171" text="room" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se8" start="187" end="196" text="fireplace" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se9" start="228" end="241" text="writing-table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se10" start="256" end="262" text="papers" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se11" start="267" end="272" text="books" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se12" start="306" end="311" text="chair" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se13" start="319" end="325" text="middle" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se14" start="330" end="337" text="another" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se15" start="345" end="349" text="side" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se16" start="354" end="358" text="Girl" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se17" start="383" end="388" text="knees" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se18" start="394" end="399" text="stile" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se19" start="411" end="416" text="river" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se20" start="419" end="423" text="YANK" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se21" start="-1" end="-1" text="" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="The location YANK  is standing within" />
+<SPATIAL_ENTITY id="se22" start="460" end="464" text="edge" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se23" start="472" end="475" text="cot" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se24" start="504" end="515" text="The Thinker" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se25" start="534" end="545" text="compartment" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se26" start="560" end="568" text="carriage" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se27" start="584" end="586" text="it" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se28" start="602" end="612" text="ENGLISHMAN" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se29" start="621" end="625" text="WIFE" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se30" start="668" end="671" text="she" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se31" start="681" end="685" text="face" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se32" start="693" end="699" text="engine" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se33" start="701" end="703" text="he" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se34" start="713" end="717" text="back" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se35" start="727" end="737" text="foreground" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se36" start="740" end="745" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se37" start="762" end="769" text="flowers" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se38" start="777" end="783" text="centre" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se39" start="785" end="790" text="bowls" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se40" start="799" end="804" text="fruit" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se41" start="806" end="810" text="wine" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se42" start="814" end="823" text="decanters" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se43" start="825" end="832" text="oysters" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se44" start="836" end="844" text="platters" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se45" start="875" end="882" text="glasses" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se46" start="900" end="910" text="candelabra" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se47" start="919" end="924" text="right" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se48" start="942" end="947" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se49" start="956" end="966" text="newspapers" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se50" start="971" end="980" text="telegrams" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c-sec_axis="" comment="" />
+<ORIENTATION_SIGNAL id="os0" start="57" end="63" text="behind" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os1" start="116" end="122" text="stands" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os2" start="176" end="182" text="facing" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os3" start="243" end="250" text="covered" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os4" start="291" end="300" text="supported" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os5" start="360" end="364" text="sits" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os6" start="365" end="373" text="crouched" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os7" start="374" end="378" text="over" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os8" start="389" end="391" text="on" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os9" start="444" end="452" text="crouched" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os10" start="453" end="455" text="on" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os11" start="591" end="597" text="seated" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os12" start="627" end="635" text="opposite" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os13" start="686" end="688" text="to" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os14" start="757" end="761" text="with" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os15" start="791" end="795" text="full" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os16" start="770" end="772" text="in" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os17" start="811" end="813" text="in" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os18" start="833" end="835" text="on" orientation_type="" comment="" />
+<ORIENTATION_SIGNAL id="os19" start="948" end="952" text="full" orientation_type="" comment="" />
+</TAGS>
+</OCDMLtask>

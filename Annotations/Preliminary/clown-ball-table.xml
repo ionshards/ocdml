@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OCDMLtask-1.2>
+<TEXT><![CDATA[
+The clown is on top of the ball.
+
+The clown is on the top of the ball.
+
+The clown is on top of the table.
+
+The clown is on the top of the table.
+
+The clown lies on top of the table.
+
+The clown lies on the top of the table
+]]></TEXT>
+<TAGS>
+<SPATIAL_ENTITY id="se0" start="5" end="10" text="clown" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se1" start="39" end="44" text="clown" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se2" start="77" end="82" text="clown" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se3" start="112" end="117" text="clown" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se4" start="28" end="32" text="ball" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="sphere" left_right="relative" front_back="relative" top_bottom="relative" c_sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se5" start="66" end="70" text="ball" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="sphere" left_right="relative" front_back="relative" top_bottom="relative" c_sec_axis="" comment="" />
+<SPATIAL_ENTITY id="se6" start="100" end="105" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se7" start="139" end="144" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se8" start="55" end="58" text="top" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="4-gon" volume_type="" left_right="relative" front_back="relative" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se9" start="128" end="131" text="top" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="4-gon" volume_type="" left_right="relative" front_back="relative" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se10" start="176" end="181" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se11" start="151" end="156" text="clown" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se12" start="188" end="193" text="clown" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="biped" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se13" start="217" end="222" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se14" start="206" end="209" text="top" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="4-gon" volume_type="" left_right="relative" front_back="relative" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se15" start="-1" end="-1" text="" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c_sec_axis="" comment="Whatever the [clown,se11] is lying relative to in 'The clown lies on top of the table.'" />
+<SPATIAL_ENTITY id="se16" start="-1" end="-1" text="" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="" line_type="" area_type="" volume_type="" left_right="relative" front_back="relative" top_bottom="relative" c_sec_axis="" comment="Whatever the [clown,se12] is lying relative to in 'The clown lies on the top of the table.'" />
+<ORIENTATION_SIGNAL id="os0" start="14" end="23" text="on top of" orientation_type="vertical" relativity="NO" comment="" />
+<ORIENTATION_SIGNAL id="os1" start="48" end="50" text="on" orientation_type="vertical" relativity="NO" comment="" />
+<ORIENTATION_SIGNAL id="os2" start="86" end="95" text="on top of" orientation_type="vertical" relativity="NO" comment="" />
+<ORIENTATION_SIGNAL id="os3" start="121" end="123" text="on" orientation_type="vertical" relativity="NO" comment="" />
+<ORIENTATION_SIGNAL id="os4" start="157" end="161" text="lies" orientation_type="lateral" relativity="NO" comment="" />
+<ORIENTATION_SIGNAL id="os5" start="162" end="171" text="on top of" orientation_type="vertical" relativity="YES" comment="" />
+<ORIENTATION_SIGNAL id="os6" start="194" end="198" text="lies" orientation_type="lateral" relativity="NO" comment="" />
+<ORIENTATION_SIGNAL id="os7" start="199" end="201" text="on" orientation_type="vertical" relativity="YES" comment="" />
+<CONFIGURATION_LINK id="cl0" fromID="se0" fromText="clown" toID="se4" toText="ball" figure_config="bottom" ground_config="top" trigger="os0" dim_coercion="" figure="se0" ground="se4" comment="" />
+<CONFIGURATION_LINK id="cl1" fromID="se1" fromText="clown" toID="se8" toText="top" figure_config="bottom" ground_config="top" trigger="os1" dim_coercion="" figure="se1" ground="se8" comment="" />
+<CONFIGURATION_LINK id="cl2" fromID="se8" fromText="top" toID="se5" toText="ball" figure_config="bottom" ground_config="top" trigger="" dim_coercion="" figure="se8" ground="se5" comment="" />
+<CONFIGURATION_LINK id="cl3" fromID="se2" fromText="clown" toID="se6" toText="table" figure_config="bottom" ground_config="top" trigger="os2" dim_coercion="" figure="se2" ground="se6" comment="" />
+<CONFIGURATION_LINK id="cl4" fromID="se3" fromText="clown" toID="se9" toText="top" figure_config="bottom" ground_config="top" trigger="os3" dim_coercion="" figure="se3" ground="se9" comment="" />
+<CONFIGURATION_LINK id="cl5" fromID="se9" fromText="top" toID="se7" toText="table" figure_config="bottom" ground_config="top" trigger="" dim_coercion="" figure="se9" ground="se7" comment="" />
+<CONFIGURATION_LINK id="cl8" fromID="se14" fromText="top" toID="se13" toText="table" figure_config="bottom" ground_config="top" trigger="" dim_coercion="" figure="se14" ground="se13" comment="" />
+<CONFIGURATION_LINK id="cl11" fromID="se11" fromText="clown" toID="se15" toText="" figure_config="side" ground_config="top" trigger="os4" dim_coercion="" figure="se11" ground="se15" comment="" />
+<CONFIGURATION_LINK id="cl13" fromID="se12" fromText="clown" toID="se16" toText="" figure_config="side" ground_config="top" trigger="os6" dim_coercion="" figure="se12" ground="se16" comment="" />
+<CONFIGURATION_LINK id="cl14" fromID="se11" fromText="clown" toID="se10" toText="table" figure_config="side" ground_config="top" trigger="os5" dim_coercion="" figure="se11" ground="se10" comment="" />
+<CONFIGURATION_LINK id="cl15" fromID="se12" fromText="clown" toID="se14" toText="top" figure_config="side" ground_config="top" trigger="os7" dim_coercion="" figure="se12" ground="se14" comment="" />
+</TAGS>
+</OCDMLtask-1.2>

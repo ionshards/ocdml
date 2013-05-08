@@ -1,8 +1,8 @@
-<!ENTITY name "OCDMLtask">
+<!ENTITY name "OCDMLtask-1.2">
 
 <!ELEMENT SPATIAL_ENTITY ( #PCDATA ) >
-<!ATTLIST SPATIAL_ENTITY start #IMPLIED >
 <!ATTLIST SPATIAL_ENTITY id ID prefix="se" #REQUIRED >
+<!ATTLIST SPATIAL_ENTITY start #IMPLIED >
 <!ATTLIST SPATIAL_ENTITY form ( NAM | NOM ) #IMPLIED >
 <!ATTLIST SPATIAL_ENTITY latLong CDATA #IMPLIED >
 <!ATTLIST SPATIAL_ENTITY mod CDATA #IMPLIED >
@@ -16,12 +16,13 @@
 <!ATTLIST SPATIAL_ENTITY left_right ( intrinsic | relative ) #IMPLIED "relative" >
 <!ATTLIST SPATIAL_ENTITY front_back ( intrinsic | relative ) #IMPLIED "relative" >
 <!ATTLIST SPATIAL_ENTITY top_bottom ( intrinsic | relative ) #IMPLIED "relative" >
-<!ATTLIST SPATIAL_ENTITY c-sec_axis ( left_right | front_back | top_bottom | other ) #IMPLIED "relative" >
+<!ATTLIST SPATIAL_ENTITY c_sec_axis ( left_right | front_back | top_bottom | other ) #IMPLIED >
 <!ATTLIST SPATIAL_ENTITY comment CDATA #IMPLIED >
 
 <!ELEMENT ORIENTATION_SIGNAL ( #PCDATA ) >
 <!ATTLIST ORIENTATION_SIGNAL id ID prefix="os" #REQUIRED >
 <!ATTLIST ORIENTATION_SIGNAL orientation_type ( longitudinal | latitudinal | lateral | vertical | coronal | any | other ) #IMPLIED >
+<!ATTLIST ORIENTATION_SIGNAL relativity ( YES | NO ) #IMPLIED >
 <!ATTLIST ORIENTATION_SIGNAL comment CDATA #IMPLIED >
 
 <!ELEMENT CONFIGURATION_LINK EMPTY >
