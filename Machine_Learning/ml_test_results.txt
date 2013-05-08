@@ -1,0 +1,11 @@
+COSI 216 Machine Learning Classification Results:
+
+• 216 Unique spacial entities(503 total annotated(not inc. NC tags))
+
+• Training/Test data consists of two texts (Galsworthy & Shaw) tokenized and POS-tagged.  
+	• NNs from both docs taken and tagged as spacial entity or not
+	• Total 939 instances -- 845 train / 94 test
+
+• Word as feature:
+	• Naive Bayes Classifier: F1: 0.904
+	• MaxEnt Classifier: F1: 0.649
