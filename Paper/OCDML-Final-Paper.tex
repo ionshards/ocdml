@@ -10,6 +10,7 @@
 \setlength\titlebox{6.5cm}    % Expanding the titlebox
 
 %% Other packages
+\usepackage[page]{appendix} % provides support for appendices
 \usepackage{float} % provides configuration of floating figures
 \usepackage{amssymb} % American Mathematical Society symbol package
 \usepackage{lingstyle} % provides sensical example sentence enumeration environment
@@ -61,7 +62,7 @@
 
 \begin{document}
 
-\maketitle
+%\maketitle
 
 \begin{abstract}
     Capturing spatial relations, as expressed in natural language, is relevant
@@ -73,17 +74,6 @@
     discuss the shortcomings of OCDML and offer some suggestions for how it may
     be improved.
 \end{abstract}
-
-\iffalse
-Citations:
-\cite{cohn1997qualitative}
-\cite{isli2000new}
-\cite{cristani2002spaceml}
-\cite{slobin2001sign}
-\cite{mani2010spatialml}
-\cite{talmy1978figure}
-\cite{herskovits1980spatial}
-\fi
 
 \section{Introduction} % (fold)
 \label{sec:introduction}
@@ -103,17 +93,18 @@ The goal of OCDML is to \ldots
 \section{SceneBank} % (fold)
 \label{scenebank_data}
 
+For the purpose of annotation we created a small English language corpus, which we call SceneBank. \Cref{sub:corups_description} provides a short description of the corpus selection process and the nature of its content. \Cref{sub:corpus_analytics} provides some discussion of balance issues and the relative size of the corpus.
+
 \subsection{Corpus Description} % (fold)
 \label{sub:corpus_description}
-
-For the purpose of annotation we created a small English language corpus, which we call SceneBank. SceneBank is intended to be a domain-focused corpus containing scene descriptions, which were excerpted from dramatic, literary works of 19th and 20th century playwrights\footnote{These works were either originally written in English or have been translated into English}. The full SceneBank corpus includes excerpts of plays by Anton Chekhov, George Bernard Shaw, John Galsworthy, Alan Alexander Milne, Eugene O'Neill, and John August Strindberg. Due to limitations on annotator availability, our annotation collection was constrained to a subset of SceneBank, which is approximately one tenth the size of the full corpus. This sub-corpus, which we will discuss in the remainder of this paper, consists of two authors: Shaw and Galsworthy. We have provided basic sentence and word counts in Table \Cref{tab:sent-word-counts} below.
+SceneBank is intended to be a domain-focused corpus containing scene descriptions, which were excerpted from dramatic, literary works of 19th and 20th century playwrights\footnote{These works were either originally written in English or have been translated into English}. The full SceneBank corpus includes excerpts of plays by Anton Chekhov, George Bernard Shaw, John Galsworthy, Alan Alexander Milne, Eugene O'Neill, and John August Strindberg. Due to limitations on annotator availability, our annotation collection was constrained to a subset of SceneBank, which is approximately one tenth the size of the full corpus. This sub-corpus, which we will discuss in the remainder of this paper, consists of two authors: Shaw and Galsworthy. We have provided basic sentence and word counts in Table \Cref{tab:sent-word-counts}.
 
 \begin{table}[h]
 \begin{center}
 \begin{tabular}
     {|c|c|c|}
-    \hline \textbf{Count} & \textbf{SceneBank} & \textbf{Annotated}           \\
-           \textbf{Type}  & \textbf{Total}     & \textbf{Subset}              \\
+    \hline \textbf{Count} & \textbf{SceneBank} & \textbf{Annotated}      \\
+           \textbf{Type}  & \textbf{Total}     & \textbf{Subset}         \\
     \hline Sentence       & 1191               & 153                     \\
     \hline Tokens         & 22433              & 2768                    \\
     \hline Types          & 3217               & 860                     \\
@@ -124,29 +115,35 @@ For the purpose of annotation we created a small English language corpus, which 
 \end{center}
 \end{table}
 
+The language employed in the scene descriptions is variable, but most scene-descriptions are relatively dense with spatial information. Even so, the corpus is small, and the annotated sub-corpus is smaller still. It should be noted that it may be presumptive to any conclusions from the annotation data gathered on such a small corpus.
 % subsection corpus_description (end)
 
 \subsection{Corpus Analytics} % (fold)
 \label{sub:corpus_analysis}
-We provide below counts for each attribute-value pair in the gold standard annotations from SceneBank. Because this data has been adjudicated, we may postulate, in assaying it, that it has been disabused of any ambiguity or error resulting from our guideline. Nonetheless, these adjudicated data reveal some issues with the corpus itself and with the ontology on which our annotation scheme is based.
+In \Cref{sec:annotation_statistics} we provide counts for each attribute-value pair in the gold standard annotations from the SceneBank annotated sub-corpus. Because these data have been adjudicated, we may postulate, in assaying it, that it has been disabused of any ambiguity or error resulting from our guideline. Nonetheless, these adjudicated data reveal some issues with the corpus itself and possibly with the model on which our annotation formalism is based.
 
-As might be expected from a , \textsc{volume} preponderates (by a wide margin) in the \texttt{dimensionality} field for the \textsc{spatial\_entity} tag type. We don't believe this is an issue, since the specification is really intended to capture configurational relationships in three-dimensional space. However, one may note that the \texttt{rect\_prism} is by far the most prevalent volumetric primitive type, followed by \texttt{biped}. While objects that are rectangularly prismatic, or at least may be conceptually simplified as being represented as a rectangular prism (in contrast to vaguely conical, infundibular, etc. objects) do account for many artificial objects that humans interact with in domestic, interior spaces, they probably don't constitute a majority (or even plurality) of all three-dimensional objects. Thus, this profusion of rectangular prisms reflects a significant bias in our corpus.
+As might be expected of a corpus consisting of scene descriptions, \textsc{volume} preponderates (by a wide margin) in the \texttt{dimensionality} field for the \textsc{spatial\_entity} tag type. We don't believe this is an issue, since our specification is intended to capture configurational relationships on three-dimensional space. However, one may note that the \texttt{rect\_prism} is by far the most prevalent volumetric primitive type, followed by \texttt{biped}. While objects that are rectangularly prismatic, or at least may be conceptually simplified as being represented as a rectangular prism (in contrast to vaguely conical, infundibular, etc. objects) do account for many artificial objects that humans interact with in domestic, interior spaces, they probably don't constitute a majority (or even plurality) of all three-dimensional objects. Thus, this profusion of rectangular prisms reflects a significant bias in our corpus.
 
-However, our annotation may have subsumed so many objects as \texttt{rect\_prism} simply because of limitations in the way our model codes directional information. That is, our ontological framework presupposes that relations in three spatial dimensions may be sufficiently captured with information about latitudinal, longitudinal, and vertical axes of orientation. In the absence of any better intuitive metric (i.e., something more accessible and less granular than, say, polar coordinates), this seems to be a necessary compromise to keep the annotation task simple and relatively informative. Under this view, the proliferation of the \texttt{rect\_prism} entity types is simply an artifact of the nature of the task.
+However, our annotation may have subsumed so many objects as \texttt{rect\_prism} simply because of limitations in the way our model codes directional information. That is, our ontological framework presupposes that relations in three spatial dimensions may be sufficiently captured in terms of latitudinal, longitudinal, and vertical axes of orientation. In the absence of any better intuitive metric (i.e., something more accessible and less granular than, say, polar coordinates), this seems to be a necessary compromise to keep the annotation task simple and relatively informative. Under this view, the proliferation of the \texttt{rect\_prism} entity types is simply an artifact of the nature of the task.
 
-Likewise, many human beings are mentioned in the corpus which our model captures with the \texttt{biped} entity type. English, among other natural languages, can express information about animals, and their anatomical parts, in rich detail. While intrinsic or relative spatial axes, in conjunction with the identity of a salient cross-sectional axis, may suffice to orient simple objects with a tolerable degree of precision, it is not capable of expressing human bodies' various stations, luxations, and deformations. A more nuanced account of a human figure's configuration should be extricable in some cases, but our model is insufficient to handle such cases. For example, a human may be described as facing in some direction, meaning that their face---the front of their head---is oriented in a particular way, independent of their torso or other bodily parts. To handle this sort of expression our model would need to be extended to include mereotopological relations between spatial entities and their parts.
-
-On a more general note, the issue of mereotopology extends beyond anatomy to highly flexible or deformable objects. It is both difficult to convey precisely and difficult to construe unambiguously. E.g., in \Cref{ex:shirt-crumpled}, is it unspecified which parts of the shirt are where. Is the front primarily lying on the floor? Is the left sleeve folded haphazardly underneath the rest? The the hearer/reader gets only a vague sense that there is an amorphous entity which, un-crumpled, would be a shirt. Without delving into the issue of dynamic simulation, it is unclear whether a spatial entity in a deformed state should be annotated as a distinct object, with different axial intrinsicalities.
+Likewise, many human beings are mentioned in the corpus, which our model captures with the \texttt{biped} entity type. English, among other natural languages, can express information about animals, and their anatomical parts, in rich detail. While intrinsic or relative spatial axes, in conjunction with the identity of a salient cross-sectional axis, may suffice to orient simple objects with a tolerable degree of precision, it is not capable of expressing human bodies' various stations, luxations, and deformations. A more nuanced account of a human figure's configuration should be extricable in some cases, but our model is insufficient to handle such cases. E.g., in     \Cref{ex:prone}, a human may described as facing in some direction, meaning that their face---the front of their head---is oriented in a particular way, independent of their torso or other bodily parts. To handle this sort of expression our model would need to be extended to include mereotopological relations between spatial entities and their parts such that a human figure, lying prone, could be captured without wrongly specifying the alignment of their head.
 
 \enumsentence{
+    She lay prone and faced the wall.
+    \label{ex:prone}
     The shirt lay crumpled on the floor.
-}\label{ex:shirt-crumpled}
+    \label{ex:shirt-crumpled}
+}
+
+On a more general note, the issue of mereotopology extends beyond anatomy to highly flexible or deformable entities of any sort. E.g., in \Cref{ex:shirt-crumpled}, it is difficult to specify precisely and unambiguously which parts of the shirt are where. Is the front primarily lying on the floor? Is the left sleeve folded haphazardly underneath the rest? The the hearer/reader gets only a vague sense that there is an amorphous entity which, un-crumpled, would be a shirt. If the goal of our annotation is to be able to construct a static scene, it is unclear whether a spatial entity in a deformed state should be annotated differently from the same entity when it is not deformed.
 
 The perceived imbalances in the corpus are not, however, all detrimental: some of the statistical discrepancies enumerated below reveal important classificatory information that could be used to refine a subsequent iteration of OCDML.
 
 Overall, the \texttt{top\_bottom} axis is annotated as \textsc{intrinsic} far more often than \textsc{relative}, while the \texttt{left\_right} and \texttt{front\_back} axes exhibit more even distributions. Likewise, \textsc{top\_bottom} constitutes a substantial majority of the \texttt{c\_sec\_axis} attributes. The \texttt{figure\_config} attribute is predominantly tagged as \textsc{bottom} (followed by \textsc{back}), while most \texttt{ground\_config} values are tagged as \textsc{top}, with \textsc{front} and \textsc{bottom} noticeably less common. However, these three edge out all other values massively.
 
 Certainly, these phenomena evince corpus imbalance to a degree, but they also elucidate the important foundational role topology plays in orienting objects in the real world. In a naïve sense, any object consisting of matter that is subject to the gravity of another massive object (such as a planet), seems likely to have its bottom relatively oriented toward the top surface of whatever surface is supporting it. Our specification does not explicitly collate spatial entities in a frame with respect to any common ground, but the prevalence of \textsc{configuration\_link} tags where the bottom of the figure is related to the top of some ground entity suggests that very basic localization of this type might simplify and focus our task.
+ 
+
 % subsection corpus_analysis (end)
 % section scenebank_data (end)
 
@@ -167,11 +164,254 @@ In this paper we have presented an initial description of OCDML \ldots
 \label{sec:acknowledgements}
 % section acknowledgements (end)
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Citations:
+\cite{cohn1997qualitative}
+\cite{isli2000new}
+\cite{cristani2002spaceml}
+\cite{slobin2001sign}
+\cite{mani2010spatialml}
+\cite{talmy1978figure}
+\cite{herskovits1980spatial}
+\cite{stubbs2011mae}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \bibliographystyle{acl}
 
 \bibliography{acl2012-ocdml}
 
-%\newpage
-%\appendix
+\begin{appendix}
+    \appendixpage
+    \section{Annotation Statistics} % (fold)
+    \label{sec:annotation_statistics}
+    Galsworthy Statistics:\\
+    \textsc{spatial\_entity}::\texttt{dimensionality}\\
+    \textsc{volume}: 266 \\
+    \textsc{line}: 3 \\
+    \textsc{point}: 1 \\
+    \textsc{area}: 68 \\
 
+    \iffalse
+    \textsc{spatial\_entity}::line_type 
+    _ : 312 
+    line: 6 
+    other: 2 
+    segment: 18 
+
+    SPATIAL_ENTITY::area_type 
+    _ : 124 
+    annulus: 1 
+    4-gon: 139 
+    other: 47 
+    disc: 27 
+
+    SPATIAL_ENTITY::volume_type 
+    _ : 9 
+    quadruped: 2 
+    cylinder: 12 
+    torus: 1 
+    tri_prism: 3 
+    sphere: 12 
+    other: 84 
+    cone: 1 
+    rect_prism: 135 
+    biped: 79 
+
+    SPATIAL_ENTITY::top_bottom 
+    relative: 45 
+    _ : 1 
+    intrinsic: 292 
+
+    SPATIAL_ENTITY::front_back 
+    relative: 163 
+    _ : 10 
+    intrinsic: 165 
+
+    SPATIAL_ENTITY::left_right 
+    relative: 179 
+    intrinsic: 159 
+
+
+
+    SPATIAL_ENTITY::c_sec_axis 
+    left_right: 19 
+    front_back: 108 
+    other: 11 
+    top_bottom: 200 
+
+    ORIENTATION_SIGNAL::orientation_type 
+    longitudinal: 19 
+    vertical: 43 
+    latitudinal: 6 
+    any: 12 
+    other: 1 
+    lateral: 5 
+    coronal: 1 
+
+    CONFIGURATION_LINK::dim_coercion 
+    none: 82 
+    figure: 10 
+    ground: 21 
+
+    CONFIGURATION_LINK::figure_config 
+    bottom: 53 
+    top: 2 
+    back: 25 
+    any: 10 
+    front: 14 
+    side: 9 
+
+    CONFIGURATION_LINK::ground_config 
+    right: 3 
+    bottom: 14 
+    top: 45 
+    back: 6 
+    side: 12 
+    front: 21 
+    any: 8 
+    left: 4 
+
+
+    Shaw Statistics:
+
+    SPATIAL_ENTITY::dimensionality 
+    volume: 171 
+    line: 1 
+    point: 5 
+    area: 33 
+
+    SPATIAL_ENTITY::line_type 
+    _ : 207 
+    other: 1 
+    segment: 2 
+
+    SPATIAL_ENTITY::area_type 
+    _ : 156 
+    3-gon: 4 
+    4-gon: 34 
+    other: 7 
+    disc: 9 
+
+    SPATIAL_ENTITY::volume_type 
+    _ : 31 
+    cylinder: 5 
+    pyramid: 2 
+    sphere: 6 
+    other: 42 
+    cone: 4 
+    rect_prism: 72 
+    biped: 48 
+
+    SPATIAL_ENTITY::top_bottom 
+    relative: 31 
+    _ : 2 
+    intrinsic: 177 
+
+    SPATIAL_ENTITY::front_back 
+    relative: 83 
+    _ : 13 
+    intrinsic: 114 
+
+    SPATIAL_ENTITY::left_right 
+    relative: 99 
+    intrinsic: 111 
+
+    SPATIAL_ENTITY::c_sec_axis 
+    _ : 6 
+    left_right: 3 
+    front_back: 64 
+    top_bottom: 137 
+    ORIENTATION_SIGNAL::orientation_type 
+    _ : 1 
+    longitudinal: 18 
+    vertical: 17 
+    lateral: 7 
+    any: 9 
+    other: 2 
+    latitudinal: 1 
+
+    CONFIGURATION_LINK::dim_coercion 
+    _ : 2 
+    none: 69 
+    figure: 3 
+    ground: 13 
+
+    CONFIGURATION_LINK::figure_config 
+    _ : 1 
+    bottom: 34 
+    back: 17 
+    any: 17 
+    front: 11 
+    side: 7 
+
+    CONFIGURATION_LINK::ground_config 
+    _ : 1 
+    right: 4 
+    bottom: 21 
+    top: 20 
+    back: 6 
+    side: 6 
+    front: 21 
+    any: 5 
+    left: 3
+    \fi
+    \section{Document Task Definition} % (fold)
+    \label{sec:document_task_definition}
+    \Cref{fig:dtd}, on page \pageref{fig:dtd}, represents the OCDML annotation specification as a Document Task Definition (DTD) compatible with the Multi-purpose Annotation Environment (MAE) and Multi-Document Adjudication Interface tools\cite{stubbs2011mae}, which were used in the SceneBank sub-corpus annotation effort.
+    \begin{figure*}
+        \begin{verbatim}
+<!ENTITY name "OCDMLtask-1.1">
+
+<!ELEMENT SPATIAL_ENTITY ( #PCDATA ) >
+<!ATTLIST SPATIAL_ENTITY id ID prefix="se" #REQUIRED >
+<!ATTLIST SPATIAL_ENTITY start #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY form ( NAM | NOM ) #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY latLong CDATA #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY mod CDATA #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY countable ( TRUE | FALSE ) #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY quant CDATA #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY scopes CDATA #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY dimensionality ( point | line | area | volume ) 
+#IMPLIED >
+<!ATTLIST SPATIAL_ENTITY line_type ( segment | ray | line | loop | other ) 
+#IMPLIED >
+<!ATTLIST SPATIAL_ENTITY area_type ( 3-gon | 4-gon | disc | annulus | other ) 
+#IMPLIED >
+<!ATTLIST SPATIAL_ENTITY volume_type ( tri_prism | rect_prism | pyramid | 
+sphere | torus | cylinder | cone | biped | quadruped | other ) #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY left_right ( intrinsic | relative ) #IMPLIED 
+"relative" >
+<!ATTLIST SPATIAL_ENTITY front_back ( intrinsic | relative ) #IMPLIED 
+"relative" >
+<!ATTLIST SPATIAL_ENTITY top_bottom ( intrinsic | relative ) #IMPLIED 
+"relative" >
+<!ATTLIST SPATIAL_ENTITY c_sec_axis ( left_right | front_back | top_bottom | 
+other ) #IMPLIED >
+<!ATTLIST SPATIAL_ENTITY comment CDATA #IMPLIED >
+
+<!ELEMENT ORIENTATION_SIGNAL ( #PCDATA ) >
+<!ATTLIST ORIENTATION_SIGNAL id ID prefix="os" #REQUIRED >
+<!ATTLIST ORIENTATION_SIGNAL orientation_type ( longitudinal | latitudinal | 
+lateral | vertical | coronal | any | other ) #IMPLIED >
+<!ATTLIST ORIENTATION_SIGNAL comment CDATA #IMPLIED >
+
+<!ELEMENT CONFIGURATION_LINK EMPTY >
+<!ATTLIST CONFIGURATION_LINK id ID prefix="cl" #REQUIRED >
+<!ATTLIST CONFIGURATION_LINK figure_config ( left | right | front | back | top 
+| bottom | side | top_or_bottom | any | other ) #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK ground_config ( left | right | front | back | top 
+| bottom | side | top_or_bottom | any | other ) #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK trigger CDATA #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK dim_coercion ( figure | ground | none ) #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK figure CDATA #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK ground CDATA #IMPLIED >
+<!ATTLIST CONFIGURATION_LINK comment CDATA #IMPLIED >
+        \end{verbatim}
+        \caption{OCDML Document Task Definition}
+        \label{fig:dtd}
+    \end{figure*}
+    
+    % section document_task_definition (end)
+\end{appendix}
+% section annotation_statistics (end)
 \end{document}
