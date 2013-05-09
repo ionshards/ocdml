@@ -1,4 +1,4 @@
-% ACL packages (Do not change)
+%% ACL packages (Do not change)
 \documentclass[11pt]{article}
 \usepackage{acl2012}
 \usepackage{times}
@@ -9,55 +9,72 @@
 \DeclareMathOperator*{\argmax}{argmax}
 \setlength\titlebox{6.5cm}    % Expanding the titlebox
 
-% Other packages
-\usepackage{float}
-\usepackage{amssymb}
-\usepackage{cancel}
-\usepackage{lingstyle}
-\usepackage{color}
-\definecolor{darkblue}{rgb}{0,0,0.8}
-\definecolor{darkred}{rgb}{0.8,0,0}
+%% Other packages
+\usepackage{float} % provides configuration of floating figures
+\usepackage{amssymb} % American Mathematical Society symbol package
+\usepackage{lingstyle} % provides sensical example sentence enumeration environment
+\usepackage{graphicx} % provides for adding external images/PDFs for figures
+\usepackage{color} % provides colors
+    \definecolor{darkblue}{rgb}{0,0,0.8}
+    \definecolor{darkred}{rgb}{0.8,0,0}
 
-% Colorized ISO-Space tags
+\usepackage{hyperref} % provides ability to create hyperlinks
+    \hypersetup{colorlinks,breaklinks,
+                urlcolor=[rgb]{0,0,0.8},
+                linkcolor=[rgb]{0,0,0},
+                citecolor=[rgb]{0,0,0}}
+
+\usepackage{cleveref} % provides lazy referencing
+    \creflabelformat{enums}{(#2#1#3)}
+        \crefname{enums}{example}{examples}
+        \Crefname{enums}{Example}{Examples}
+    \creflabelformat{enumsi}{(#2#1#3)}
+        \crefname{enumsi}{example}{examples}
+        \Crefname{enumsi}{Example}{Examples}
+    \newcommand{\crefrangeconjunction}{~through~}
+
+% Colorized tag annotation command definitions
 \newcommand{\entityTag}[2]{[{\bf \color{darkblue}#1}$_{pl#2}$]}
 \newcommand{\signalTag}[2]{[{\bf \color{darkred}#1}$_{p#2}$]}
 
-\title{OCDML}
+\title{Orientation, Configuration, \& Directionality Markup Language}
 
-%
 \author{
-    Zachary Yocum \\
+    Cynthia Goodman \\
     Brandeis University \\
-    \texttt{zyocum@brandeis.edu} \\\And
+    \textt{cpg@brandeis.edu} \\
+    \and
     Cory Massaro \\
     Brandeis University \\
-    \texttt{cmassaro@brandeis.edu} \\\And
+    \texttt{cmassaro@brandeis.edu} \\
+    \and
     Malcolm J. Phillips \\
     Brandeis University \\
-    \textt{icos@brandeis.edu} \\\And
-    Cynthia Goodman\\
+    \textt{icos@brandeis.edu} \\
+    \and
+    Zachary Yocum \\
     Brandeis University \\
-    \textt{cpg@brandeis.edu}
-    }
+    \texttt{zyocum@brandeis.edu} 
+}
 
 \date{\today}
 
 \begin{document}
-%\maketitle
 
-%An understanding of spatial information in natural language is necessary for many computational linguistics and artificial intelligence applications.  In this paper, we discuss what problems face researchers with respect to this topic, focusing on the need for a well-developed annotation scheme.  The desiderata for such a specification language are defined along with what representational mechanisms are required for the specification to be successful.  We then review several spatial information annotation schemes, focusing on the latest version of the ISO-Space specification.  Finally, we discuss where ISO-Space still falls short and propose some ways that the specification could be enriched.
-%
-
+\maketitle
 
 \begin{abstract}
-This paper presents the first description of Orientation Configuration \& Dimensionality Markup Language (OCDML), a markup language for coding certain spatial configurations expressed in natural language.
+    Capturing spatial relations, as expressed in natural language, is relevant
+    to many computational linguistics applications. In this paper, we present a
+    specification of Orientation Configuration \& Dimensionality Markup
+    Language (OCDML), a markup language developed for coding certain spatial
+    configurations expressed in natural language. We further describe a
+    preliminary annotation effort of a small corpus using to OCDML. Finally, we
+    discuss the shortcomings of OCDML and offer some suggestions for how it may
+    be improved.
 \end{abstract}
 
-\section{Introduction} % (fold)
-\label{sec:introduction}
-The goal of OCDML is to \ldots
-% section introduction (end)
-
+\iffalse
 Citations:
 \cite{cohn1997qualitative}
 \cite{isli2000new}
@@ -66,13 +83,79 @@ Citations:
 \cite{mani2010spatialml}
 \cite{talmy1978figure}
 \cite{herskovits1980spatial}
+\fi
 
-\section{SceneBank Data} % (fold)
+\section{Introduction} % (fold)
+\label{sec:introduction}
+The goal of OCDML is to \ldots
+% section introduction (end)
+
+\section{Previous Work} % (fold)
+\label{sec:previous_work}
+
+% section previous_work (end)
+
+\section{Model} % (fold)
+\label{sec:model}
+
+% section model (end)
+
+\section{SceneBank} % (fold)
 \label{scenebank_data}
+
+\subsection{Corpus Description} % (fold)
+\label{sub:corpus_description}
+
+For the purpose of annotation we created a small English language corpus, which we call SceneBank. SceneBank is intended to be a domain-focused corpus containing scene descriptions, which were excerpted from dramatic, literary works of 19th and 20th century playwrights\footnote{These works were either originally written in English or have been translated into English}. The full SceneBank corpus includes excerpts of plays by Anton Chekhov, George Bernard Shaw, John Galsworthy, Alan Alexander Milne, Eugene O'Neill, and John August Strindberg. Due to limitations on annotator availability, our annotation collection was constrained to a subset of SceneBank, which is approximately one tenth the size of the full corpus. This sub-corpus, which we will discuss in the remainder of this paper, consists of two authors: Shaw and Galsworthy. We have provided basic sentence and word counts in Table \Cref{tab:sent-word-counts} below.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}
+    {|c|c|c|}
+    \hline \textbf{Count} & \textbf{SceneBank} & \textbf{Annotated}           \\
+           \textbf{Type}  & \textbf{Total}     & \textbf{Subset}              \\
+    \hline Sentence       & 1191               & 153                     \\
+    \hline Tokens         & 22433              & 2768                    \\
+    \hline Types          & 3217               & 860                     \\
+    \hline
+\end{tabular}
+\caption{Sentence \& Word Counts for SceneBank}
+\label{tab:sent-word-counts}
+\end{center}
+\end{table}
+
+% subsection corpus_description (end)
+
+\subsection{Corpus Analytics} % (fold)
+\label{sub:corpus_analysis}
+We provide below counts for each attribute-value pair in the gold standard annotations from SceneBank. Because this data has been adjudicated, we may postulate, in assaying it, that it has been disabused of any ambiguity or error resulting from our guideline. Nonetheless, these adjudicated data reveal some issues with the corpus itself and with the ontology on which our annotation scheme is based.
+
+As might be expected from a , \textsc{volume} preponderates (by a wide margin) in the \texttt{dimensionality} field for the \textsc{spatial\_entity} tag type. We don't believe this is an issue, since the specification is really intended to capture configurational relationships in three-dimensional space. However, one may note that the \texttt{rect\_prism} is by far the most prevalent volumetric primitive type, followed by \texttt{biped}. While objects that are rectangularly prismatic, or at least may be conceptually simplified as being represented as a rectangular prism (in contrast to vaguely conical, infundibular, etc. objects) do account for many artificial objects that humans interact with in domestic, interior spaces, they probably don't constitute a majority (or even plurality) of all three-dimensional objects. Thus, this profusion of rectangular prisms reflects a significant bias in our corpus.
+
+However, our annotation may have subsumed so many objects as \texttt{rect\_prism} simply because of limitations in the way our model codes directional information. That is, our ontological framework presupposes that relations in three spatial dimensions may be sufficiently captured with information about latitudinal, longitudinal, and vertical axes of orientation. In the absence of any better intuitive metric (i.e., something more accessible and less granular than, say, polar coordinates), this seems to be a necessary compromise to keep the annotation task simple and relatively informative. Under this view, the proliferation of the \texttt{rect\_prism} entity types is simply an artifact of the nature of the task.
+
+Likewise, many human beings are mentioned in the corpus which our model captures with the \texttt{biped} entity type. English, among other natural languages, can express information about animals, and their anatomical parts, in rich detail. While intrinsic or relative spatial axes, in conjunction with the identity of a salient cross-sectional axis, may suffice to orient simple objects with a tolerable degree of precision, it is not capable of expressing human bodies' various stations, luxations, and deformations. A more nuanced account of a human figure's configuration should be extricable in some cases, but our model is insufficient to handle such cases. For example, a human may be described as facing in some direction, meaning that their face---the front of their head---is oriented in a particular way, independent of their torso or other bodily parts. To handle this sort of expression our model would need to be extended to include mereotopological relations between spatial entities and their parts.
+
+On a more general note, the issue of mereotopology extends beyond anatomy to highly flexible or deformable objects. It is both difficult to convey precisely and difficult to construe unambiguously. E.g., in \Cref{ex:shirt-crumpled}, is it unspecified which parts of the shirt are where. Is the front primarily lying on the floor? Is the left sleeve folded haphazardly underneath the rest? The the hearer/reader gets only a vague sense that there is an amorphous entity which, un-crumpled, would be a shirt. Without delving into the issue of dynamic simulation, it is unclear whether a spatial entity in a deformed state should be annotated as a distinct object, with different axial intrinsicalities.
+
+\enumsentence{
+    The shirt lay crumpled on the floor.
+}\label{ex:shirt-crumpled}
+
+The perceived imbalances in the corpus are not, however, all detrimental: some of the statistical discrepancies enumerated below reveal important classificatory information that could be used to refine a subsequent iteration of OCDML.
+
+Overall, the \texttt{top\_bottom} axis is annotated as \textsc{intrinsic} far more often than \textsc{relative}, while the \texttt{left\_right} and \texttt{front\_back} axes exhibit more even distributions. Likewise, \textsc{top\_bottom} constitutes a substantial majority of the \texttt{c\_sec\_axis} attributes. The \texttt{figure\_config} attribute is predominantly tagged as \textsc{bottom} (followed by \textsc{back}), while most \texttt{ground\_config} values are tagged as \textsc{top}, with \textsc{front} and \textsc{bottom} noticeably less common. However, these three edge out all other values massively.
+
+Certainly, these phenomena evince corpus imbalance to a degree, but they also elucidate the important foundational role topology plays in orienting objects in the real world. In a naïve sense, any object consisting of matter that is subject to the gravity of another massive object (such as a planet), seems likely to have its bottom relatively oriented toward the top surface of whatever surface is supporting it. Our specification does not explicitly collate spatial entities in a frame with respect to any common ground, but the prevalence of \textsc{configuration\_link} tags where the bottom of the figure is related to the top of some ground entity suggests that very basic localization of this type might simplify and focus our task.
+% subsection corpus_analysis (end)
 % section scenebank_data (end)
 
 \section{Discussion} % (fold)
 \label{sec:discussion}
+
+% subsection subsection_name (end)
+
+
 % section discussion (end)
 
 \section{Conclusion} % (fold)
@@ -88,5 +171,7 @@ In this paper we have presented an initial description of OCDML \ldots
 
 \bibliography{acl2012-ocdml}
 
+%\newpage
+%\appendix
 
 \end{document}
