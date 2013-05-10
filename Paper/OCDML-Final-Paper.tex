@@ -10,6 +10,8 @@
 \setlength\titlebox{6.5cm}    % Expanding the titlebox
 
 %% Other packages
+\usepackage[utf8]{inputenc} % ecnode source in utf-8
+\usepackage[top=1in, left=1in, right=1in, bottom=1in]{geometry} % provides margin size
 \usepackage[page]{appendix} % provides support for appendices
 \usepackage{float} % provides configuration of floating figures
 \usepackage{amssymb} % American Mathematical Society symbol package
@@ -77,11 +79,78 @@
 
 \section{Introduction} % (fold)
 \label{sec:introduction}
-The goal of OCDML is to \ldots
+The goal of OCDML is not to provide a comprehensive formalism for representing spatial relations in natural language; rather, OCDML is intended specifically to capture orientation and dimensionality of spatial entities. OCDML was conceived with the intention of providing a substratum for machine learning applications with the purpose of classifying spatial entities and configurational relations between those entities.
+
+Examples of the kinds of spatial language that OCDML is intended to capture are listed in \Cref{ex:intro_examples}.
+
+\eenumsentence{
+    \label{ex:bird}
+    \item An empty flask stood on the table beside him.
+    \label{ex:flask}
+    \item There are two chairs at the table, opposite one another.
+    \label{ex:iPhone}
+    \item A dying fire burns on the left.
+    \label{ex:fire}
+}\label{ex:intro_examples}
+
 % section introduction (end)
 
 \section{Previous Work} % (fold)
 \label{sec:previous_work}
+
+The problem of representing spatial relations in natural language has been approached in several ways. In \Cref{sub:spatialml}\crefrangeconjunction\Cref{sub:wordseye} we discuss some of these approaches paying particular attention to the way that orientation is represented.
+
+\subsection{SpatialML} % (fold)
+\label{sub:spatialml}
+
+% subsection spatialml (end)
+
+\subsection{ISO-Space} % (fold)
+\label{sub:iso_space}
+
+% subsection iso_space (end)
+
+\subsection{WordsEye} % (fold)
+\label{sub:wordseye}
+
+WordsEye \cite{coyne2001wordseye} is a text-to-scene conversion system, which claims to allow users to create a 3-dimensional graphical representation of a scene by taking a natural language description of a scene as input. WordsEye works by tagging and parsing the input text using a statistical dependency parser. The output is then converted into a dependency structure, which is in turn converted into a semantic representation using role labels. A complex series of depiction rules are then used to interpret the semantic labels and display the intended scene graphically.
+
+Coyne's and Sproat's description of WordsEye is explicit for nouns, verbs, and adjectives, however, it does not explain how spatial prepositions and other orientational terms are represented. While WordsEye emphasizes its ability to interpret natural language, the rule-based methodology used for creating the images does not seem to adequately handle all the kinds of language constructs that humans would naturally produce. Take \Cref{fig:wordseye-1}, which was generated from the input in \Cref{ex:wordseye-1}.
+
+\enumsentence{
+    John uses the crossbow. He rides the horse by the store. The store is under the large willow. The small allosaurus is in front of the horse. The dinosaur faces John. A gigantic teacup is in front of the store. The dinosaur is in front of the horse. The gigantic mushroom is in the teacup. The castle is to the right of the store.
+}\label{ex:wordseye-1}
+
+\begin{figure}
+    \begin{center}
+        \scalebox{.30}{
+            \includegraphics{WordsEye-example.png}
+        }
+    \end{center}
+    \caption{Example of a WorsEye 3D Scene}
+    \label{fig:wordseye-1}
+\end{figure}
+
+Although the language in \Cref{ex:wordseye-1} is not particularly natural---there are no pronouns, and the sentences consist mostly of simple copular predicates---the scene that is generated does seem to capture the spatial entities and their relations rather aptly.
+
+In other cases, such as \Cref{ex:wordseye-2}, which corresponds to \Cref{fig:wordseye-2}, WordsEye's approach seems to fall short.
+
+\begin{figure}
+    \begin{center}
+        \scalebox{.55}{
+            \includegraphics{man-on-plane.png}
+        }
+    \end{center}
+    \caption{Another Example of a WorsEye 3D Scene}
+    \label{fig:wordseye-2}
+\end{figure}
+
+\enumsentence{
+    The big plane is above the barn. The tall man is on the front of the plane.
+}\label{ex:wordseye-2}
+
+Our goal for annotation is to create a system that can capture spatial and orientation relations as they are actually expressed. We believe that a rule based approach is unlikely to result in the best system for capturing a wider variety of natural language scene descriptions.
+% subsection wordseye (end)
 
 % section previous_work (end)
 
@@ -93,7 +162,7 @@ The goal of OCDML is to \ldots
 \section{SceneBank} % (fold)
 \label{scenebank_data}
 
-For the purpose of annotation we created a small English language corpus, which we call SceneBank. \Cref{sub:corups_description} provides a short description of the corpus selection process and the nature of its content. \Cref{sub:corpus_analytics} provides some discussion of balance issues and the relative size of the corpus.
+For the purpose of annotation we created a small English language corpus, which we call SceneBank. \Cref{sub:corpus_description} provides a short description of the corpus selection process and the nature of its content. \Cref{sub:corpus_analytics} provides some discussion of balance issues and the relative size of the corpus.
 
 \subsection{Corpus Description} % (fold)
 \label{sub:corpus_description}
@@ -115,34 +184,34 @@ SceneBank is intended to be a domain-focused corpus containing scene description
 \end{center}
 \end{table}
 
-The language employed in the scene descriptions is variable, but most scene-descriptions are relatively dense with spatial information. Even so, the corpus is small, and the annotated sub-corpus is smaller still. It should be noted that it may be presumptive to any conclusions from the annotation data gathered on such a small corpus.
+The language employed in the scene descriptions is variable, but most scene-descriptions are relatively dense with spatial information. Even so, the corpus is small, and the annotated sub-corpus is smaller still. It should be noted that it would not be appropriate to make any conclusive statements based on the annotation data gathered on such a small corpus.
+
 % subsection corpus_description (end)
 
 \subsection{Corpus Analytics} % (fold)
-\label{sub:corpus_analysis}
-In \Cref{sec:annotation_statistics} we provide counts for each attribute-value pair in the gold standard annotations from the SceneBank annotated sub-corpus. Because these data have been adjudicated, we may postulate, in assaying it, that it has been disabused of any ambiguity or error resulting from our guideline. Nonetheless, these adjudicated data reveal some issues with the corpus itself and possibly with the model on which our annotation formalism is based.
+\label{sub:corpus_analytics}
+In \Cref{sec:annotation_data} we provide counts for each attribute-value pair in the gold standard annotations from the SceneBank annotated sub-corpus. Because these data have been adjudicated, we may postulate, in assaying it, that it has been disabused of any ambiguity or error resulting from our guideline. Nonetheless, these adjudicated data reveal some issues with the corpus itself and possibly with the model on which our annotation formalism is based.
 
 As might be expected of a corpus consisting of scene descriptions, \textsc{volume} preponderates (by a wide margin) in the \texttt{dimensionality} field for the \textsc{spatial\_entity} tag type. We don't believe this is an issue, since our specification is intended to capture configurational relationships on three-dimensional space. However, one may note that the \texttt{rect\_prism} is by far the most prevalent volumetric primitive type, followed by \texttt{biped}. While objects that are rectangularly prismatic, or at least may be conceptually simplified as being represented as a rectangular prism (in contrast to vaguely conical, infundibular, etc. objects) do account for many artificial objects that humans interact with in domestic, interior spaces, they probably don't constitute a majority (or even plurality) of all three-dimensional objects. Thus, this profusion of rectangular prisms reflects a significant bias in our corpus.
 
-However, our annotation may have subsumed so many objects as \texttt{rect\_prism} simply because of limitations in the way our model codes directional information. That is, our ontological framework presupposes that relations in three spatial dimensions may be sufficiently captured in terms of latitudinal, longitudinal, and vertical axes of orientation. In the absence of any better intuitive metric (i.e., something more accessible and less granular than, say, polar coordinates), this seems to be a necessary compromise to keep the annotation task simple and relatively informative. Under this view, the proliferation of the \texttt{rect\_prism} entity types is simply an artifact of the nature of the task.
+However, it is worth pointing out that our annotation may have subsumed so many objects as \texttt{rect\_prism} because of limitations in the way our model codes directional information. That is, our ontological framework presupposes that relations in three spatial dimensions may be sufficiently captured in terms of latitudinal, longitudinal, and vertical axes of orientation. In the absence of any better intuitive metric (i.e., something more accessible and less granular than, say, polar coordinates), this seems to be a necessary compromise to keep the annotation task simple and relatively informative. Under this view, the proliferation of the \texttt{rect\_prism} entity types is simply an artifact of the nature of the task.
 
-Likewise, many human beings are mentioned in the corpus, which our model captures with the \texttt{biped} entity type. English, among other natural languages, can express information about animals, and their anatomical parts, in rich detail. While intrinsic or relative spatial axes, in conjunction with the identity of a salient cross-sectional axis, may suffice to orient simple objects with a tolerable degree of precision, it is not capable of expressing human bodies' various stations, luxations, and deformations. A more nuanced account of a human figure's configuration should be extricable in some cases, but our model is insufficient to handle such cases. E.g., in     \Cref{ex:prone}, a human may described as facing in some direction, meaning that their face---the front of their head---is oriented in a particular way, independent of their torso or other bodily parts. To handle this sort of expression our model would need to be extended to include mereotopological relations between spatial entities and their parts such that a human figure, lying prone, could be captured without wrongly specifying the alignment of their head.
+Likewise, many human beings are mentioned in the corpus, which is reflected by the numerous instances of entities tagged with the \texttt{biped} entity type. English, among other natural languages, can express information about animals, and their anatomical parts, in rich detail. While intrinsic or relative spatial axes, in conjunction with the identity of a salient cross-sectional axis, may suffice to orient simple objects with a tolerable degree of precision, it is insufficient for expressing human bodies' various stations, luxations, and deformations. A more nuanced account of a human figure's configuration should be extricable in some cases, but our model is insufficient to handle such cases. As is demonstrated in \Cref{ex:prone}, a human may be described as facing in some direction such that her face---the front of her head---is oriented independent of her torso and the rest of her body. To handle this sort of expression our model would need to be extended to include mereotopological relations between spatial entities and their parts such that a human figure, lying prone, could be captured without wrongly specifying the alignment of their head.
 
-\enumsentence{
-    She lay prone and faced the wall.
+\eenumsentence{
+    \item She lay prone facing the wall.
     \label{ex:prone}
-    The shirt lay crumpled on the floor.
+    \item The shirt lay crumpled on the floor.
     \label{ex:shirt-crumpled}
 }
 
-On a more general note, the issue of mereotopology extends beyond anatomy to highly flexible or deformable entities of any sort. E.g., in \Cref{ex:shirt-crumpled}, it is difficult to specify precisely and unambiguously which parts of the shirt are where. Is the front primarily lying on the floor? Is the left sleeve folded haphazardly underneath the rest? The the hearer/reader gets only a vague sense that there is an amorphous entity which, un-crumpled, would be a shirt. If the goal of our annotation is to be able to construct a static scene, it is unclear whether a spatial entity in a deformed state should be annotated differently from the same entity when it is not deformed.
+On a more general note, the issue of mereotopology extends beyond anatomy to highly flexible or deformable entities of any sort. E.g., in \Cref{ex:shirt-crumpled}, it is intractable to concisely and precisely specify which parts of the shirt are where. Is the front primarily lying on the floor? Is the left sleeve folded haphazardly underneath the rest? This information is underspecified such that the hearer/reader gets only a vague sense that there is an amorphous entity which, un-crumpled, would be a shirt. If the goal of our annotation is to be able to provide the necessary information to construct a depiction of a static scene, it is unclear whether a spatial entity in a deformed state should be annotated differently from the same entity when it is not deformed.
 
 The perceived imbalances in the corpus are not, however, all detrimental: some of the statistical discrepancies enumerated below reveal important classificatory information that could be used to refine a subsequent iteration of OCDML.
 
 Overall, the \texttt{top\_bottom} axis is annotated as \textsc{intrinsic} far more often than \textsc{relative}, while the \texttt{left\_right} and \texttt{front\_back} axes exhibit more even distributions. Likewise, \textsc{top\_bottom} constitutes a substantial majority of the \texttt{c\_sec\_axis} attributes. The \texttt{figure\_config} attribute is predominantly tagged as \textsc{bottom} (followed by \textsc{back}), while most \texttt{ground\_config} values are tagged as \textsc{top}, with \textsc{front} and \textsc{bottom} noticeably less common. However, these three edge out all other values massively.
 
 Certainly, these phenomena evince corpus imbalance to a degree, but they also elucidate the important foundational role topology plays in orienting objects in the real world. In a naïve sense, any object consisting of matter that is subject to the gravity of another massive object (such as a planet), seems likely to have its bottom relatively oriented toward the top surface of whatever surface is supporting it. Our specification does not explicitly collate spatial entities in a frame with respect to any common ground, but the prevalence of \textsc{configuration\_link} tags where the bottom of the figure is related to the top of some ground entity suggests that very basic localization of this type might simplify and focus our task.
- 
 
 % subsection corpus_analysis (end)
 % section scenebank_data (end)
@@ -150,8 +219,33 @@ Certainly, these phenomena evince corpus imbalance to a degree, but they also el
 \section{Discussion} % (fold)
 \label{sec:discussion}
 
-% subsection subsection_name (end)
+\subsection{Annotation Process} % (fold)
+\label{subsec:annotation_process}
 
+A greater degree of supervision in the annotation process might have obviated some of the problems that appeared over the course of the annotation. We asked our annotators to perform a three-phase annotation: they were first to identify extents within the text; then to assess the attributes of the adjudicated set of extents; then, finally, to create links. 
+
+However, further subdivision of the link identification step might have allowed greater control over what entities the annotators identified as linked via a spatial configuration. Because link identification and link attribute assessment were collapsed into a single phase, we could not gather significant data on the attributes of the bulk of our links: the Shaw text contained, in total, ninety-two \textsc{configuration\_link} tags among all annotators; however, of these, only twenty-six were shared among all three annotators. Of these twenty-six \textsc{configuration\_link} relations that all three of our annotators identified, the link attributes were also in perfect agreement. Since the annotators were in complete agreement with respect to commonly identified links, we acquired no information about possible confusion or misinterpretation concerning our conception of configuration links, and the exiguity of the data grossly constringed the amount of variety in the gold standard.
+
+% subsection annotaion_process (end)
+
+\subsection{Specification} % (fold)
+\label{sebsec:specification}
+
+Our task might have been fundamentally improved if anaphora resolution and closure had been included. This would have elucidated the many instances of pronouns tagged in our corpus, which are otherwise merely treated as having the same qualities as their antecedents and therefore not terribly consistent (i.e., ``it'', which was a commonly tagged \textsc{spatial\_entity} extent, exhibits a variety of \texttt{volume\_type}/\texttt{area\_type}/\textsc{line\_type} values and exhibits \textsc{intrinsic} or \textsc{relative} manifestations of all three orientational axes). This would naturally provide a solution to the issues with non-consuming entities, where underspecified objects could be linked somehow to entities or locations already in the discourse. Allowing for a notion of ``common ground'' or a unique, universal space in which all of the relations in a given scope are valid might also prove valuable for machine learning, allowing ``default'' positions of various spatial entities to remain unspecified. Extending the \textsc{spatial\_entity} tag with a \texttt{common\_ground} bit as an attribute would be a minimal extension to our specification that would facilitate capturing this information.
+
+% subsection specification (end)
+
+
+\subsection{Guideline} % (fold)
+\label{subsec:guideline}
+
+Some of the task's difficulty may also be imputed to the guideline. While our guideline exhaustively handles ``nice'' spatial relations---those between entities with clearly demarcated axes of orientation, their surfaces aligned as though on a grid—--the ``messy'' relations (those that natural language annotation is probably best suited, perhaps even necessary, for capturing) are left underspecified. The treatment of amorphous or highly pliant things like liquids, hair, curtains, and clothing largely escapes the guideline's scope.
+
+Revision of the guidelines would require, above all, appending multifarious fully-annotated examples accounting for some commonly encountered difficulties; this would be tremendously beneficial to one attempting to annotate a case not explicitly covered in the text of the guideline, for one could at least emulate any examples provided that reflect a similar difficulty. We feel that this is a nefariously difficult balance to strike between overwhelming and underwhelming annotators, but admit that we may have erred on the sides of simplicity and brevity.
+
+Furthermore, our guideline is rather turbid with respect to non-consuming entities. This is partly a function of the specification itself, but partly a problem, once again, with the way in which annotators are asked to look for configuration links. The annotation of non-markable, paralinguistic and even extralinguistic information in our task seems to have been a large source of confusion. In cases where the orientation of an explicit entity relies on its relationship with an underspecified, or wholly unspecified entity, particularly in the absence of an explicit \textsc{orientation\_signal} markable, it is exceedingly difficult for an annotator to descry the orientational information and to make unambiguous inferences about that information.
+
+% subsection guideline (end)
 
 % section discussion (end)
 
@@ -174,6 +268,7 @@ Citations:
 \cite{talmy1978figure}
 \cite{herskovits1980spatial}
 \cite{stubbs2011mae}
+\cite{joachims1998text}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \bibliographystyle{acl}
@@ -181,184 +276,266 @@ Citations:
 \bibliography{acl2012-ocdml}
 
 \begin{appendix}
+    \newpage
     \appendixpage
-    \section{Annotation Statistics} % (fold)
-    \label{sec:annotation_statistics}
-    Galsworthy Statistics:\\
-    \textsc{spatial\_entity}::\texttt{dimensionality}\\
-    \textsc{volume}: 266 \\
-    \textsc{line}: 3 \\
-    \textsc{point}: 1 \\
-    \textsc{area}: 68 \\
+    \section{Annotation Data} % (fold)
+    \label{sec:annotation_data}
+    
+    The data included in this appendix are for the gold standard annotations for the Galsworthy and Shaw texts. \Cref{tab:tag-type-counts} enumerates the number of instances of each tag type. \Cref{sub:spatial_entity-counts} shows the breakdowns for each attribute of the \textsc{spatial\_entity} tag type. \Cref{sub:orientation_signal-counts} shows data for the \textsc{orientation\_signal} tag type. \Cref{sub:configuration_link-counts} shows the gold standard data for the \textsc{configuration\_link} relations.
+    
+    \begin{table}[here]
+    \begin{center}
+    \begin{tabular}
+        {|l|l|l|l|}
+        \hline  \textbf{Value} & \textbf{Galsworthy} & \textbf{Shaw} & \textbf{Total} \\
+        \hline  \texttt{se}     & 338 & 338 & 548 \\
+        \hline  \texttt{os} & 87  & 55 & 142 \\
+        \hline  \texttt{cl} & 113 & 87 & 200 \\
+        \hline
+    \end{tabular}
+    \caption{Tag Type Counts}
+    \texttt{se} : \textsc{spatial\_entity}\\
+    \texttt{os} : \textsc{orientation\_signal}\\
+    \texttt{cl} : \textsc{configuration\_link}
+    \label{tab:tag-type-counts}
+    \end{center}
+    \end{table} 
+    
+    \subsection{\textsc{spatial\_entity}} % (fold)
+    \label{sub:spatial_entity-counts}
+    
+    Tables \Cref{tab:dimensionality-counts}\crefrangeconjunction\Cref{tab:c_sec_axis-counts} break down, for each attribute of the \textsc{spatial\_entity} tag, how many instances of each value were assigned.
+    
+    \begin{table}[here]
+    \begin{center}
+    \begin{tabular}
+        {|l|l|l|l|}
+        \hline  \textbf{Value} & \textbf{Galsworthy} & \textbf{Shaw} & \textbf{Total} \\
+        \hline \textsc{volume} & 266 & 171 & 437 \\
+        \hline \textsc{area} & 68 & 33 & 101     \\
+        \hline \textsc{point} & 1 & 5 & 6        \\
+        \hline \textsc{line} & 3 & 1 & 4         \\
+        \hline
+    \end{tabular}
+    \caption{\textsc{spatial\_entity}::\texttt{dimensionality}}
+    \label{tab:dimensionality-counts}
+    \end{center}
+    \end{table}
+    
+    \begin{table}[here]
+    \begin{center}
+    \begin{tabular}
+        {|l|l|l|l|}
+        \hline  \textbf{Value} & \textbf{Galsworthy} & \textbf{Shaw} & \textbf{Total} \\
+        \hline $\varnothing$ & 312 & 207 & 519  \\
+        \hline \textsc{segment} & 18 & 2 & 20   \\
+        \hline \textsc{line} & 6 & 0 & 6        \\
+        \hline \textsc{other} & 2 & 1 & 3       \\
+        \hline
+    \end{tabular}
+    \caption{\textsc{spatial\_entity}::\texttt{line\_type}}
+    \label{tab:line_type-counts}
+    \end{center}
+    \end{table}
 
-    \iffalse
-    \textsc{spatial\_entity}::line_type 
-    _ : 312 
-    line: 6 
-    other: 2 
-    segment: 18 
+    \begin{table}[here]
+    \begin{center}
+    \begin{tabular}
+        {|l|l|l|l|}
+        \hline  \textbf{Value} & \textbf{Galsworthy} & \textbf{Shaw} & \textbf{Total} \\
+        \hline $\varnothing$ & 124 & 156 & 280 \\
+        \hline \textsc{4-gon} & 139 & 34 & 173 \\
+        \hline \textsc{other} & 47 & 7 & 54    \\
+        \hline \textsc{disc} & 27 & 9 & 36     \\
+        \hline \textsc{3-gon} & 0 & 4 & 4      \\
+        \hline \textsc{annulus} & 1 & 0 & 1    \\
+        \hline
+    \end{tabular}
+    \caption{\textsc{spatial\_entity}::\texttt{area\_type}}
+    \label{tab:area_type-counts}
+    \end{center}
+    \end{table}
+    
+    \begin{table}[here]
+    \begin{center}
+    \begin{tabular}
+        {|l|l|l|l|}
+        \hline  \textbf{Value} & \textbf{Galsworthy} & \textbf{Shaw} & \textbf{Total} \\
+        \hline \textsc{rect\_prism} & 135 & 31 & 166 \\
+        \hline \textsc{other} & 84 & 72 & 156        \\
+        \hline \textsc{biped} & 79 & 48 & 127        \\
+        \hline \textsc{tri\_prism} & 3 & 42 & 45     \\
+        \hline $\varnothing$ & 9 & 31 & 40           \\
+        \hline \textsc{sphere} & 12 & 6 & 18         \\
+        \hline \textsc{cylinder} & 12 & 5 & 17       \\
+        \hline \textsc{cone} & 1 & 4 & 5             \\
+        \hline \textsc{quadruped} & 2 & 0 & 2        \\
+        \hline \textsc{pyramid} & 0 & 2 & 2          \\
+        \hline \textsc{torus} & 1 & 0 & 1            \\
+        \hline
+    \end{tabular}
+    \caption{\textsc{spatial\_entity}::\texttt{volume\_type}}
+    \label{tab:volume_type-counts}
+    \end{center}
+    \end{table}
+    
+    \begin{table}[here]
+    \begin{center}
+    \begin{tabular}
+        {|l|l|l|l|}
+        \hline  \textbf{Value} & \textbf{Galsworthy} & \textbf{Shaw} & \textbf{Total} \\
+        \hline \textsc{intrinsic} & 292 & 177 & 469 \\
+        \hline \textsc{relative} & 45 & 31 & 76     \\
+        \hline $\varnothing$ & 1 & 2 & 3            \\
+        \hline
+    \end{tabular}
+    \caption{\textsc{spatial\_entity}::\texttt{top\_bottom}}
+    \label{tab:top_bottom-counts}
+    \end{center}
+    \end{table}
 
-    SPATIAL_ENTITY::area_type 
-    _ : 124 
-    annulus: 1 
-    4-gon: 139 
-    other: 47 
-    disc: 27 
+    \begin{table}[here]
+    \begin{center}
+    \begin{tabular}
+        {|l|l|l|l|}
+        \hline  \textbf{Value} & \textbf{Galsworthy} & \textbf{Shaw} & \textbf{Total} \\
+        \hline \textsc{intrinsic} & 165 & 114 & 279 \\
+        \hline \textsc{relative} & 163 & 83 & 246   \\
+        \hline $\varnothing$ & 10 & 13 & 23         \\
+        \hline
+    \end{tabular}
+    \caption{\textsc{spatial\_entity}::\texttt{front\_back}}
+    \label{tab:front_back-counts}
+    \end{center}
+    \end{table}
 
-    SPATIAL_ENTITY::volume_type 
-    _ : 9 
-    quadruped: 2 
-    cylinder: 12 
-    torus: 1 
-    tri_prism: 3 
-    sphere: 12 
-    other: 84 
-    cone: 1 
-    rect_prism: 135 
-    biped: 79 
+    \begin{table}[here]
+    \begin{center}
+    \begin{tabular}
+        {|l|l|l|l|}
+        \hline  \textbf{Value} & \textbf{Galsworthy} & \textbf{Shaw} & \textbf{Total} \\
+        \hline  \textsc{relative} & 179 & 99 & 278   \\
+        \hline  \textsc{intrinsic} & 159 & 111 & 270 \\
+        \hline
+    \end{tabular}
+    \caption{\textsc{spatial\_entity}::\texttt{left\_right}}
+    \label{tab:left_right-counts}
+    \end{center}
+    \end{table}
 
-    SPATIAL_ENTITY::top_bottom 
-    relative: 45 
-    _ : 1 
-    intrinsic: 292 
+    \begin{table}[here]
+    \begin{center}
+    \begin{tabular}
+        {|l|l|l|l|}
+        \hline  \textbf{Value} & \textbf{Galsworthy} & \textbf{Shaw} & \textbf{Total} \\
+        \hline  \textsc{top\_bottom} & 200 & 137 & 337 \\
+        \hline  \textsc{front\_back} & 108 & 64 & 172  \\
+        \hline  \textsc{left\_right} & 19 & 3 & 22     \\
+        \hline  \textsc{other} & 11 & 0 & 11           \\
+        \hline  $\varnothing$ & 0 & 6 &  6             \\
+        \hline
+    \end{tabular}
+    \caption{\textsc{spatial\_entity}::\texttt{c\_sec\_axis}}
+    \label{tab:c_sec_axis-counts}
+    \end{center}
+    \end{table}
+    % subsection spatial_entity (end)
 
-    SPATIAL_ENTITY::front_back 
-    relative: 163 
-    _ : 10 
-    intrinsic: 165 
+    \subsection{\textsc{orientation\_signal}} % (fold)
+    \label{sub:orientation_signal-counts}
+    
+    Table \Cref{tab:orientation_type-counts} breaks shows the number of instances that each \texttt{orientation\_type} was assigned for \textsc{orientation\_signal} tags.
+    
+    \begin{table}[here]
+    \begin{center}
+    \begin{tabular}
+        {|l|l|l|l|}
+        \hline  \textbf{Value} & \textbf{Galsworthy} & \textbf{Shaw} & \textbf{Total} \\
+        \hline  \textsc{vertical} & 43 & 17 & 60     \\
+        \hline  \textsc{longitudinal} & 19 & 18 & 37 \\
+        \hline  \textsc{any} & 12 & 9 & 21           \\
+        \hline  \textsc{lateral} & 5 & 7 & 12        \\
+        \hline  \textsc{latitudinal} & 6 & 1 & 7     \\
+        \hline  \textsc{other} & 1 & 2 & 3           \\
+        \hline  \textsc{coronal} & 1 & 0 & 1         \\
+        \hline  $\varnothing$ & 0 & 1 & 1            \\
+        \hline
+    \end{tabular}
+    \caption{\textsc{orientation\_signal}::\texttt{orientation\_type}}
+    \label{tab:orientation_type-counts}
+    \end{center}
+    \end{table}
+    % subsection orientation_signal (end)
+    
+    \subsection{\textsc{configuration\_link}} % (fold)
+    \label{sub:configuration_link-counts}
+    
+    Tables \Cref{tab:dim_coercion-counts}\crefrangeconjunction\Cref{tab:ground_config-counts} break down, for each attribute of the \textsc{configuration\_link} relation, how many instances of each value were assigned.
+    
+    \begin{table}[here]
+    \begin{center}
+    \begin{tabular}
+        {|l|l|l|l|}
+        \hline  \textbf{Value} & \textbf{Galsworthy} & \textbf{Shaw} & \textbf{Total} \\
+        \hline  \textsc{none} & 82 & 69 & 151  \\
+        \hline  \textsc{ground} & 21 & 13 & 34 \\
+        \hline  \textsc{figure} & 10 & 3 & 13  \\
+        \hline  $\varnothing$ & 0 & 2 & 2      \\
+        \hline
+    \end{tabular}
+    \caption{\textsc{configuration\_link}::\texttt{dim\_coercion}}
+    \label{tab:dim_coercion-counts}
+    \end{center}
+    \end{table}
 
-    SPATIAL_ENTITY::left_right 
-    relative: 179 
-    intrinsic: 159 
+    \begin{table}[here]
+    \begin{center}
+    \begin{tabular}
+        {|l|l|l|l|}
+        \hline  \textbf{Value} & \textbf{Galsworthy} & \textbf{Shaw} & \textbf{Total} \\
+        \hline  \textsc{bottom} & 53 & 34 & 87 \\
+        \hline  \textsc{back} & 25 & 17 & 42   \\
+        \hline  \textsc{any} & 10 & 17 & 27    \\
+        \hline  \textsc{front} & 14 & 11 & 25  \\
+        \hline  \textsc{side} & 9 & 7 & 16     \\
+        \hline  \textsc{top} & 2 & 0 & 2       \\
+        \hline  $\varnothing$ & 0 & 1 & 1      \\
+        \hline
+    \end{tabular}
+    \caption{\textsc{configuration\_link}::\texttt{figure\_config}}
+    \label{tab:figure_config-counts}
+    \end{center}
+    \end{table}
 
-
-
-    SPATIAL_ENTITY::c_sec_axis 
-    left_right: 19 
-    front_back: 108 
-    other: 11 
-    top_bottom: 200 
-
-    ORIENTATION_SIGNAL::orientation_type 
-    longitudinal: 19 
-    vertical: 43 
-    latitudinal: 6 
-    any: 12 
-    other: 1 
-    lateral: 5 
-    coronal: 1 
-
-    CONFIGURATION_LINK::dim_coercion 
-    none: 82 
-    figure: 10 
-    ground: 21 
-
-    CONFIGURATION_LINK::figure_config 
-    bottom: 53 
-    top: 2 
-    back: 25 
-    any: 10 
-    front: 14 
-    side: 9 
-
-    CONFIGURATION_LINK::ground_config 
-    right: 3 
-    bottom: 14 
-    top: 45 
-    back: 6 
-    side: 12 
-    front: 21 
-    any: 8 
-    left: 4 
-
-
-    Shaw Statistics:
-
-    SPATIAL_ENTITY::dimensionality 
-    volume: 171 
-    line: 1 
-    point: 5 
-    area: 33 
-
-    SPATIAL_ENTITY::line_type 
-    _ : 207 
-    other: 1 
-    segment: 2 
-
-    SPATIAL_ENTITY::area_type 
-    _ : 156 
-    3-gon: 4 
-    4-gon: 34 
-    other: 7 
-    disc: 9 
-
-    SPATIAL_ENTITY::volume_type 
-    _ : 31 
-    cylinder: 5 
-    pyramid: 2 
-    sphere: 6 
-    other: 42 
-    cone: 4 
-    rect_prism: 72 
-    biped: 48 
-
-    SPATIAL_ENTITY::top_bottom 
-    relative: 31 
-    _ : 2 
-    intrinsic: 177 
-
-    SPATIAL_ENTITY::front_back 
-    relative: 83 
-    _ : 13 
-    intrinsic: 114 
-
-    SPATIAL_ENTITY::left_right 
-    relative: 99 
-    intrinsic: 111 
-
-    SPATIAL_ENTITY::c_sec_axis 
-    _ : 6 
-    left_right: 3 
-    front_back: 64 
-    top_bottom: 137 
-    ORIENTATION_SIGNAL::orientation_type 
-    _ : 1 
-    longitudinal: 18 
-    vertical: 17 
-    lateral: 7 
-    any: 9 
-    other: 2 
-    latitudinal: 1 
-
-    CONFIGURATION_LINK::dim_coercion 
-    _ : 2 
-    none: 69 
-    figure: 3 
-    ground: 13 
-
-    CONFIGURATION_LINK::figure_config 
-    _ : 1 
-    bottom: 34 
-    back: 17 
-    any: 17 
-    front: 11 
-    side: 7 
-
-    CONFIGURATION_LINK::ground_config 
-    _ : 1 
-    right: 4 
-    bottom: 21 
-    top: 20 
-    back: 6 
-    side: 6 
-    front: 21 
-    any: 5 
-    left: 3
-    \fi
+    \begin{table}[here]
+    \begin{center}
+    \begin{tabular}
+        {|l|l|l|l|}
+        \hline  \textbf{Value} & \textbf{Galsworthy} & \textbf{Shaw} & \textbf{Total} \\
+        \hline  \textsc{top} & 45 & 20 & 65    \\
+        \hline  \textsc{front} & 21 & 21 & 42  \\
+        \hline  \textsc{bottom} & 14 & 21 & 35 \\
+        \hline  \textsc{side} & 12 & 6 & 18    \\
+        \hline  \textsc{any} & 8 & 5 & 13      \\
+        \hline  \textsc{back} & 6 & 6 & 12     \\
+        \hline  \textsc{right} & 3 & 4 & 7     \\
+        \hline  \textsc{left} & 4 & 3 & 7      \\
+        \hline  $\varnothing$ & 0 & 1 & 1      \\
+        \hline
+    \end{tabular}
+    \caption{\textsc{configuration\_link}::\texttt{ground\_config}}
+    \label{tab:ground_config-counts}
+    \end{center}
+    \end{table}
+    
+    % subsection configuration_link (end)
+    
+    \clearpage
     \section{Document Task Definition} % (fold)
     \label{sec:document_task_definition}
-    \Cref{fig:dtd}, on page \pageref{fig:dtd}, represents the OCDML annotation specification as a Document Task Definition (DTD) compatible with the Multi-purpose Annotation Environment (MAE) and Multi-Document Adjudication Interface tools\cite{stubbs2011mae}, which were used in the SceneBank sub-corpus annotation effort.
-    \begin{figure*}
+    \Cref{fig:dtd} represents the OCDML annotation specification as a Document Task Definition (DTD) compatible with the Multi-purpose Annotation Environment (MAE) and Multi-Document Adjudication Interface tools \cite{stubbs2011mae}, which were used in the SceneBank sub-corpus annotation effort.
+    \begin{figure*}[h]
+	\footnotesize
         \begin{verbatim}
 <!ENTITY name "OCDMLtask-1.1">
 
@@ -411,6 +588,50 @@ lateral | vertical | coronal | any | other ) #IMPLIED >
         \label{fig:dtd}
     \end{figure*}
     
+    \clearpage
+    \section{Fully Annotated Example} % (fold)
+    \label{sec:fully_annotated_example}
+    \begin{figure}
+        \begin{verbatim}
+<?xml version="1.0" encoding="UTF-8" ?>
+<OCDMLtask-1.1>
+<TEXT><![CDATA[
+
+A hotel sitting room. A table in the centre. On it a telephone. Two chairs at it, opposite one another. Behind it, the door. The fireplace has a mirror in the mantelpiece.
+
+]]></TEXT>
+<TAGS>
+<SPATIAL_ENTITY id="se0" start="17" end="21" text="room" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se1" start="25" end="30" text="table" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se2" start="38" end="44" text="centre" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="cylinder" left_right="relative" front_back="relative" top_bottom="relative" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se3" start="49" end="51" text="it" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se4" start="54" end="63" text="telephone" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="tri_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" c_sec_axis="left_right" comment="" />
+<SPATIAL_ENTITY id="se5" start="69" end="75" text="chairs" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se6" start="79" end="81" text="it" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se7" start="92" end="95" text="one" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se8" start="96" end="103" text="another" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se9" start="112" end="114" text="it" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" c_sec_axis="top_bottom" comment="" />
+<SPATIAL_ENTITY id="se10" start="120" end="124" text="door" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="intrinsic" c_sec_axis="front_back" comment="" />
+<SPATIAL_ENTITY id="se11" start="130" end="139" text="fireplace" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="intrinsic" front_back="intrinsic" top_bottom="intrinsic" c_sec_axis="front_back" comment="" />
+<SPATIAL_ENTITY id="se12" start="146" end="152" text="mirror" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="area" line_type="" area_type="disc" volume_type="cylinder" left_right="relative" front_back="intrinsic" top_bottom="relative" c_sec_axis="front_back" comment="" />
+<SPATIAL_ENTITY id="se13" start="160" end="171" text="mantelpiece" form="" latLong="" mod="" countable="" quant="" scopes="" dimensionality="volume" line_type="" area_type="" volume_type="rect_prism" left_right="relative" front_back="relative" top_bottom="relative" c_sec_axis="front_back" comment="" />
+<ORIENTATION_SIGNAL id="os0" start="31" end="33" text="in" orientation_type="vertical" comment="" />
+<ORIENTATION_SIGNAL id="os1" start="46" end="48" text="On" orientation_type="vertical" comment="" />
+<ORIENTATION_SIGNAL id="os2" start="76" end="78" text="at" orientation_type="lateral" comment="" />
+<ORIENTATION_SIGNAL id="os3" start="83" end="91" text="opposite" orientation_type="longitudinal" comment="" />
+<ORIENTATION_SIGNAL id="os4" start="105" end="111" text="Behind" orientation_type="longitudinal" comment="" />
+<ORIENTATION_SIGNAL id="os5" start="153" end="155" text="in" orientation_type="longitudinal" comment="" />
+<CONFIGURATION_LINK id="cl0" fromID="se1" fromText="table" toID="se2" toText="centre" figure_config="bottom" ground_config="bottom" trigger="os0" dim_coercion="" figure="se1" ground="se2" comment="" />
+<CONFIGURATION_LINK id="cl1" fromID="se4" fromText="telephone" toID="se3" toText="it" figure_config="bottom" ground_config="top" trigger="os1" dim_coercion="" figure="se4" ground="se3" comment="" />
+<CONFIGURATION_LINK id="cl2" fromID="se5" fromText="chairs" toID="se6" toText="it" figure_config="front" ground_config="side" trigger="os2" dim_coercion="" figure="se5" ground="se6" comment="" />
+<CONFIGURATION_LINK id="cl3" fromID="se7" fromText="one" toID="se8" toText="another" figure_config="front" ground_config="front" trigger="os3" dim_coercion="" figure="se7" ground="se8" comment="" />
+<CONFIGURATION_LINK id="cl4" fromID="se10" fromText="door" toID="se9" toText="it" figure_config="any" ground_config="back" trigger="os4" dim_coercion="" figure="se10" ground="se9" comment="" />
+<CONFIGURATION_LINK id="cl5" fromID="se12" fromText="mirror" toID="se13" toText="mantelpiece" figure_config="back" ground_config="front" trigger="os5" dim_coercion="" figure="se12" ground="se13" comment="" />
+</TAGS>
+</OCDMLtask-1.1>
+        \end{verbatim}
+    \end{figure}
+    % section fully_annotated_example (end)
     % section document_task_definition (end)
 \end{appendix}
 % section annotation_statistics (end)
